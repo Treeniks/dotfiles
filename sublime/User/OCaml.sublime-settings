@@ -1,0 +1,6 @@
+// These settings override both User and Default settings for the OCaml syntax
+{
+    "tab_size": 2,
+    "auto_complete": false,
+    "auto_match_enabled": false,
+}

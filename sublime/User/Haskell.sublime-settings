@@ -1,0 +1,7 @@
+// These settings override both User and Default settings for the Haskell syntax
+{
+    "tab_size": 2,
+
+    // not sure about this one yet
+    // "auto_complete": false,
+}
