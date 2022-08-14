@@ -1,0 +1,36 @@
+%YAML 1.2
+---
+# See https://www.sublimetext.com/docs/syntax.html
+# used for personal .anilist files in which I mark which anime I watched when
+
+name: Anilist
+file_extensions:
+  - anilist
+scope: text
+
+contexts:
+  main:
+    - match: "^(.*)(:)"
+      captures:
+        1: markup.heading
+        2: punctuation
+      push: inside
+
+  inside:
+    - meta_content_scope: meta.paragraph
+    - match: ^\b(started|finished|completed|watched|DROPPED|stopped at)\b
+      scope: keyword
+    - match: ep(\.)(\d+(/\d+)?)
+      captures:
+        1: punctuation
+        2: constant.numeric
+    - match: (\d\d\d\d-\d\d-\d\d)\??|(\d\d:\d\d( - \d\d:\d\d)?)\??
+      scope: comment
+    - match: \-|
+      scope: punctuation
+    - match: <(.*)>
+      captures:
+        1: markup.underline.link
+      scope: punctuation
+    - match: "^\n$"
+      pop: true
