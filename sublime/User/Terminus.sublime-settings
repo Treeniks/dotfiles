@@ -1,0 +1,33 @@
+{
+    // still needs configuring
+    "default_config": {
+        "linux": "Nushell",
+        "osx": "Nushell",
+        "windows": "Nushell",
+    },
+    "shell_configs": [
+        {
+            "name": "Nushell",
+            "cmd": [
+                "nu"
+            ],
+            "env": {},
+            "enable": true,
+            "platforms": [
+                "linux",
+                "osx",
+                "windows"
+            ],
+        },
+        {
+            "name": "Developer PowerShell for VS 2022",
+            "cmd": ["powershell.exe", "-NoExit", "-File", "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/Launch-VsDevShell.ps1", "-SkipAutomaticLocation"],
+            "env": {},
+            "enable": true,
+            "platforms": [
+                "windows"
+            ]
+        },
+    ],
+    "theme": "adaptive",
+}
