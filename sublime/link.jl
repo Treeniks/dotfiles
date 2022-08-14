@@ -1,6 +1,8 @@
 link_target_path = "$(@__DIR__)/User"
 if Sys.iswindows()
     config_path = "$(ENV["USERPROFILE"])/scoop/persist/sublime-text/Data/Packages/User"
+elseif Sys.islinux()
+    config_path = "$(ENV["HOME"])/.config/sublime-text/Packages/User"
 else
     println("OS not yet supported")
     exit()
