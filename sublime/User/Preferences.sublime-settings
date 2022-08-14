@@ -1,0 +1,143 @@
+{
+    "color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
+
+    "light_color_scheme": "Breakers.sublime-color-scheme",
+    "dark_color_scheme": "Monokai.sublime-color-scheme",
+
+    "font_face": "JetBrains Mono",
+    "font_size": 14,
+
+    "translate_tabs_to_spaces": true,
+
+    // undecided
+    "detect_indentation": false,
+
+    // 'true' creates issues with some filetypes like JSON
+    // it's better to just have control
+    "smart_indent": false,
+
+    // bad for keeping track of complicated expressions with many brackets
+    // "auto_match_enabled": false,
+
+    // undecided
+    // "draw_minimap_border": true,
+
+    // there is no reason not to always show it
+    "always_show_minimap_viewport": true,
+
+    // undecided
+    "highlight_line": false,
+
+    // "smooth" is also nice
+    "caret_style": "phase",
+
+    "caret_extra_top": 1,
+    "caret_extra_bottom": 1,
+
+    // somehow breaks other brackets
+    // "match_brackets_angle": true,
+
+    "move_to_limit_on_up_down": true,
+
+    "draw_white_space": ["selection", "leading_mixed", "trailing", "isolated"],
+
+    "draw_unicode_white_space": "all",
+
+    "indent_guide_options": ["draw_normal", "draw_active", "solid"],
+
+    "trim_trailing_white_space_on_save": "not_on_caret",
+
+    "trim_only_modified_white_space": false,
+
+    // undecided
+    "save_on_focus_lost": true,
+
+    // tab still insert completion
+    // this stops auto completion widget to open on tab
+    "tab_completion": false,
+
+    // "auto_complete": false,
+
+    // I have found no reason not to set this to 0
+    // "auto_complete_delay": 0,
+
+    // make auto complete explicit
+    // "auto_complete_selector": "-",
+
+    // "auto_complete_triggers": [],
+
+    "auto_complete_commit_on_tab": true,
+
+    "auto_complete_cycle": true,
+
+    // undecided
+    // "auto_complete_trailing_spaces": false,
+
+    "shift_tab_unindent": true,
+
+    "find_selected_text": false,
+
+    "auto_find_in_selection": true,
+
+    "close_find_after_find_all": false,
+    "close_find_after_replace_all": false,
+
+    // no apparent reason to have a limit here
+    "find_scroll_highlights_limit": 0,
+
+    // undecided
+    "focus_on_file_drop": true,
+
+    //
+    // User Interface Settings
+    //
+
+    "theme": "Monokai Pro (Filter Spectrum).sublime-theme",
+
+    "light_theme": "Adaptive.sublime-theme",
+    "dark_theme": "Adaptive Dark.sublime-theme",
+
+    "themed_title_bar": false,
+
+    "bold_folder_labels": true,
+
+    // undecided
+    "overlay_scroll_bars": "enabled",
+
+    // undecided
+    "enable_tab_scrolling": false,
+
+    "show_encoding": true,
+
+    "show_line_endings": true,
+
+    "hardware_acceleration": "opengl",
+
+    //
+    // Application Behavior Settings
+    //
+
+    // undecided
+    "open_files_in_new_window": "always",
+
+    // undecided
+    "show_rel_path": true,
+
+    "show_project_first": true,
+
+    // should be set, but depends on Sublime Merge's path
+    // "sublime_merge_path": "~/scoop/apps/sublime-merge/current/sublime_merge.exe",
+
+    "preview_on_click": "only_left",
+
+    // undecided
+    "relative_line_numbers": false,
+
+    //
+    // Packages
+    //
+
+    "ignored_packages": [
+        "Vintage",
+    ],
+}
