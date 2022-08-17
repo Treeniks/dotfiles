@@ -16,6 +16,7 @@
     // "editor.lineNumbers": "relative",
 
     "editor.renderWhitespace": "trailing",
+    "editor.renderLineHighlight": "gutter",
     "editor.detectIndentation": false,
     "editor.tabCompletion": "on",
     "editor.snippetSuggestions": "top",
@@ -47,7 +48,7 @@
     ],
 
     // =========== MISC ===========
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.colorTheme": "Aura Dark",
     "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
     "extensions.ignoreRecommendations": true,
     "haskell.formattingProvider": "stylish-haskell"

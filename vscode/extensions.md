@@ -13,3 +13,4 @@
 - rust-analyzer (matklad)
 - Sublime Text Keymap and Settings Importer (Microsoft)
 - Todo Tree (Gruntfuggly)
+- Aura Theme (Dalton Menezes)
