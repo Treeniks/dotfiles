@@ -1,5 +1,24 @@
 // Settings in here override those in "LSP/LSP.sublime-settings"
 {
     "show_diagnostics_panel_on_save": 0,
-    "clients": {},
+    "clients": {
+        "rust-analyzer": {
+            "command": [
+                "rust-analyzer"
+            ],
+            "selector": "source.rust",
+            "initializationOptions": {
+                // very annoying when working with configurations
+                "diagnostics.disabled": [
+                    "inactive-code",
+                ],
+                // enables unstable rustfmt features
+                // requires nightly-gnu toolchain to be installed on Windows
+                // otherwise it would have to be "+nightly-msvc"
+                "rustfmt.extraArgs": [
+                    "+nightly",
+                ],
+            },
+        },
+    },
 }
