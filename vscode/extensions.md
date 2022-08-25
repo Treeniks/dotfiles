@@ -1,0 +1,15 @@
+# Extensions
+
+- Block Travel (sashaweiss)
+- C/C++ (Microsoft)
+- C# (Microsoft)
+- Extensions Pack for Java (Microsoft)
+- Julia (julialang)
+- Jupyter (Microsoft)
+- Python (Microsoft)
+- Live Share (Microsoft)
+- Monokai Pro (monokai)
+- Project Manager (Alessandro Fragnani)
+- rust-analyzer (matklad)
+- Sublime Text Keymap and Settings Importer (Microsoft)
+- Todo Tree (Gruntfuggly)

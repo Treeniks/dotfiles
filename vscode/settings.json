@@ -1,0 +1,54 @@
+{
+    // =========== EDITOR ===========
+
+    // font
+    "editor.fontFamily": "JetBrains Mono, Fira Code, Consolas",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+
+    // find
+    "editor.find.autoFindInSelection": "multiline",
+    "editor.find.seedSearchStringFromSelection": "never",
+
+    "editor.mouseWheelZoom": true,
+    // "explorer.confirmDragAndDrop": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    // "editor.lineNumbers": "relative",
+
+    "editor.renderWhitespace": "trailing",
+    "editor.detectIndentation": false,
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.multiCursorModifier": "ctrlCmd",
+
+    // =========== FILES ===========
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+
+    // =========== TERMINAL ===========
+    "terminal.integrated.fontFamily": "MesloLGM NF",
+    "terminal.integrated.profiles.windows": {
+        "Nushell": {
+            "path": "nu"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Nushell",
+
+    // =========== MARKDOWN ===========
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+
+    // =========== JULIA ===========
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+
+    // =========== MISC ===========
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "extensions.ignoreRecommendations": true,
+    "haskell.formattingProvider": "stylish-haskell"
+}
