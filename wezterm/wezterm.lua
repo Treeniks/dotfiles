@@ -1,21 +1,23 @@
 local wezterm = require 'wezterm';
 return {
-    color_scheme = "Aura (Gogh)",
-    font = wezterm.font("MesloLGM NF"),
+    font = wezterm.font("JetBrains Mono"),
+
+    -- currently broken on Windows, see https://github.com/nushell/nushell/issues/5585
+    -- default_prog = {"nu"},
+
     line_height = 1.,
     window_background_opacity = 0.9,
+    hide_tab_bar_if_only_one_tab = true,
 
     window_close_confirmation = "NeverPrompt",
 
-    default_prog = {"nu"},
-
     enable_scroll_bar=true,
-    -- hide_tab_bar_if_only_one_tab = true,
 
-    -- disable_default_key_bindings = true,
+    disable_default_key_bindings = true,
     keys = {
-        {key="t", mods="CTRL", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
+        {key="t", mods="CTRL|SHIFT", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
         {key="w", mods="CTRL|SHIFT", action=wezterm.action{CloseCurrentTab={confirm=false}}},
+
         -- these two are default key bindings, but they seem to not work by default
         {key="Tab", mods="CTRL", action=wezterm.action{ActivateTabRelative=1}},
         {key="Tab", mods="CTRL|SHIFT", action=wezterm.action{ActivateTabRelative=-1}},
@@ -25,51 +27,42 @@ return {
     -- seems to be fixed now
     default_cursor_style= "BlinkingBar",
 
-    -- rename the window to "WezTerm" permanently
-    wezterm.on("format-window-title", function(tab, pane, tabs, panes, config)
-        return "WezTerm"
-    end),
+    -- Aura color scheme https://github.com/daltonmenezes/aura-theme/tree/main/packages/color-palettes
+    colors = {
+        foreground = '#edecee',
+        background = '#15141b',
 
-    -- * newer wezterm looks nice without all this
-    -- colors = {
-    --     tab_bar = {
-    --         -- color of a non-focused window top bar on windows
-    --         background = "#2b2b2b",
+        cursor_bg = '#a277ff',
+        cursor_fg = '#15141b',
+        cursor_border = '#a277ff',
 
-    --         active_tab = {
-    --             bg_color = "#101010",
-    --             fg_color = "#bbbbbb",
+        selection_fg = '#edecee',
+        selection_bg = '#29263c',
 
-    --             -- "Half", "Normal", "Bold"
-    --             intensity = "Normal",
+        ansi = {
+          '#110f18',
+          '#ff6767',
+          '#61ffca',
+          '#ffca85',
+          '#a277ff',
+          '#a277ff',
+          '#61ffca',
+          '#edecee',
+        },
+        brights = {
+          '#4d4d4d',
+          '#ff6767',
+          '#61ffca',
+          '#ffca85',
+          '#a277ff',
+          '#a277ff',
+          '#61ffca',
+          '#edecee',
+        },
+    },
 
-    --             -- "None", "Single", "Double"
-    --             underline = "None",
-    --             italic = false,
-    --             strikethrough = false,
-    --         },
-
-    --         inactive_tab = {
-    --             bg_color = "#2b2b2b",
-    --             fg_color = "#bbbbbb",
-    --         },
-
-    --         inactive_tab_hover = {
-    --             bg_color = "#505050",
-    --             fg_color = "#bbbbbb",
-    --             -- italic = true,
-    --         },
-
-    --         new_tab = {
-    --             bg_color = "#2b2b2b",
-    --             fg_color = "#bbbbbb",
-    --         },
-
-    --         new_tab_hover = {
-    --             bg_color = "#505050",
-    --             fg_color = "#bbbbbb",
-    --             -- italic = true,
-    --         }
-    --     }
-    -- }
+    -- -- rename the window to "WezTerm" permanently
+    -- wezterm.on("format-window-title", function(tab, pane, tabs, panes, config)
+    --     return "WezTerm"
+    -- end),
 }
