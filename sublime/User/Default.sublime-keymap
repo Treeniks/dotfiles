@@ -102,6 +102,18 @@
         },
     },
 
+    // needed because Sublime Linux keymap != Windows keymap
+    {
+        "keys": ["ctrl+alt+up"],
+        "command": "select_lines",
+        "args": {"forward": false},
+    },
+    {
+        "keys": ["ctrl+alt+down"],
+        "command": "select_lines",
+        "args": {"forward": true},
+    },
+
     {
         "keys": ["alt+s"],
         "command": "toggle_in_selection",
