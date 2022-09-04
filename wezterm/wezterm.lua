@@ -13,7 +13,9 @@ return {
 
     enable_scroll_bar = true,
 
-    disable_default_key_bindings = true,
+    -- I'm too lazy to add everything by hand
+    -- e.g. copy pasting and stuff
+    -- disable_default_key_bindings = true,
     keys = {
         {key="t", mods="CTRL|SHIFT", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
         {key="w", mods="CTRL|SHIFT", action=wezterm.action{CloseCurrentTab={confirm=false}}},
@@ -23,9 +25,9 @@ return {
         {key="Tab", mods="CTRL|SHIFT", action=wezterm.action{ActivateTabRelative=-1}},
     },
 
-    -- * anything else breaks with background opacity
-    -- seems to be fixed now
-    default_cursor_style = "BlinkingBar",
+    -- makes working in vim kind of annoying
+    -- default_cursor_style = "BlinkingBar",
+    default_cursor_style = "BlinkingBlock",
 
     -- Aura color scheme https://github.com/daltonmenezes/aura-theme/tree/main/packages/color-palettes
     colors = {
