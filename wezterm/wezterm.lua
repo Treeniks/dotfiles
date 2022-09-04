@@ -11,7 +11,7 @@ return {
 
     window_close_confirmation = "NeverPrompt",
 
-    enable_scroll_bar=true,
+    enable_scroll_bar = true,
 
     disable_default_key_bindings = true,
     keys = {
@@ -25,7 +25,7 @@ return {
 
     -- * anything else breaks with background opacity
     -- seems to be fixed now
-    default_cursor_style= "BlinkingBar",
+    default_cursor_style = "BlinkingBar",
 
     -- Aura color scheme https://github.com/daltonmenezes/aura-theme/tree/main/packages/color-palettes
     colors = {
