@@ -50,6 +50,9 @@
     "trim_only_modified_white_space": false,
 
     // undecided
+    "ensure_newline_at_eof_on_save": true,
+
+    // undecided
     "save_on_focus_lost": true,
 
     // tab still insert completion
