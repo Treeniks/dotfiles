@@ -3,6 +3,8 @@ if Sys.iswindows()
     config_path = "$(ENV["USERPROFILE"])/scoop/persist/sublime-text/Data/Packages/User"
 elseif Sys.islinux()
     config_path = "$(ENV["HOME"])/.config/sublime-text/Packages/User"
+elseif Sys.isapple()
+    config_path = "$(ENV["HOME"])/Library/Application Support/Sublime Text/Packages/User"
 else
     println("OS not yet supported")
     exit()
