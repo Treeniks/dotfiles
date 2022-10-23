@@ -1,7 +1,7 @@
 link_target_path = "$(@__DIR__)/wezterm.lua"
 if Sys.iswindows()
     config_path = "$(ENV["USERPROFILE"])/.config/wezterm/wezterm.lua"
-elseif Sys.islinux()
+elseif Sys.islinux() || Sys.isapple()
     config_path = "$(ENV["HOME"])/.config/wezterm/wezterm.lua"
 else
     println("OS not yet supported")
