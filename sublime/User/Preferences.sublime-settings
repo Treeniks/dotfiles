@@ -37,6 +37,9 @@
     // somehow breaks other brackets
     // "match_brackets_angle": true,
 
+    // overwrite mac default
+    "scroll_past_end": true,
+
     "move_to_limit_on_up_down": true,
 
     "draw_white_space": ["selection", "leading_mixed", "trailing", "isolated"],
