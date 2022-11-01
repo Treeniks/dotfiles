@@ -1,6 +1,8 @@
 link_target_path = "$(@__DIR__)/config"
 if Sys.iswindows()
     config_path = "$(ENV["USERPROFILE"])/scoop/persist/mpv/portable_config"
+elseif Sys.isapple()
+    config_path = "$(ENV["HOME"])/.config/mpv"
 else
     println("OS not yet supported")
     exit()
