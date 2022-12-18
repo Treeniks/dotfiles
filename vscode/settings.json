@@ -22,6 +22,12 @@
     "editor.snippetSuggestions": "top",
     "editor.multiCursorModifier": "ctrlCmd",
 
+    // =========== SMOOTH SCROLL ===========
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": true,
+
     // =========== FILES ===========
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
