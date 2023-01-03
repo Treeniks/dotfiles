@@ -1,6 +1,6 @@
 // Settings in here override those in "Zig Language/Settings/Zig.sublime-settings",
 {
     "zig.build.on_save": false,
-    "zig.fmt.on_save": true,
+    "zig.fmt.on_save": false,
     "zig.quiet": true,
 }
