@@ -20,5 +20,11 @@
                 ],
             },
         },
+        "zls": {
+            "command": [
+                "zls"
+            ],
+            "selector": "source.zig",
+        },
     },
 }
