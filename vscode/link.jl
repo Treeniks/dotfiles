@@ -1,6 +1,8 @@
 link_target_path = "$(@__DIR__)/settings.json"
 if Sys.iswindows()
     config_path = "$(ENV["USERPROFILE"])/scoop/persist/vscode/data/user-data/User/settings.json"
+elseif Sys.isapple()
+    config_path = "$(ENV["HOME"])/Library/Application Support/Code/User/settings.json"
 else
     println("OS not yet supported")
     exit()
