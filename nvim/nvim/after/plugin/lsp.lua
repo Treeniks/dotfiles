@@ -8,26 +8,37 @@ lsp.setup_servers({
     'rust_analyzer', 'zls', 'clangd', force = true
 })
 
+lsp.on_attach(function(client, bufnr)
+    lsp.default_keymaps({
+        buffer = bufnr,
+        preserve_mappings = false,
+    })
+end)
+
+lsp.setup()
+
 -- modify autocomplete keymap
 local cmp = require('cmp')
-local cmp_mappings = lsp.defaults.cmp_mappings()
+local cmp_action = require('lsp-zero').cmp_action()
 
-cmp_mappings['<CR>'] = nil
-cmp_mappings['<Tab>'] = function(fallback)
-    if cmp.visible() then
-        cmp.confirm()
-    else
-        fallback()
-    end
-end
-cmp_mappings['<S-Tab>'] = nil
-
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings,
-    sources = {
+cmp.setup({
+    source = {
         {name = 'path'},
-        {name = 'nvim_lsp'}
+        {name = 'nvim_lsp'},
+    },
+    preselect = cmp.PreselectMode.Item,
+    completion = {
+        completeopt = 'menuone,noinsert,preview',
+    },
+    mapping = {
+        ['<C-Space>'] = cmp.mapping.complete(), -- doesn't seem to work in wezterm
+        ['<Tab>'] = function(fallback)
+            if cmp.visible() then
+                cmp.confirm()
+            else
+                fallback()
+            end
+        end
     }
 })
 
-lsp.setup()
