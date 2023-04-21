@@ -1,6 +1,7 @@
 // Settings in here override those in "LSP/LSP.sublime-settings"
 {
     "show_diagnostics_panel_on_save": 0,
+    "show_inlay_hints": true,
     "clients": {
         "rust-analyzer": {
             "command": [
@@ -18,6 +19,7 @@
                 "rustfmt.extraArgs": [
                     "+nightly",
                 ],
+                "check.command": "clippy",
             },
         },
         "zls": {
