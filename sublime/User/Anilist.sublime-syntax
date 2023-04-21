@@ -6,31 +6,33 @@
 name: Anilist
 file_extensions:
   - anilist
-scope: text
+scope: text.markdown
 
 contexts:
   main:
     - match: "^(.*)(:)"
       captures:
-        1: markup.heading
-        2: punctuation
+        1: entity.name.section.markdown
+        2: punctuation.separator.markdown
+      scope: markup.heading.markdown
       push: inside
 
   inside:
-    - meta_content_scope: meta.paragraph
+    - meta_content_scope: meta.paragraph.markdown
     - match: ^\b(started|finished|completed|watched|DROPPED|stopped at)\b
-      scope: keyword
+      scope: keyword.markdown
     - match: ep(\.)(\d+(/\d+)?)
       captures:
-        1: punctuation
-        2: constant.numeric
+        1: punctuation.separator.markdown
+        2: constant.numeric.markdown
     - match: (\d\d\d\d-\d\d-\d\d)\??|(\d\d:\d\d( - \d\d:\d\d)?)\??
-      scope: comment
+      scope: comment.markdown
     - match: \-|
-      scope: punctuation
-    - match: <(.*)>
+      scope: punctuation.separator.markdown
+    - match: (<)(.*)(>)
       captures:
-        1: markup.underline.link
-      scope: punctuation
+        1: punctuation.definition.link.begin.markdown
+        2: markup.underline.link.markdown
+        3: punctuation.definition.link.end.markdown
     - match: "^\n$"
       pop: true
