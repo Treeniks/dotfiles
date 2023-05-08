@@ -1,5 +1,5 @@
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { 'c', 'lua', 'rust', 'help', 'javascript', 'typescript', 'zig' },
+    ensure_installed = { 'c', 'lua', 'rust', 'help', 'javascript', 'typescript', 'zig', 'haskell' },
 
     sync_install = false,
 
@@ -114,4 +114,3 @@ require('treesitter-context').setup{
     -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
     separator = nil,
 }
-

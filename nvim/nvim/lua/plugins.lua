@@ -9,14 +9,14 @@ return require('packer').startup(function(use)
         requires = { 'nvim-lua/plenary.nvim' }
     }
 
+    use 'nvim-telescope/telescope-project.nvim'
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
 
     use 'folke/which-key.nvim'
-
-    use 'ahmedkhalf/project.nvim'
 
     use { 'akinsho/toggleterm.nvim', tag = '*' }
 
@@ -29,27 +29,20 @@ return require('packer').startup(function(use)
 
     use 'numToStr/Comment.nvim'
 
-    use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
-
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        { run = ':TSUpdate' }
+    }
     use 'nvim-treesitter/nvim-treesitter-context'
 
     use 'windwp/nvim-autopairs'
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
+    -- LSP and autocompletion
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-path'
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'hrsh7th/cmp-nvim-lsp'},
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-        }
-    }
+    -- snippet engine (required for nvim-cmp)
+    use 'L3MON4D3/LuaSnip'
 end)
