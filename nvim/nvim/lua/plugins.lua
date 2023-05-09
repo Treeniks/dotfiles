@@ -11,11 +11,6 @@ return require('packer').startup(function(use)
 
     use 'nvim-telescope/telescope-project.nvim'
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons' }
-    }
-
     use 'folke/which-key.nvim'
 
     use { 'akinsho/toggleterm.nvim', tag = '*' }

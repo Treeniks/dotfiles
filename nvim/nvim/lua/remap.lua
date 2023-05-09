@@ -2,10 +2,8 @@ vim.g.mapleader = " "
 
 vim.keymap.set({'n', 'i'}, '<C-s>', vim.cmd.write)
 
--- lsp
-
--- nvim-tree
-vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus)
+vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>r', function() vim.cmd.Ex('.') end)
 
 -- telescope
 local telescope = require('telescope')

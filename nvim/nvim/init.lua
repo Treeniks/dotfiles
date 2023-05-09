@@ -1,10 +1,6 @@
 require('remap')
 require('plugins')
 
--- disable netrw
-vim.g.loaded_netrw = true
-vim.g.loaded_netrwPlugin = true
-
 vim.cmd.colorscheme('rose-pine')
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

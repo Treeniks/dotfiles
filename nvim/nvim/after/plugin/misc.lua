@@ -1,5 +1,3 @@
-require('nvim-tree').setup{}
-
 require('which-key').setup{}
 
 require('telescope').load_extension('project')
