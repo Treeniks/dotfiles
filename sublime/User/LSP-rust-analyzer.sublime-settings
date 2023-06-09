@@ -1,0 +1,8 @@
+{
+    // I don't want an LSP when I'm only looking at a file
+    // i.e. make the LSP explicit
+    "enabled": false,
+    "command": [
+        "rust-analyzer"
+    ],
+}

@@ -11,6 +11,7 @@
 		"LSP",
 		"LSP-json",
 		"LSP-julia",
+		"LSP-rust-analyzer",
 		"MarkdownPreview",
 		"Material Theme",
 		"Materialize",
