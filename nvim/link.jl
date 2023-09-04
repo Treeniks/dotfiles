@@ -1,7 +1,7 @@
 link_target_path = "$(@__DIR__)/nvim"
 if Sys.iswindows()
     config_path = "$(ENV["LOCALAPPDATA"])/nvim"
-elseif Sys.isapple()
+elseif Sys.isapple() || Sys.islinux()
     config_path = "$(ENV["HOME"])/.config/nvim"
 else
     println("OS not yet supported")
