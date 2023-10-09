@@ -1,7 +1,7 @@
 require('tree-sitter-just').setup({})
 
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { 'c', 'lua', 'rust', 'markdown', 'markdown_inline', 'help', 'javascript', 'typescript', 'zig', 'haskell' },
+    ensure_installed = { 'c', 'lua', 'rust', 'markdown', 'markdown_inline', 'javascript', 'typescript', 'zig', 'haskell' },
 
     sync_install = false,
 
