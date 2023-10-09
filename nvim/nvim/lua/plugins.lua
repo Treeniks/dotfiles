@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- setup lazy.nvim and add all plugins
 require("lazy").setup({
-    -- color scheme
+    -- color schemes
     {
         'rose-pine/neovim',
         lazy = false,
@@ -58,6 +58,7 @@ require("lazy").setup({
         build = ':TSUpdate',
     },
     'nvim-treesitter/nvim-treesitter-context',
+    'nvim-treesitter/nvim-treesitter-textobjects',
     'IndianBoy42/tree-sitter-just',
 
     'windwp/nvim-autopairs',

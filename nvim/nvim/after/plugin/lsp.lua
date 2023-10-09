@@ -51,20 +51,3 @@ lspconfig.rust_analyzer.setup({
 })
 lspconfig.julials.setup{}
 lspconfig.zls.setup{}
-
--- set lsp keybinds
-vim.api.nvim_create_autocmd('LspAttach', {
-    desc = 'LSP actions',
-    callback = function(event)
-        local opts = {buffer = true}
-
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-        vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
-        vim.keymap.set('n', '<F4>', vim.lsp.buf.code_action, opts)
-        vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, opts)
-
-        vim.keymap.set('n', 'L', vim.diagnostic.open_float, opts)
-        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-        vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-    end
-})
