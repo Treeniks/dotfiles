@@ -3,7 +3,12 @@ return {
     font = wezterm.font("JetBrains Mono"),
 
     -- currently broken on Windows, see https://github.com/nushell/nushell/issues/5585
-    -- default_prog = {"nu"},
+    -- fixed by disabling "shell_integration" in nushell config
+    -- default_prog = {"/opt/homebrew/bin/fish"},
+    
+    -- color_scheme = "Catppuccin Latte",
+
+    native_macos_fullscreen_mode = true,
 
     line_height = 1.,
     window_background_opacity = 0.9,
@@ -12,6 +17,8 @@ return {
     window_close_confirmation = "NeverPrompt",
 
     enable_scroll_bar = true,
+
+    use_ime = false,
 
     -- I'm too lazy to add everything by hand
     -- e.g. copy pasting and stuff
