@@ -1,5 +1,7 @@
+require('tree-sitter-just').setup({})
+
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { 'c', 'lua', 'rust', 'help', 'javascript', 'typescript', 'zig', 'haskell' },
+    ensure_installed = { 'c', 'lua', 'rust', 'markdown', 'markdown_inline', 'help', 'javascript', 'typescript', 'zig', 'haskell' },
 
     sync_install = false,
 
@@ -10,6 +12,8 @@ require('nvim-treesitter.configs').setup {
         additional_vim_regex_highlighting = false,
     }
 }
+
+require("nvim-treesitter.install").compilers = { "gcc-13", "clang" }
 
 require('treesitter-context').setup{
     enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)

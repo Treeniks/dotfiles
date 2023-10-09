@@ -5,10 +5,7 @@ require('telescope').load_extension('project')
 require('toggleterm').setup{}
 
 -- indentation guides
-require('indent_blankline').setup{
-    show_current_context = true,
-    show_current_context_start = true
-}
+require('ibl').setup{}
 
 -- status line at the bottom
 require('lualine').setup{}

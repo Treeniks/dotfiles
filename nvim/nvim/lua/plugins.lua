@@ -3,6 +3,16 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'rose-pine/neovim'
+    -- use 'techtuner/aura-neovim'
+    use { 'catppuccin/vim', as = 'catppuccin' }
+    use {
+        'daltonmenezes/aura-theme',
+        rtp = 'packages/neovim',
+        -- config = function()
+        --     vim.cmd.colorscheme('aura-dark')
+        -- end
+    }
+    -- use '~/Documents/Dracula PRO - Zeno Rocha/themes/vim'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -29,6 +39,8 @@ return require('packer').startup(function(use)
         { run = ':TSUpdate' }
     }
     use 'nvim-treesitter/nvim-treesitter-context'
+
+    use 'IndianBoy42/tree-sitter-just'
 
     use 'windwp/nvim-autopairs'
 

@@ -50,6 +50,7 @@ lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
 })
 lspconfig.julials.setup{}
+lspconfig.zls.setup{}
 
 -- set lsp keybinds
 vim.api.nvim_create_autocmd('LspAttach', {
