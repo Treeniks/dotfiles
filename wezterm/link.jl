@@ -1,8 +1,10 @@
 link_target_path = "$(@__DIR__)/wezterm.lua"
 if Sys.iswindows()
-    config_path = "$(ENV["USERPROFILE"])/.config/wezterm/wezterm.lua"
+    config_dir = "$(ENV["USERPROFILE"])/.config/wezterm"
+    config_path = "$config_dir/wezterm.lua"
 elseif Sys.islinux() || Sys.isapple()
-    config_path = "$(ENV["HOME"])/.config/wezterm/wezterm.lua"
+    config_dir = "$(ENV["HOME"])/.config/wezterm"
+    config_path = "$config_dir/wezterm.lua"
 else
     println("OS not yet supported")
     exit()
@@ -18,5 +20,6 @@ if isfile(config_path)
     end
 end
 
+mkpath(config_dir)
 symlink(link_target_path, config_path)
 println("Symlink created")
