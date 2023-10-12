@@ -1,0 +1,1 @@
+Basic config taken from <https://github.com/Tnixc/dots> with the Spotify widget removed, some plugins renamend and a few icons and colors modified to the [Aura Theme Color Palette](https://github.com/daltonmenezes/aura-theme/tree/main/packages/color-palettes).

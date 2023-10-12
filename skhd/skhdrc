@@ -1,0 +1,49 @@
+cmd - return : wezterm
+alt - return : wezterm
+
+# alternative to cmd+q
+# alt+q only closes one window
+# cmd+q closes the whole app
+alt - q : yabai -m window --close
+
+# ability to minimize windows with keybind
+# unfortunately one has to unminimize with the mouse
+alt - m : yabai -m window --minimize
+
+alt - f : yabai -m window --toggle zoom-fullscreen
+alt - v : yabai -m window --toggle float
+
+alt - 0 : yabai -m space --balance
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# swap managed window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# move managed window
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - j : yabai -m window --warp south
+shift + cmd - k : yabai -m window --warp north
+shift + cmd - l : yabai -m window --warp east
+
+# go to other workspace
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+
+# move to other workspace
+shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+
