@@ -1,11 +1,24 @@
 {
     // still needs configuring
     "default_config": {
-        "linux": "Nushell",
-        "osx": "Nushell",
-        "windows": "Nushell",
+        "linux": null,
+        "osx": null,
+        "windows": "Fish",
     },
     "shell_configs": [
+        {
+            "name": "Fish",
+            "cmd": [
+                "fish"
+            ],
+            "env": {},
+            "enable": true,
+            "platforms": [
+                "linux",
+                "osx",
+                "windows"
+            ]
+        },
         {
             "name": "Nushell",
             "cmd": [
