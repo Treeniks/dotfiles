@@ -1,5 +1,5 @@
 {
-    "color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
+    "color_scheme": "rose-pine.sublime-color-scheme",
 
     "light_color_scheme": "Breakers.sublime-color-scheme",
     "dark_color_scheme": "Monokai.sublime-color-scheme",
@@ -98,7 +98,7 @@
     // User Interface Settings
     //
 
-    "theme": "Monokai Pro (Filter Spectrum).sublime-theme",
+    "theme": "Adaptive.sublime-theme",
 
     "light_theme": "Adaptive.sublime-theme",
     "dark_theme": "Adaptive Dark.sublime-theme",
