@@ -2,6 +2,9 @@ local wezterm = require 'wezterm';
 return {
     font = wezterm.font("JetBrains Mono"),
 
+    -- for MacOS yabai
+    -- window_decorations = "RESIZE",
+
     -- currently broken on Windows, see https://github.com/nushell/nushell/issues/5585
     -- fixed by disabling "shell_integration" in nushell config
     -- default_prog = {"/opt/homebrew/bin/fish"},
