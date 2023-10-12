@@ -5,9 +5,9 @@ return {
     -- for MacOS yabai
     -- window_decorations = "RESIZE",
 
-    -- currently broken on Windows, see https://github.com/nushell/nushell/issues/5585
+    -- nushell currently broken on Windows, see https://github.com/nushell/nushell/issues/5585
     -- fixed by disabling "shell_integration" in nushell config
-    -- default_prog = {"/opt/homebrew/bin/fish"},
+    default_prog = {"fish"},
     
     -- color_scheme = "Catppuccin Latte",
 
