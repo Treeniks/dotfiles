@@ -21,7 +21,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Maximized
+  # startup_mode: Maximized
 
   # Window title
   title: Alacritty
@@ -35,7 +35,7 @@ window:
 font:
   # different on different platforms
   normal:
-    family: MesloLGM NF
+    family: JetBrains Mono
 
   size: 14.0
 
@@ -106,8 +106,8 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
- program: nu
+# shell:
+#   program: fish
 
-key_bindings:
-  - { key: Return,   mods: Alt,           action: ToggleFullscreen }
+# key_bindings:
+#   - { key: Return,   mods: Alt,           action: ToggleFullscreen }
