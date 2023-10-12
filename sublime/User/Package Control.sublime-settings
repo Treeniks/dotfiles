@@ -3,7 +3,9 @@
 	"installed_packages":
 	[
 		"AlignTab",
+		"Catppuccin color schemes",
 		"CMake",
+		"Dracula Color Scheme",
 		"Duplicate Lines",
 		"FileIcons",
 		"GitHub Theme",
