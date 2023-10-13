@@ -34,6 +34,11 @@ require("lazy").setup({
         end,
     },
 
+    -- Mastering the vim language plugins
+    "tpope/vim-surround",
+    "christoomey/vim-system-copy",
+    "vim-scripts/ReplaceWithRegister",
+
     {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
