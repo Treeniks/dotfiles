@@ -53,7 +53,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         wk.register({
             l = {
-                name = 'LSP',
+                name = 'LSP Actions',
                 k = { vim.lsp.buf.hover, 'Hover', opts },
                 f = { vim.lsp.buf.format, 'Format', opts },
                 r = { vim.lsp.buf.rename, 'Rename', opts },

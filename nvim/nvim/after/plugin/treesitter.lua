@@ -1,6 +1,6 @@
 require('tree-sitter-just').setup({})
 
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.configs').setup({
     ensure_installed = { 'c', 'lua', 'rust', 'markdown', 'markdown_inline', 'javascript', 'typescript', 'zig', 'haskell', 'latex' },
 
     sync_install = false,
@@ -25,9 +25,9 @@ require('nvim-treesitter.configs').setup {
             },
         },
     },
-}
+})
 
-require('treesitter-context').setup{
+require('treesitter-context').setup({
     -- this breaks quite often with Zig
     -- and is generally not all that useful I find
     enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
@@ -42,4 +42,4 @@ require('treesitter-context').setup{
     separator = nil,
     zindex = 20, -- The Z-index of the context window
     on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
-}
+})
