@@ -56,8 +56,8 @@ done
 
 sketchybar --add item space_separator left \
            --set space_separator icon="" \
-                                 background.padding_left=23 \
-                                 background.padding_right=23 \
+                                 background.padding_left=20 \
+                                 background.padding_right=6 \
                                  label.drawing=off \
                                  icon.color=0xff61FFCA
 
@@ -83,15 +83,15 @@ sketchybar --default label.padding_left=6 \
 ########### RIGHT ITEMS ###########
 sketchybar --add item clock right \
            --set clock update_freq=1 \
-                      icon.drawing=off \
-                      script="~/.config/sketchybar/plugins/clock.sh" \
-                      background.padding_left=0
+                       icon.drawing=off \
+                       script="~/.config/sketchybar/plugins/clock.sh" \
+                       background.padding_left=0
 
 sketchybar --add item clock_logo right\
            --set clock_logo icon="" \
-                           label.drawing=off \
-                           label.drawing=off \
-                           background.color=0xffA277FF
+                            label.drawing=off \
+                            label.drawing=off \
+                            background.color=0xffA277FF
 
 sketchybar --add item date right \
            --set date update_freq=1000 \
@@ -101,8 +101,8 @@ sketchybar --add item date right \
 
 sketchybar --add item date_logo right\
            --set date_logo icon="" \
-                            label.drawing=off \
-                            background.color=0xff61FFCA
+                           label.drawing=off \
+                           background.color=0xff61FFCA
 
 sketchybar --add item battery right \
            --set battery update_freq=3 \
@@ -112,8 +112,8 @@ sketchybar --add item battery right \
 
 sketchybar --add item battery_logo right \
            --set battery_logo icon="" \
-                 label.drawing=off \
-                 background.color=0xffFFCA85
+                              label.drawing=off \
+                              background.color=0xffFFCA85
 
 sketchybar --add item net right \
            --set net script="~/.config/sketchybar/plugins/net.sh" \
@@ -122,8 +122,8 @@ sketchybar --add item net right \
 
 sketchybar --add item net_logo right \
            --set net_logo icon="" \
-                     label.drawing=off \
-                     background.color=0xffF694FF
+                          label.drawing=off \
+                          background.color=0xffF694FF
 
 ########### FINALIZING THE SETUP ###########
 sketchybar --update
