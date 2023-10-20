@@ -49,5 +49,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
 })
-lspconfig.julials.setup{}
-lspconfig.zls.setup{}
+lspconfig.julials.setup({
+    capabilities = capabilities,
+})
+lspconfig.zls.setup({
+    capabilities = capabilities,
+})
