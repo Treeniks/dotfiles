@@ -58,6 +58,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 f = { vim.lsp.buf.format, 'Format', opts },
                 r = { vim.lsp.buf.rename, 'Rename', opts },
                 a = { vim.lsp.buf.code_action, 'Code Action', opts },
+                g = {
+                    name = 'Goto',
+                    d = { vim.lsp.buf.definition, 'Goto Definition', opts },
+                    D = { vim.lsp.buf.declaration, 'Goto Declaration', opts },
+                },
             },
 
             d = {
