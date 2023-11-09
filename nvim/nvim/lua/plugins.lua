@@ -74,6 +74,11 @@ require("lazy").setup({
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
 
+    -- Isabelle LSP Config
+    -- {
+    --     dir = '~/Documents/isar-lsp.nvim'
+    -- },
+
     -- snippet engine (required for nvim-cmp)
     'L3MON4D3/LuaSnip',
 })

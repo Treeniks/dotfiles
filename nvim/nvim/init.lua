@@ -1,8 +1,15 @@
 require('plugins')
 require('remap')
 
+vim.filetype.add({
+    extension = {
+        thy = 'isabelle',
+    },
+})
+
 vim.cmd.colorscheme('rose-pine')
 -- vim.cmd.colorscheme('aura-dark')
+-- vim.cmd.colorscheme('catppuccin_mocha')
 -- light theme
 -- vim.cmd.colorscheme('catppuccin_latte')
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

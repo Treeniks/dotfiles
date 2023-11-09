@@ -58,3 +58,8 @@ lspconfig.zls.setup({
 lspconfig.clangd.setup({
     capabilities = capabilities,
 })
+
+-- require('isar-lsp')
+-- lspconfig.isabelle.setup({
+--     capabilities = capabilities,
+-- })
