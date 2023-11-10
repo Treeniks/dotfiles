@@ -35,6 +35,7 @@ require('lazy').setup({
     },
 
     -- Mastering the vim language plugins
+    'tpope/vim-repeat',
     'tpope/vim-surround',
     'christoomey/vim-system-copy',
     'vim-scripts/ReplaceWithRegister',
