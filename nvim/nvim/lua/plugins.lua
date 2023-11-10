@@ -1,19 +1,19 @@
 -- install lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable', -- latest stable release
         lazypath,
     })
 end
 vim.opt.rtp:prepend(lazypath)
 
 -- setup lazy.nvim and add all plugins
-require("lazy").setup({
+require('lazy').setup({
     -- color schemes
     {
         'rose-pine/neovim',
@@ -26,7 +26,7 @@ require("lazy").setup({
         priority = 1000,
     },
     {
-        "daltonmenezes/aura-theme",
+        'daltonmenezes/aura-theme',
         lazy = false,
         priority = 1000,
         config = function(plugin)
@@ -35,9 +35,9 @@ require("lazy").setup({
     },
 
     -- Mastering the vim language plugins
-    "tpope/vim-surround",
-    "christoomey/vim-system-copy",
-    "vim-scripts/ReplaceWithRegister",
+    'tpope/vim-surround',
+    'christoomey/vim-system-copy',
+    'vim-scripts/ReplaceWithRegister',
 
     {
         'nvim-telescope/telescope.nvim',
@@ -76,7 +76,16 @@ require("lazy").setup({
 
     -- Isabelle LSP Config
     -- {
-    --     dir = '~/Documents/isar-lsp.nvim'
+    --     dir = '~/Documents/isabelle-lsp.nvim'
+    -- },
+    -- {
+    --     dir = '~/Documents/isabelle-syn.nvim'
+    -- },
+    'Treeniks/isabelle-lsp.nvim',
+    'Treeniks/isabelle-syn.nvim',
+
+    -- {
+    --     dir = '~/Documents/tree-sitter-isar'
     -- },
 
     -- snippet engine (required for nvim-cmp)

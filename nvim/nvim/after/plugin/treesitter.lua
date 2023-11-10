@@ -18,14 +18,16 @@ require('nvim-treesitter.configs').setup({
 
             lookahead = true,
             keymaps = {
-                ["af"] = "@function.outer",
-                ["if"] = "@function.inner",
-                ["ac"] = "@class.outer",
-                ["ic"] = "@class.inner",
+                ['af'] = "@function.outer",
+                ['if'] = "@function.inner",
+                ['ac'] = "@class.outer",
+                ['ic'] = "@class.inner",
             },
         },
     },
 })
+
+-- require('tree-sitter-isar')
 
 require('treesitter-context').setup({
     -- this breaks quite often with Zig

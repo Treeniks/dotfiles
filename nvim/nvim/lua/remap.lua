@@ -2,7 +2,7 @@ local wk = require('which-key')
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
 wk.register({
     ['<C-s>'] = { vim.cmd.write, 'Save' },
