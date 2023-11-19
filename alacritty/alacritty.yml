@@ -1,39 +1,14 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
-
 window:
-  # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
-  #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background and no title bar buttons
-  # decorations: none
-
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
-  #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
-  # startup_mode: Maximized
-
-  # Window title
-  title: Alacritty
+  padding:
+    x: 10
+    y: 10
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: false
+  dynamic_title: true
 
   opacity: 0.9
 
-# Font configuration
 font:
-  # different on different platforms
   normal:
     family: JetBrains Mono
 
@@ -75,39 +50,3 @@ colors:
     magenta: '#a277ff'
     cyan:    '#61ffca'
     white:   '#edecee'
-
-cursor:
-  # Cursor style
-  style:
-    # Cursor shape
-    #
-    # Values for `shape`:
-    #   - ▇ Block
-    #   - _ Underline
-    #   - | Beam
-    shape: Beam
-
-    # Cursor blinking state
-    #
-    # Values for `blinking`:
-    #   - Never: Prevent the cursor from ever blinking
-    #   - Off: Disable blinking by default
-    #   - On: Enable blinking by default
-    #   - Always: Force the cursor to always blink
-    blinking: On
-
-# Shell
-#
-# You can set `shell.program` to the path of your favorite shell, e.g.
-# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
-# shell.
-#
-# Default:
-#   - (macOS) /bin/bash --login
-#   - (Linux/BSD) user login shell
-#   - (Windows) powershell
-# shell:
-#   program: fish
-
-# key_bindings:
-#   - { key: Return,   mods: Alt,           action: ToggleFullscreen }
