@@ -34,6 +34,11 @@ require('lazy').setup({
         end,
     },
 
+    {
+        'lervag/vimtex',
+        lazy = false,
+    },
+
     -- Mastering the vim language plugins
     'tpope/vim-repeat',
     'tpope/vim-surround',

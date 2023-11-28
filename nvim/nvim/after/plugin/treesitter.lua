@@ -1,7 +1,7 @@
 require('tree-sitter-just').setup({})
 
 require('nvim-treesitter.configs').setup({
-    ensure_installed = { 'c', 'lua', 'rust', 'markdown', 'markdown_inline', 'javascript', 'typescript', 'zig', 'haskell', 'latex' },
+    ensure_installed = { 'c', 'lua', 'rust', 'markdown', 'markdown_inline', 'javascript', 'typescript', 'zig', 'haskell' },
 
     sync_install = false,
 
@@ -10,6 +10,8 @@ require('nvim-treesitter.configs').setup({
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
+
+        disable = { 'latex' },
     },
 
     textobjects = {
