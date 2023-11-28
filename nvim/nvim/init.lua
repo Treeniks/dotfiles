@@ -40,5 +40,5 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 4
+vim.opt.scrolloff = 1
 vim.opt.signcolumn = 'yes' -- stops constant shifting because of LSP diagnostics
