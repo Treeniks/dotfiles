@@ -1,0 +1,11 @@
+format = """
+$username$hostname | $all
+"""
+
+[username]
+show_always = true
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = false
+format = '@[$ssh_symbol$hostname]($style)'
