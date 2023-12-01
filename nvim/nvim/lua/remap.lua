@@ -1,6 +1,7 @@
 local wk = require('which-key')
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
+local luasnip = require('luasnip')
 
 vim.g.mapleader = ' '
 
@@ -72,5 +73,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 n = { vim.diagnostic.goto_next, 'Goto Next', opts },
             },
         }, { prefix = '<leader>' })
+
+        -- pressing <leader>lk is sometimes a little too much work
+        -- so C-k also works
+        wk.register({
+            ['<C-k>'] = { vim.lsp.buf.hover, 'LSP Hover', opts }
+        })
     end
 })
+
+-- snippet expansion
+-- not needed as it's integrated into nvim-cmp
+-- thanks to cmp_luasnip
+-- wk.register({
+--     ['<C-l>'] = { luasnip.expand, 'Expand Snippet' },
+-- }, { mode = {'i'} })
