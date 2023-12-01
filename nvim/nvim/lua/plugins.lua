@@ -79,21 +79,21 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
+    -- snippet engine (required for nvim-cmp)
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
 
     -- Isabelle LSP Config
-    -- {
-    --     dir = '~/Documents/isabelle-lsp.nvim'
-    -- },
-    -- {
-    --     dir = '~/Documents/isabelle-syn.nvim'
-    -- },
-    'Treeniks/isabelle-lsp.nvim',
-    'Treeniks/isabelle-syn.nvim',
+    {
+        dir = '~/Documents/isabelle/isabelle-lsp.nvim'
+    },
+    {
+        dir = '~/Documents/isabelle/isabelle-syn.nvim'
+    },
+    -- 'Treeniks/isabelle-lsp.nvim',
+    -- 'Treeniks/isabelle-syn.nvim',
 
     -- {
     --     dir = '~/Documents/tree-sitter-isar'
     -- },
-
-    -- snippet engine (required for nvim-cmp)
-    'L3MON4D3/LuaSnip',
 })

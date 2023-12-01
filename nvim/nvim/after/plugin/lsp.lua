@@ -36,6 +36,7 @@ cmp.setup({
         end, { 'i', 's' })
     },
     sources = cmp.config.sources({
+        { name = 'luasnip' },
         { name = 'nvim_lsp' },
     }, {
         { name = 'path' }
@@ -63,3 +64,93 @@ require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({
     capabilities = capabilities,
 })
+
+local s = luasnip.snippet
+local sn = luasnip.snippet_node
+local isn = luasnip.indent_snippet_node
+local t = luasnip.text_node
+local i = luasnip.insert_node
+local f = luasnip.function_node
+local c = luasnip.choice_node
+local d = luasnip.dynamic_node
+local r = luasnip.restore_node
+local events = require('luasnip.util.events')
+local ai = require('luasnip.nodes.absolute_indexer')
+local extras = require('luasnip.extras')
+local l = extras.lambda
+local rep = extras.rep
+local p = extras.partial
+local m = extras.match
+local n = extras.nonempty
+local dl = extras.dynamic_lambda
+local fmt = require('luasnip.extras.fmt').fmt
+local fmta = require('luasnip.extras.fmt').fmta
+local conds = require('luasnip.extras.expand_conditions')
+local postfix = require('luasnip.extras.postfix').postfix
+local types = require('luasnip.util.types')
+local parse = require('luasnip.util.parser').parse_snippet
+local ms = luasnip.multi_snippet
+local k = require('luasnip.nodes.key_indexer').new_key
+local function copy(args)
+	return args[1]
+end
+luasnip.add_snippets('isabelle', {
+	s('\\Implies', { t('\\<Longrightarrow>'), }),
+	s('\\implies', { t('\\<longrightarrow>'), }),
+	s('\\To', { t('\\<Rightarrow>'), }),
+	s('\\to', { t('\\<rightarrow>'), }),
+
+	s('\\Iff', { t('\\<Longleftrightarrow>'), }),
+	s('\\iff', { t('\\<longleftrightarrow>'), }),
+
+	s('\\forall', { t('\\<forall>'), }),
+	s('\\exists', { t('\\<exists>'), }),
+	s('\\and', { t('\\<and>'), }),
+	s('\\or', { t('\\<or>'), }),
+	s('\\not', { t('\\<not>'), }),
+	s('\\And', { t('\\<And>'), }),
+	s('\\Or', { t('\\<Or>'), }),
+
+	s('\\open', { t('\\<open>'), }),
+	s('\\close', { t('\\<close>'), }),
+	s('\\lbrakk', { t('\\<lbrakk>'), }),
+	s('\\rbrakk', { t('\\<rbrakk>'), }),
+
+	s('\\Gamma', { t('\\<Gamma>'), }),
+	s('\\tau', { t('\\<tau>'), }),
+	s('\\turnstile', { t('\\<turnstile>'), }),
+
+    s('\\sub', { t('\\<^sub>'), }),
+    s('\\sub', { t('\\<^sub>'), }),
+
+    s('fun', {
+        t('fun '),
+        i(1, 'function_name'),
+        t(' :: "'),
+        i(2),
+        t({'" where', '\t"'}),
+        f(copy, 1),
+        t(' '),
+        i(3),
+        t('"'),
+    }),
+    s('inductive', {
+        t('inductive '),
+        i(1, 'predicate_name'),
+        t(' :: "'),
+        i(2),
+        t({'" where', '\t"'}),
+        f(copy, 1),
+        t(' '),
+        i(3),
+        t('"'),
+    }),
+    s('proof', {
+        t('proof ('),
+        i(1, 'induction'),
+        t({')', '\t'}),
+        i(2),
+        t({'', 'qed'}),
+    }),
+})
+
