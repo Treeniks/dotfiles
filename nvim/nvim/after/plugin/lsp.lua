@@ -106,6 +106,11 @@ luasnip.add_snippets('isabelle', {
 	s('\\To', { t('\\<Rightarrow>'), }),
 	s('\\to', { t('\\<rightarrow>'), }),
 
+	s('\\Longrightarrow', { t('\\<Longrightarrow>'), }),
+	s('\\longrightarrow', { t('\\<longrightarrow>'), }),
+	s('\\Rightarrow', { t('\\<Rightarrow>'), }),
+	s('\\rightarrow', { t('\\<rightarrow>'), }),
+
 	s('\\Iff', { t('\\<Longleftrightarrow>'), }),
 	s('\\iff', { t('\\<longleftrightarrow>'), }),
 
@@ -116,6 +121,11 @@ luasnip.add_snippets('isabelle', {
 	s('\\not', { t('\\<not>'), }),
 	s('\\And', { t('\\<And>'), }),
 	s('\\Or', { t('\\<Or>'), }),
+
+	s('\\noteq', { t('\\<noteq>'), }),
+	s('\\neq', { t('\\<noteq>'), }),
+	s('\\le', { t('\\<le>'), }),
+	s('\\ge', { t('\\<ge>'), }),
 
 	s('\\open', { t('\\<open>'), }),
 	s('\\close', { t('\\<close>'), }),
@@ -128,6 +138,14 @@ luasnip.add_snippets('isabelle', {
 
     s('\\sub', { t('\\<^sub>'), }),
     s('\\sub', { t('\\<^sub>'), }),
+
+    s('simp', { t('simp'), }),
+    s('auto', { t('auto'), }),
+    s('force', { t('force'), }),
+    s('fastforce', { t('fastforce'), }),
+    s('blast', { t('blast'), }),
+    s('try0', { t('try0'), }),
+    s('sledgehammer', { t('sledgehammer'), }),
 
     s('fun', {
         t('fun '),
