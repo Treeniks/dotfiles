@@ -21,14 +21,18 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.confirm({ select = true })
-            elseif luasnip.jumpable() then
+            -- elseif luasnip.expandable() then
+            --     luasnip.expand()
+            -- elseif luasnip.expand_or_jumpable() then
+            --     luasnip.expand_or_jump()
+            elseif luasnip.jumpable(1) then
                 luasnip.jump(1)
             else
                 fallback()
             end
         end, { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
-            if luasnip.jumpable() then
+            if luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             else
                 fallback()
@@ -91,9 +95,11 @@ local types = require('luasnip.util.types')
 local parse = require('luasnip.util.parser').parse_snippet
 local ms = luasnip.multi_snippet
 local k = require('luasnip.nodes.key_indexer').new_key
+
 local function copy(args)
 	return args[1]
 end
+
 luasnip.add_snippets('isabelle', {
 	s('\\Implies', { t('\\<Longrightarrow>'), }),
 	s('\\implies', { t('\\<longrightarrow>'), }),
