@@ -137,7 +137,6 @@ luasnip.add_snippets('isabelle', {
 	s('\\turnstile', { t('\\<turnstile>'), }),
 
     s('\\sub', { t('\\<^sub>'), }),
-    s('\\sub', { t('\\<^sub>'), }),
 
     s('simp', { t('simp'), }),
     s('auto', { t('auto'), }),
