@@ -116,7 +116,8 @@ sketchybar --add item battery_logo right \
                               background.color=0xffFFCA85
 
 sketchybar --add item net right \
-           --set net script="~/.config/sketchybar/plugins/net.sh" \
+           --set net update_freq=30 \
+                     script="~/.config/sketchybar/plugins/net.sh" \
                      icon.drawing=off \
                      background.padding_left=0
 
