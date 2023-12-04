@@ -5,7 +5,9 @@ $username$hostname | $all
 [username]
 show_always = true
 format = '[$user]($style)'
+style_user = 'bold yellow'
 
 [hostname]
 ssh_only = false
 format = '@[$ssh_symbol$hostname]($style)'
+style = 'bold green'
