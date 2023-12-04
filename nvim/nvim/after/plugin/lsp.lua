@@ -63,6 +63,9 @@ lspconfig.zls.setup({
 lspconfig.clangd.setup({
     capabilities = capabilities,
 })
+lspconfig.ocamllsp.setup({
+    capabilities = capabilities,
+})
 
 require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({
