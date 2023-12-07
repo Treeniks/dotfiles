@@ -84,14 +84,14 @@ require('lazy').setup({
     'saadparwaiz1/cmp_luasnip',
 
     -- Isabelle LSP Config
-    {
-        dir = '~/Documents/isabelle/isabelle-lsp.nvim'
-    },
-    {
-        dir = '~/Documents/isabelle/isabelle-syn.nvim'
-    },
-    -- 'Treeniks/isabelle-lsp.nvim',
-    -- 'Treeniks/isabelle-syn.nvim',
+    -- {
+    --     dir = '~/Documents/isabelle/isabelle-lsp.nvim'
+    -- },
+    -- {
+    --     dir = '~/Documents/isabelle/isabelle-syn.nvim'
+    -- },
+    'Treeniks/isabelle-lsp.nvim',
+    'Treeniks/isabelle-syn.nvim',
 
     -- {
     --     dir = '~/Documents/tree-sitter-isar'
