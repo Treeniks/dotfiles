@@ -3,8 +3,7 @@ local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
 local luasnip = require('luasnip')
 
-local harpoon_mark = require('harpoon.mark')
-local harpoon_ui = require('harpoon.ui')
+local harpoon = require('harpoon')
 
 vim.g.mapleader = ' '
 
@@ -41,12 +40,16 @@ wk.register({
     -- Harpoon Keybinds
     h = {
         name = 'Harpoon',
-        m = { harpoon_mark.add_file, 'Mark' },
-        f = { harpoon_ui.toggle_quick_menu, 'Quick Menu' },
-        n = { harpoon_ui.nav_next, 'Next' },
-        p = { harpoon_ui.nav_prev, 'Prev' },
+        m = { function() harpoon:list():append() end, 'Mark' },
+        f = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, 'Quick Menu' },
     },
 }, { prefix = '<leader>' })
+
+wk.register({
+    ['<C-a>'] = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, 'Harpoon Quick Menu' },
+    ['<C-z>'] = { function() harpoon:list():select(1) end, 'Harpoon Prev' },
+    ['<C-x>'] = { function() harpoon:list():select(2) end, 'Harpoon Next' },
+}, { mode = {'n', 'i'} })
 
 -- toogleterm
 wk.register({

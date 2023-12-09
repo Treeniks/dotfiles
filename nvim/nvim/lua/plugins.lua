@@ -50,7 +50,10 @@ require('lazy').setup({
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-project.nvim',
 
-    'ThePrimeagen/harpoon',
+    {
+        'ThePrimeagen/harpoon',
+        branch = 'harpoon2',
+    },
 
     'folke/which-key.nvim',
 
