@@ -76,6 +76,9 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter-textobjects',
     'IndianBoy42/tree-sitter-just',
 
+    'alaviss/tree-sitter-nim',
+    'alaviss/nim.nvim',
+
     'windwp/nvim-autopairs',
 
     -- LSP and autocompletion
