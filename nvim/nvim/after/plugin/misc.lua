@@ -13,6 +13,6 @@ require('lualine').setup({})
 -- gcc command
 require('Comment').setup({})
 
-require('nvim-autopairs').setup({})
+-- require('nvim-autopairs').setup({})
 
 require('harpoon'):setup()

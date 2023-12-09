@@ -79,7 +79,7 @@ require('lazy').setup({
     'alaviss/tree-sitter-nim',
     'alaviss/nim.nvim',
 
-    'windwp/nvim-autopairs',
+    -- 'windwp/nvim-autopairs',
 
     -- LSP and autocompletion
     'neovim/nvim-lspconfig',
