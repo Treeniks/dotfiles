@@ -45,11 +45,12 @@ require('lazy').setup({
     'christoomey/vim-system-copy',
     'vim-scripts/ReplaceWithRegister',
 
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' },
-    },
+    'nvim-lua/plenary.nvim',
+
+    'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-project.nvim',
+
+    'ThePrimeagen/harpoon',
 
     'folke/which-key.nvim',
 

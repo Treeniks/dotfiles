@@ -1,7 +1,10 @@
 local wk = require('which-key')
 local telescope = require('telescope')
-local builtin = require('telescope.builtin')
+local telescope_builtin = require('telescope.builtin')
 local luasnip = require('luasnip')
+
+local harpoon_mark = require('harpoon.mark')
+local harpoon_ui = require('harpoon.ui')
 
 vim.g.mapleader = ' '
 
@@ -22,17 +25,26 @@ wk.register({
         'Ex in CWD',
     },
 
-    -- Telescope keybinds
+    -- Telescope Keybinds
     t = {
         name = 'Telescope',
         p = { telescope.extensions.project.project, 'Project' },
-        f = { builtin.find_files, 'Files' },
-        g = { builtin.git_files, 'Git Files' },
+        f = { telescope_builtin.find_files, 'Files' },
+        g = { telescope_builtin.git_files, 'Git Files' },
         s = {
-            function() builtin.grep_string({ search = vim.fn.input('Grep > ') }) end,
+            function() telescope_builtin.grep_string({ search = vim.fn.input('Grep > ') }) end,
             'Grep Search',
         },
-        b = { builtin.buffers, 'Buffers' },
+        b = { telescope_builtin.buffers, 'Buffers' },
+    },
+
+    -- Harpoon Keybinds
+    h = {
+        name = 'Harpoon',
+        m = { harpoon_mark.add_file, 'Mark' },
+        f = { harpoon_ui.toggle_quick_menu, 'Quick Menu' },
+        n = { harpoon_ui.nav_next, 'Next' },
+        p = { harpoon_ui.nav_prev, 'Prev' },
     },
 }, { prefix = '<leader>' })
 
