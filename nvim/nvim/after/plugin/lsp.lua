@@ -66,6 +66,9 @@ lspconfig.clangd.setup({
 lspconfig.ocamllsp.setup({
     capabilities = capabilities,
 })
+lspconfig.nim_langserver.setup({
+    capabilities = capabilities,
+})
 
 require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({
