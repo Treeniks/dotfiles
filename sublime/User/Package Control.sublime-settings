@@ -11,6 +11,7 @@
         "GitHub Theme",
         "Julia",
         "LSP",
+        "LSP-clangd",
         "LSP-json",
         "LSP-julia",
         "LSP-rust-analyzer",
