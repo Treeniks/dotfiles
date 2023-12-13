@@ -78,6 +78,7 @@ require('lazy').setup({
 
     'alaviss/tree-sitter-nim',
     'alaviss/nim.nvim',
+    'jlcrochet/vim-crystal',
 
     -- 'windwp/nvim-autopairs',
 

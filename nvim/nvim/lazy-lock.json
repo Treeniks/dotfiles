@@ -25,6 +25,7 @@
   "toggleterm.nvim": { "branch": "main", "commit": "cbd041d91b90cd3c02df03fe6133208888f8e008" },
   "tree-sitter-just": { "branch": "main", "commit": "4e5f5f3ff37b12a1bbf664eb3966b3019e924594" },
   "tree-sitter-nim": { "branch": "main", "commit": "1f9308c9e440ddbc67c0aaeb9396c992d266b281" },
+  "vim-crystal": { "branch": "master", "commit": "967ee45d195dd236e788d69c5e9340bee6306489" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-system-copy": { "branch": "master", "commit": "1e5afc45d38a4ebb5b949415c0711c2b5e51959a" },
