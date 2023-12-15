@@ -72,6 +72,9 @@ lspconfig.nim_langserver.setup({
 lspconfig.crystalline.setup({
     capabilities = capabilities,
 })
+lspconfig.sourcekit.setup({
+    capabilities = capabilities,
+})
 
 require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({
