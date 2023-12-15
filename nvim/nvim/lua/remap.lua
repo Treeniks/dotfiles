@@ -54,7 +54,7 @@ wk.register({
 -- toogleterm
 wk.register({
     ['<C-\\>'] = { function() vim.cmd.ToggleTerm('direction=float') end, 'Open Floating Terminal' },
-}, { mode = {'n', 't'} })
+}, { mode = {'n', 'i', 't'} })
 
 -- Default Keybind to go into Normal Mode while in Terminal Mode is <C-\><C-n>
 wk.register({
