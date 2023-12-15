@@ -130,10 +130,10 @@ require('lazy').setup({
     'alaviss/nim.nvim',
     'jlcrochet/vim-crystal',
 
-    -- {
-    --     'windwp/nvim-autopairs',
-    --     opts = {},
-    -- },
+    {
+        'windwp/nvim-autopairs',
+        opts = {},
+    },
 
     -- LSP and autocompletion
     'neovim/nvim-lspconfig',
