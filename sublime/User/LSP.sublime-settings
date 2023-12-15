@@ -27,5 +27,11 @@
             ],
             "selector": "source.zig",
         },
+        "crystalline": {
+            "command": [
+                "crystalline"
+            ],
+            "selector": "source.crystal",
+        },
     },
 }
