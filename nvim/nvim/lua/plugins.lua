@@ -49,7 +49,10 @@ require('lazy').setup({
             require('nvim-surround').setup({})
         end,
     },
-    'christoomey/vim-system-copy',
+    -- causes delay on 'c' commands
+    -- specifically in visual mode, 'c' will be delayed
+    -- as the command might be 'cp'
+    -- 'christoomey/vim-system-copy',
     'vim-scripts/ReplaceWithRegister',
     'mg979/vim-visual-multi',
 
