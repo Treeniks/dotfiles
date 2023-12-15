@@ -44,6 +44,7 @@ require('lazy').setup({
     'tpope/vim-surround',
     'christoomey/vim-system-copy',
     'vim-scripts/ReplaceWithRegister',
+    'mg979/vim-visual-multi',
 
     'nvim-lua/plenary.nvim',
 
