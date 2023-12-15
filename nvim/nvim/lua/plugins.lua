@@ -37,6 +37,23 @@ require('lazy').setup({
     {
         'lervag/vimtex',
         lazy = false,
+        config = function()
+            vim.g.vimtex_syntax_conceal = {
+                accents = 1,
+                ligatures = 1,
+                cites = 1,
+                fancy = 1,
+                spacing = 0,
+                greek = 1,
+                math_bounds = 0,
+                math_delimiters = 1,
+                math_fracs = 1,
+                math_super_sub = 1,
+                math_symbols = 1,
+                sections = 1,
+                styles = 1,
+            }
+        end,
     },
 
     -- Mastering the vim language plugins
@@ -45,9 +62,7 @@ require('lazy').setup({
         "kylechui/nvim-surround",
         version = "*", -- use for stability
         event = "VeryLazy",
-        config = function()
-            require('nvim-surround').setup({})
-        end,
+        opts = {},
     },
     -- causes delay on 'c' commands
     -- specifically in visual mode, 'c' will be delayed
@@ -59,25 +74,49 @@ require('lazy').setup({
     'nvim-lua/plenary.nvim',
 
     'nvim-telescope/telescope.nvim',
-    'nvim-telescope/telescope-project.nvim',
+    {
+        'nvim-telescope/telescope-project.nvim',
+        config = function()
+            require('telescope').load_extension('project')
+        end,
+    },
 
     {
         'ThePrimeagen/harpoon',
         branch = 'harpoon2',
+        opts = {},
     },
 
-    'folke/which-key.nvim',
+    {
+        'folke/which-key.nvim',
+        opts = {},
+    },
 
-    'akinsho/toggleterm.nvim',
+    {
+        'akinsho/toggleterm.nvim',
+        opts = {},
+    },
 
-    'lukas-reineke/indent-blankline.nvim',
+    -- indentation guides
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('ibl').setup({ scope = { enabled = false } })
+        end,
+    },
 
+    -- status line at the bottom
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
+        opts = {},
     },
 
-    'numToStr/Comment.nvim',
+    -- gcc command
+    {
+        'numToStr/Comment.nvim',
+        opts = {},
+    },
 
     {
         'nvim-treesitter/nvim-treesitter',
@@ -91,7 +130,10 @@ require('lazy').setup({
     'alaviss/nim.nvim',
     'jlcrochet/vim-crystal',
 
-    -- 'windwp/nvim-autopairs',
+    -- {
+    --     'windwp/nvim-autopairs',
+    --     opts = {},
+    -- },
 
     -- LSP and autocompletion
     'neovim/nvim-lspconfig',
