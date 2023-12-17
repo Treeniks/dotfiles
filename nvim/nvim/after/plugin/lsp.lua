@@ -221,6 +221,7 @@ luasnip.add_snippets('isabelle', {
     -- other symbols
 	s('\\turnstile', { t('\\<turnstile>') }),
 	s('\\circ', { t('\\<circ>') }),
+	s('\\dots', { t('\\<dots>') }),
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),
