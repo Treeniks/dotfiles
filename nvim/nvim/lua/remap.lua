@@ -43,6 +43,12 @@ wk.register({
         m = { function() harpoon:list():append() end, 'Mark' },
         f = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, 'Quick Menu' },
     },
+
+    c = {
+        name = "lol",
+        r = { function() vim.cmd('CellularAutomaton make_it_rain') end, 'Rain' },
+        g = { function() vim.cmd('CellularAutomaton game_of_life') end, 'Game' },
+    },
 }, { prefix = '<leader>' })
 
 wk.register({

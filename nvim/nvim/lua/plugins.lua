@@ -154,7 +154,6 @@ require('lazy').setup({
     'Treeniks/isabelle-lsp.nvim',
     'Treeniks/isabelle-syn.nvim',
 
-    -- {
-    --     dir = '~/Documents/tree-sitter-isar'
-    -- },
+    -- lol
+    'eandrju/cellular-automaton.nvim',
 })
