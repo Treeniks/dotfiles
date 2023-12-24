@@ -33,6 +33,21 @@ require('lazy').setup({
             vim.opt.rtp:append(plugin.dir .. '/packages/neovim')
         end,
     },
+    {
+        'loctvl842/monokai-pro.nvim',
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        'sainnhe/sonokai',
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        'EdenEast/nightfox.nvim',
+        lazy = false,
+        priority = 1000,
+    },
 
     {
         'lervag/vimtex',
