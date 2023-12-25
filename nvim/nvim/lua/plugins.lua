@@ -48,6 +48,11 @@ require('lazy').setup({
         lazy = false,
         priority = 1000,
     },
+    {
+        'kaicataldo/material.vim',
+        lazy = false,
+        priority = 1000,
+    },
 
     {
         'lervag/vimtex',

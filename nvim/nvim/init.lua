@@ -6,8 +6,10 @@ require('remap')
 vim.cmd.colorscheme('catppuccin_mocha')
 -- vim.cmd.colorscheme('carbonfox')
 -- vim.cmd.colorscheme('monokai-pro-spectrum')
--- vim.g.sonokai_style = 'andromeda'
+vim.g.sonokai_style = 'andromeda'
 -- vim.cmd.colorscheme('sonokai')
+vim.g.material_theme_style = 'darker'
+-- vim.cmd.colorscheme('material')
 -- light theme
 -- vim.cmd.colorscheme('catppuccin_latte')
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
