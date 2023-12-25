@@ -1,15 +1,22 @@
 require('plugins')
 require('remap')
 
+-- Theme selection
 -- vim.cmd.colorscheme('rose-pine')
 -- vim.cmd.colorscheme('aura-dark')
-vim.cmd.colorscheme('catppuccin_mocha')
+-- vim.cmd.colorscheme('catppuccin_mocha')
+-- vim.cmd.colorscheme('iceberg')
 -- vim.cmd.colorscheme('carbonfox')
+vim.cmd.colorscheme('tokyonight-moon')
+-- vim.cmd.colorscheme('embark')
 -- vim.cmd.colorscheme('monokai-pro-spectrum')
-vim.g.sonokai_style = 'andromeda'
+--
+-- vim.g.sonokai_style = 'andromeda'
 -- vim.cmd.colorscheme('sonokai')
-vim.g.material_theme_style = 'darker'
+--
+-- vim.g.material_theme_style = 'darker'
 -- vim.cmd.colorscheme('material')
+--
 -- light theme
 -- vim.cmd.colorscheme('catppuccin_latte')
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })

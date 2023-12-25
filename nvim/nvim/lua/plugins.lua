@@ -53,6 +53,26 @@ require('lazy').setup({
         lazy = false,
         priority = 1000,
     },
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        'cocopon/iceberg.vim',
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        'morhetz/gruvbox',
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        'embark-theme/vim', name = 'embark',
+        lazy = false,
+        priority = 1000,
+    },
 
     {
         'lervag/vimtex',
