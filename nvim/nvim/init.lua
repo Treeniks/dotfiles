@@ -7,9 +7,9 @@ require('remap')
 -- vim.cmd.colorscheme('catppuccin_mocha')
 -- vim.cmd.colorscheme('iceberg')
 -- vim.cmd.colorscheme('carbonfox')
-vim.cmd.colorscheme('tokyonight-moon')
+-- vim.cmd.colorscheme('tokyonight-moon')
 -- vim.cmd.colorscheme('embark')
--- vim.cmd.colorscheme('monokai-pro-spectrum')
+vim.cmd.colorscheme('monokai-pro')
 --
 -- vim.g.sonokai_style = 'andromeda'
 -- vim.cmd.colorscheme('sonokai')
@@ -19,9 +19,9 @@ vim.cmd.colorscheme('tokyonight-moon')
 --
 -- light theme
 -- vim.cmd.colorscheme('catppuccin_latte')
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 
 -- Neovide settings
 vim.g.neovide_theme = 'dark'

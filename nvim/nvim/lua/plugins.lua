@@ -37,6 +37,10 @@ require('lazy').setup({
         'loctvl842/monokai-pro.nvim',
         lazy = false,
         priority = 1000,
+        opts = {
+            transparent_background = true,
+            filter = 'spectrum',
+        },
     },
     {
         'sainnhe/sonokai',
@@ -140,16 +144,23 @@ require('lazy').setup({
     -- indentation guides
     {
         'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require('ibl').setup({ scope = { enabled = false } })
-        end,
+        main = 'ibl',
+        opts = {
+            indent = { highlight = 'Comment', char = '▏' },
+            scope = { enabled = false },
+        },
+    },
     },
 
     -- status line at the bottom
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
-        opts = {},
+        opts = {
+            options = {
+                theme = 'monokai-pro',
+            },
+        },
     },
 
     -- gcc command
