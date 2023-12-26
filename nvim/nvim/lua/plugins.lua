@@ -162,11 +162,7 @@ require('lazy').setup({
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
-        opts = {
-            options = {
-                theme = 'monokai-pro',
-            },
-        },
+        opts = {},
     },
 
     -- gcc command
@@ -192,6 +188,17 @@ require('lazy').setup({
         opts = {},
     },
 
+    {
+        'echasnovski/mini.nvim',
+        config = function()
+            require('mini.files').setup({
+                windows = {
+                    preview = true,
+                },
+            })
+        end,
+    },
+
     -- LSP and autocompletion
     'neovim/nvim-lspconfig',
     'hrsh7th/nvim-cmp',
@@ -200,6 +207,11 @@ require('lazy').setup({
     -- snippet engine (required for nvim-cmp)
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
+
+    {
+        'folke/neodev.nvim',
+        opts = {},
+    },
 
     -- Isabelle LSP Config
     -- {

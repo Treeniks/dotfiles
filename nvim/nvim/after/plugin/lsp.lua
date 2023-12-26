@@ -75,6 +75,9 @@ lspconfig.crystalline.setup({
 lspconfig.sourcekit.setup({
     capabilities = capabilities,
 })
+lspconfig.lua_ls.setup({
+    capabilities = capabilities,
+})
 
 require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({

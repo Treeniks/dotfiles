@@ -1,7 +1,7 @@
 local wk = require('which-key')
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
-local luasnip = require('luasnip')
+local mini_files = require('mini.files')
 
 local harpoon = require('harpoon')
 
@@ -16,12 +16,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 wk.register({
     e = {
-        vim.cmd.Ex,
-        'Ex',
-    },
-    r = {
-        function() vim.cmd.Ex('.') end,
-        'Ex in CWD',
+        function() mini_files.open() end,
+        'Mini Files',
     },
 
     -- Telescope Keybinds
@@ -106,6 +102,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- snippet expansion
 -- not needed as it's integrated into nvim-cmp
 -- thanks to cmp_luasnip
+--
+-- local luasnip = require('luasnip')
 -- wk.register({
 --     ['<C-l>'] = { luasnip.expand, 'Expand Snippet' },
 -- }, { mode = {'i'} })
