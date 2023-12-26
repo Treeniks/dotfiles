@@ -2,6 +2,7 @@ local wk = require('which-key')
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
 local mini_files = require('mini.files')
+local neogit = require('neogit')
 
 local harpoon = require('harpoon')
 
@@ -46,9 +47,10 @@ wk.register({
         g = { function() vim.cmd('CellularAutomaton game_of_life') end, 'Game' },
     },
 
-    n = { function() vim.cmd('tabnext') end, 'Tab Next' },
-    p = { function() vim.cmd('tabprevious') end, 'Tab Previous' },
-    m = { function() vim.cmd('tabnew') end, 'Tab New' },
+    g = { neogit.open, 'Neogit' },
+    j = { function() vim.cmd('tabnext') end, 'Tab Next' },
+    k = { function() vim.cmd('tabprevious') end, 'Tab Previous' },
+    n = { function() vim.cmd('tabnew') end, 'Tab New' },
     q = { function() vim.cmd('tabclose') end, 'Tab Close' },
 }, { prefix = '<leader>' })
 
