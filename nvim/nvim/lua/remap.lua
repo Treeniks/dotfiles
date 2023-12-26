@@ -47,6 +47,11 @@ wk.register({
         g = { function() vim.cmd('CellularAutomaton game_of_life') end, 'Game' },
     },
 
+    m = {
+        name = "Mini",
+        t = { MiniMap.toggle, "MiniMap Toggle" },
+    },
+
     g = { neogit.open, 'Neogit' },
     j = { function() vim.cmd('tabnext') end, 'Tab Next' },
     k = { function() vim.cmd('tabprevious') end, 'Tab Previous' },

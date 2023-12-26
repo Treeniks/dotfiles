@@ -208,6 +208,9 @@ require('lazy').setup({
                     preview = true,
                 },
             })
+
+            require('mini.map').setup({})
+            MiniMap.open()
         end,
     },
 
