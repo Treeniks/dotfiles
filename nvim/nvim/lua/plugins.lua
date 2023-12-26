@@ -150,6 +150,12 @@ require('lazy').setup({
             scope = { enabled = false },
         },
     },
+
+    -- whitespace
+    {
+        'johnfrankmorgan/whitespace.nvim',
+        main = 'whitespace-nvim',
+        opts = {},
     },
 
     -- status line at the bottom

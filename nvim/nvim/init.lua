@@ -55,3 +55,8 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 1
 vim.opt.signcolumn = 'yes' -- stops constant shifting because of LSP diagnostics
+
+vim.opt.list = true
+vim.opt.listchars = {
+    trail = "⋅",
+}
