@@ -45,6 +45,11 @@ wk.register({
         r = { function() vim.cmd('CellularAutomaton make_it_rain') end, 'Rain' },
         g = { function() vim.cmd('CellularAutomaton game_of_life') end, 'Game' },
     },
+
+    n = { function() vim.cmd('tabnext') end, 'Tab Next' },
+    p = { function() vim.cmd('tabprevious') end, 'Tab Previous' },
+    m = { function() vim.cmd('tabnew') end, 'Tab New' },
+    q = { function() vim.cmd('tabclose') end, 'Tab Close' },
 }, { prefix = '<leader>' })
 
 wk.register({
