@@ -46,10 +46,11 @@ vim.keymap.set('n', '<leader>q', vim.cmd.tabclose, { desc = 'Tab Close' })
 -- toggleterm
 vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>', function() vim.cmd.ToggleTerm('direction=float') end,
     { desc = 'Open Floating Terminal' })
-
+vim.keymap.set({ 'n', 'i' }, '<leader>b', function() vim.cmd.ToggleTerm('direction=tab') end,
+    { desc = 'Open Floating Terminal' })
 
 -- Default Keybind to go into Normal Mode while in Terminal Mode is <C-\><C-n>
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit Terminal Mode' })
+vim.keymap.set('t', '<C-]>', '<C-\\><C-n>', { desc = 'Exit Terminal Mode' })
 
 -- lsp keybinds
 vim.api.nvim_create_autocmd('LspAttach', {
