@@ -132,11 +132,6 @@ require('lazy').setup({
     },
 
     {
-        'folke/which-key.nvim',
-        opts = {},
-    },
-
-    {
         'akinsho/toggleterm.nvim',
         opts = {},
     },
@@ -211,6 +206,8 @@ require('lazy').setup({
 
             require('mini.map').setup({})
             MiniMap.open()
+
+            -- mini.clue setup is in remap file
         end,
     },
 
