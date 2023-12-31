@@ -205,7 +205,8 @@ require('lazy').setup({
             })
 
             require('mini.map').setup({})
-            MiniMap.open()
+            -- should only be done on-demand with <leader>mt
+            -- MiniMap.open()
 
             -- mini.clue setup is in remap file
         end,
