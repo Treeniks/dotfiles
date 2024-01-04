@@ -117,12 +117,12 @@ end
 
 luasnip.add_snippets('isabelle', {
     -- arrows
-	s('\\Implies', { t('\\<Longrightarrow>') }),
-	s('\\implies', { t('\\<longrightarrow>') }),
-	s('\\To', { t('\\<Rightarrow>') }),
-	s('\\to', { t('\\<rightarrow>') }),
-	s('\\Iff', { t('\\<Longleftrightarrow>') }),
-	s('\\iff', { t('\\<longleftrightarrow>') }),
+    s('\\Implies', { t('\\<Longrightarrow>') }),
+    s('\\implies', { t('\\<longrightarrow>') }),
+    s('\\To', { t('\\<Rightarrow>') }),
+    s('\\to', { t('\\<rightarrow>') }),
+    s('\\Iff', { t('\\<Longleftrightarrow>') }),
+    s('\\iff', { t('\\<longleftrightarrow>') }),
 
     s('\\leftarrow', { t('\\<leftarrow>') }),
     s('\\longleftarrow', { t('\\<longleftarrow>') }),
@@ -166,25 +166,27 @@ luasnip.add_snippets('isabelle', {
     s('\\Inter', { t('\\<Inter>') }),
     s('\\union', { t('\\<union>') }),
     s('\\Union', { t('\\<Union>') }),
+    s('\\emptyset', { t('\\<emptyset>') }),
 
     -- relations
-	s('\\noteq', { t('\\<noteq>') }),
-	s('\\neq', { t('\\<noteq>') }),
-	s('\\le', { t('\\<le>') }),
-	s('\\ge', { t('\\<ge>') }),
-	s('\\sim', { t('\\<sim>') }),
+    s('\\noteq', { t('\\<noteq>') }),
+    s('\\neq', { t('\\<noteq>') }),
+    s('\\le', { t('\\<le>') }),
+    s('\\ge', { t('\\<ge>') }),
+    s('\\sim', { t('\\<sim>') }),
+    s('\\equiv', { t('\\<equiv>') }),
 
     -- brackets
-	s('\\open', { t('\\<open>') }),
-	s('\\close', { t('\\<close>') }),
-	s('\\lbrakk', { t('\\<lbrakk>') }),
-	s('\\rbrakk', { t('\\<rbrakk>') }),
+    s('\\open', { t('\\<open>') }),
+    s('\\close', { t('\\<close>') }),
+    s('\\lbrakk', { t('\\<lbrakk>') }),
+    s('\\rbrakk', { t('\\<rbrakk>') }),
 
     -- greek symbols
     s('\\alpha', { t('\\<alpha>') }),
     s('\\beta', { t('\\<beta>') }),
-	s('\\Gamma', { t('\\<Gamma>') }),
-	s('\\tau', { t('\\<tau>') }),
+    s('\\Gamma', { t('\\<Gamma>') }),
+    s('\\tau', { t('\\<tau>') }),
 
     s('\\alpha', { t('\\<alpha>') }),
     s('\\beta', { t('\\<beta>') }),
@@ -222,9 +224,9 @@ luasnip.add_snippets('isabelle', {
     s('\\Omega', { t('\\<Omega>') }),
 
     -- other symbols
-	s('\\turnstile', { t('\\<turnstile>') }),
-	s('\\circ', { t('\\<circ>') }),
-	s('\\dots', { t('\\<dots>') }),
+    s('\\turnstile', { t('\\<turnstile>') }),
+    s('\\circ', { t('\\<circ>') }),
+    s('\\dots', { t('\\<dots>') }),
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),
