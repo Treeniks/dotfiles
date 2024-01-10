@@ -1,6 +1,9 @@
 require('plugins')
 require('remap')
 
+local ft = require('Comment.ft')
+ft.set('isabelle', {'(*%s*)', '(*%s*)'})
+
 -- Theme selection
 -- vim.cmd.colorscheme('rose-pine')
 -- vim.cmd.colorscheme('aura-dark')
