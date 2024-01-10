@@ -202,6 +202,11 @@ require('lazy').setup({
                 windows = {
                     preview = true,
                 },
+
+                mappings = {
+                    go_in = 'L',
+                    go_in_plus = 'l',
+                },
             })
 
             require('mini.map').setup({})
@@ -228,10 +233,10 @@ require('lazy').setup({
 
     -- Isabelle LSP Config
     -- {
-    --     dir = '~/Documents/isabelle/isabelle-lsp.nvim'
+    --     dir = '~/Documents/isabelle/isabelle-lsp.nvim',
     -- },
     -- {
-    --     dir = '~/Documents/isabelle/isabelle-syn.nvim'
+    --     dir = '~/Documents/isabelle/isabelle-syn.nvim',
     -- },
     'Treeniks/isabelle-lsp.nvim',
     'Treeniks/isabelle-syn.nvim',

@@ -1,6 +1,5 @@
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
-local mini_files = require('mini.files')
 local neogit = require('neogit')
 
 local harpoon = require('harpoon')
@@ -12,7 +11,7 @@ vim.keymap.set({ 'n', 'i' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
-vim.keymap.set('n', '<leader>e', mini_files.open, { desc = 'Mini Files' })
+vim.keymap.set('n', '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = 'Mini Files' })
 
 -- Telescope Keybinds
 vim.keymap.set('n', '<leader>tp', telescope.extensions.project.project, { desc = 'Telescope Project' })
@@ -117,6 +116,13 @@ miniclue.setup({
         miniclue.gen_clues.windows(),
         miniclue.gen_clues.z(),
 
+        { mode = 'n', keys = '<leader>l', desc = 'LSP' },
+        { mode = 'n', keys = '<leader>g', desc = 'LSP Goto' },
+        { mode = 'n', keys = '<leader>d', desc = 'LSP Diagnostic' },
+        { mode = 'n', keys = '<leader>t', desc = 'Telescope' },
+        { mode = 'n', keys = '<leader>h', desc = 'Harpoon' },
+        { mode = 'n', keys = '<leader>m', desc = 'MiniMap' },
+        { mode = 'n', keys = '<leader>c', desc = 'lol' },
         -- would need to add a whole bunch of custom clues for defualt actions
         -- oof
         -- { mode = 'n', keys = 'cw', desc = 'Change Word' }
