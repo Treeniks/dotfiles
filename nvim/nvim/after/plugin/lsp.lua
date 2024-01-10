@@ -227,6 +227,7 @@ luasnip.add_snippets('isabelle', {
     s('\\turnstile', { t('\\<turnstile>') }),
     s('\\circ', { t('\\<circ>') }),
     s('\\dots', { t('\\<dots>') }),
+    s('\\times', { t('\\<times>') }),
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),
