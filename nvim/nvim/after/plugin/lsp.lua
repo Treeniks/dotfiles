@@ -145,6 +145,8 @@ luasnip.add_snippets('isabelle', {
     s('\\mapsto', { t('\\<mapsto>') }),
     s('\\longmapsto', { t('\\<longmapsto>') }),
 
+    s('\\down', { t('\\<down>') }),
+
     -- logic
     s('\\and', { t('\\<and>') }),
     s('\\And', { t('\\<And>') }),
