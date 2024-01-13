@@ -230,6 +230,7 @@ luasnip.add_snippets('isabelle', {
     s('\\circ', { t('\\<circ>') }),
     s('\\dots', { t('\\<dots>') }),
     s('\\times', { t('\\<times>') }),
+    s('\\infinity', { t('\\<infinity>') }),
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),
