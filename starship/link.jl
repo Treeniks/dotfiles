@@ -1,5 +1,5 @@
 link_target_path = "$(@__DIR__)/starship.toml"
-if Sys.isapple() || Sys.islinux()
+if Sys.isapple() || Sys.islinux() || Sys.iswindows()
     config_dir = "$(ENV["HOME"])/.config"
     config_path = "$config_dir/starship.toml"
 else
