@@ -156,6 +156,7 @@ luasnip.add_snippets('isabelle', {
     s('\\exists', { t('\\<exists>') }),
     s('\\nexists', { t('\\<nexists>') }),
     s('\\not', { t('\\<not>') }),
+    s('\\oplus', { t('\\<oplus>') }),
 
     -- sets
     s('\\in', { t('\\<in>') }),
@@ -177,6 +178,7 @@ luasnip.add_snippets('isabelle', {
     s('\\ge', { t('\\<ge>') }),
     s('\\sim', { t('\\<sim>') }),
     s('\\equiv', { t('\\<equiv>') }),
+    s('\\lessapprox', { t('\\<lessapprox>') }),
 
     -- brackets
     s('\\open', { t('\\<open>') }),
@@ -227,6 +229,7 @@ luasnip.add_snippets('isabelle', {
 
     -- other symbols
     s('\\turnstile', { t('\\<turnstile>') }),
+    s('\\stileturn', { t('\\<stileturn>') }),
     s('\\circ', { t('\\<circ>') }),
     s('\\dots', { t('\\<dots>') }),
     s('\\times', { t('\\<times>') }),
@@ -234,6 +237,12 @@ luasnip.add_snippets('isabelle', {
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),
+    s('\\bsub', { t('\\<^bsub>') }),
+    s('\\esub', { t('\\<^esub>') }),
+
+    s('\\sup', { t('\\<^sup>') }),
+    s('\\bsup', { t('\\<^bsup>') }),
+    s('\\esup', { t('\\<^esup>') }),
 
     -- isabelle keywords
     s('simp', { t('simp') }),
