@@ -171,6 +171,25 @@ luasnip.add_snippets('isabelle', {
     s('\\Union', { t('\\<Union>') }),
     s('\\emptyset', { t('\\<emptyset>') }),
 
+    -- lattice shit
+    s('\\sqinter', { t('\\<sqinter>') }),
+    s('\\Sqinter', { t('\\<Sqinter>') }),
+    s('\\squnion', { t('\\<squnion>') }),
+    s('\\Squnion', { t('\\<Squnion>') }),
+
+    s('\\glb', { t('\\<sqinter>') }),
+    s('\\Glb', { t('\\<Sqinter>') }),
+    s('\\lub', { t('\\<squnion>') }),
+    s('\\Lub', { t('\\<Squnion>') }),
+
+    s('\\meet', { t('\\<sqinter>') }),
+    s('\\Meet', { t('\\<Sqinter>') }),
+    s('\\join', { t('\\<squnion>') }),
+    s('\\Join', { t('\\<Squnion>') }),
+
+    s('\\top', { t('\\<top>') }),
+    s('\\bottom', { t('\\<bottom>') }),
+
     -- relations
     s('\\noteq', { t('\\<noteq>') }),
     s('\\neq', { t('\\<noteq>') }),
