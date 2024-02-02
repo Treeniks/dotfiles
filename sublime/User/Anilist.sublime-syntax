@@ -19,7 +19,7 @@ contexts:
 
   inside:
     - meta_content_scope: meta.paragraph.markdown
-    - match: ^\b(started|finished|completed|watched|DROPPED|stopped at)\b
+    - match: ^\b(started|finished|completed|watched|DROPPED|PAUSED|stopped at)\b
       scope: keyword.markdown
     - match: ep(\.)(\d+(/\d+)?)
       captures:
