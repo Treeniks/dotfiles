@@ -146,6 +146,9 @@ luasnip.add_snippets('isabelle', {
     s('\\longmapsto', { t('\\<longmapsto>') }),
 
     s('\\down', { t('\\<down>') }),
+    s('\\Down', { t('\\<Down>') }),
+    s('\\up', { t('\\<up>') }),
+    s('\\Up', { t('\\<Up>') }),
 
     -- logic
     s('\\and', { t('\\<and>') }),
@@ -253,6 +256,8 @@ luasnip.add_snippets('isabelle', {
     s('\\dots', { t('\\<dots>') }),
     s('\\times', { t('\\<times>') }),
     s('\\infinity', { t('\\<infinity>') }),
+
+    s('\\bar', { t('\\<bar>') }),
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),
