@@ -112,7 +112,7 @@ local ms = luasnip.multi_snippet
 local k = require('luasnip.nodes.key_indexer').new_key
 
 local function copy(args)
-	return args[1]
+    return args[1]
 end
 
 luasnip.add_snippets('isabelle', {
@@ -282,7 +282,7 @@ luasnip.add_snippets('isabelle', {
         i(1),
         t(' :: "'),
         i(2),
-        t({'" where', '\t"'}),
+        t({ '" where', '\t"' }),
         f(copy, 1),
         t(' '),
         i(3, '_'),
@@ -295,16 +295,15 @@ luasnip.add_snippets('isabelle', {
         i(1),
         t(' :: "'),
         i(2),
-        t({'" where', '\t"'}),
+        t({ '" where', '\t"' }),
         i(3),
         t('"'),
     }),
     s('proof', {
         t('proof ('),
         i(1, 'induction'),
-        t({')', '\t'}),
+        t({ ')', '\t' }),
         i(2),
-        t({'', 'qed'}),
+        t({ '', 'qed' }),
     }),
 })
-
