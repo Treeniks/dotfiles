@@ -113,6 +113,8 @@ require('lazy').setup({
     -- as the command might be 'cp'
     -- 'christoomey/vim-system-copy',
     'vim-scripts/ReplaceWithRegister',
+
+    -- doesn't seem to work properly in conjunction with mini.clue
     'mg979/vim-visual-multi',
 
     'nvim-lua/plenary.nvim',
