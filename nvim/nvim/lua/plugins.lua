@@ -1,3 +1,5 @@
+-- vi: foldmethod=marker
+
 -- install lazy.nvim
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -15,13 +17,15 @@ vim.opt.rtp:prepend(lazypath)
 -- setup lazy.nvim and add all plugins
 require('lazy').setup({
     -- color schemes
+    -- {{{
     {
         'rose-pine/neovim',
         lazy = false,
         priority = 1000,
     },
     {
-        'catppuccin/vim', name = 'catppuccin',
+        'catppuccin/vim',
+        name = 'catppuccin',
         lazy = false,
         priority = 1000,
     },
@@ -73,10 +77,12 @@ require('lazy').setup({
         priority = 1000,
     },
     {
-        'embark-theme/vim', name = 'embark',
+        'embark-theme/vim',
+        name = 'embark',
         lazy = false,
         priority = 1000,
     },
+    -- }}}
 
     {
         'lervag/vimtex',
@@ -140,8 +146,8 @@ require('lazy').setup({
     {
         "NeogitOrg/neogit",
         dependencies = {
-            "nvim-lua/plenary.nvim",         -- required
-            "sindrets/diffview.nvim",        -- optional - Diff integration
+            "nvim-lua/plenary.nvim",  -- required
+            "sindrets/diffview.nvim", -- optional - Diff integration
 
             -- Only one of these is needed, not both.
             "nvim-telescope/telescope.nvim", -- optional
@@ -212,6 +218,9 @@ require('lazy').setup({
             })
 
             require('mini.map').setup({})
+            require('mini.starter').setup({
+                autoopen = false,
+            })
             -- should only be done on-demand with <leader>mt
             -- MiniMap.open()
 

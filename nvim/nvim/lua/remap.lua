@@ -12,6 +12,10 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 vim.keymap.set('n', '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = 'Mini Files' })
+-- useful when using Neovide
+vim.keymap.set('n', '<leader>r', function() MiniFiles.open('~/Documents') end, { desc = 'Mini Files at HOME' })
+
+vim.keymap.set('n', '<leader>s', function() MiniStarter.open() end, { desc = 'Mini Starter' })
 
 -- Telescope Keybinds
 vim.keymap.set('n', '<leader>tp', telescope.extensions.project.project, { desc = 'Telescope Project' })

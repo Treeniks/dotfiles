@@ -28,17 +28,9 @@ vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 
 -- Neovide settings
 vim.g.neovide_theme = 'dark'
-
--- Helper function for transparency formatting
-local alpha = function()
-    return string.format('%x', math.floor(255 * vim.g.transparency))
-end
--- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
-vim.g.neovide_transparency = 0.0
-vim.g.transparency = 0.95
--- only works on MacOS for now
-vim.g.neovide_background_color = '#15141b' .. alpha()
-vim.opt.guifont = 'JetBrains Mono:h18'
+vim.g.neovide_transparency = 0.95
+-- vim.g.transparency = 0.95
+vim.opt.guifont = 'JetBrains Mono:h16'
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
