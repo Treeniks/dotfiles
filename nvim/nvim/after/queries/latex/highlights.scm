@@ -70,13 +70,17 @@
 (((command_name) @Conceal (#eq? @Conceal "\\coloneqq")) (#set! conceal "≔"))
 (((command_name) @Conceal (#eq? @Conceal "\\infty")) (#set! conceal "∞"))
 
+(((command_name) @Conceal (#eq? @Conceal "\\langle")) (#set! conceal "⟨"))
+(((command_name) @Conceal (#eq? @Conceal "\\rangle")) (#set! conceal "⟩"))
+
 ; escaped characters
 (((command_name) @Conceal (#eq? @Conceal "\\_")) (#set! conceal "_"))
 (((command_name) @Conceal (#eq? @Conceal "\\{")) (#set! conceal "{"))
 (((command_name) @Conceal (#eq? @Conceal "\\}")) (#set! conceal "}"))
+(((command_name) @Conceal (#eq? @Conceal "\\&")) (#set! conceal "&"))
 
 ; mathbb letters
-(((command_name) @Conceal (#eq? @Conceal "\\mathbb{L}")) (#set! conceal "𝕃"))
+(((generic_command) @Conceal (#eq? @Conceal "\\mathbb{L}")) (#set! conceal "𝕃"))
 
 ; greek letters
 (((command_name) @Conceal (#eq? @Conceal "\\pi")) (#set! conceal "π"))
