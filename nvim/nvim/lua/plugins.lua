@@ -220,7 +220,11 @@ require('lazy').setup({
 
     {
         'windwp/nvim-autopairs',
-        opts = {},
+        config = function()
+            local autopairs = require('nvim-autopairs')
+            autopairs.setup()
+            autopairs.remove_rule('`')
+        end,
     },
 
     {
