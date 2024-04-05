@@ -50,3 +50,6 @@ colors:
     magenta: '#a277ff'
     cyan:    '#61ffca'
     white:   '#edecee'
+
+shell:
+  program: fish
