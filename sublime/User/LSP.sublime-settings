@@ -33,5 +33,11 @@
             ],
             "selector": "source.crystal",
         },
+        "typst-lsp": {
+            "command": [
+                "typst-lsp"
+            ],
+            "selector": "text.typst",
+        },
     },
 }
