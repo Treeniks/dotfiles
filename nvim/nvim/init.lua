@@ -4,6 +4,14 @@ require('remap')
 local ft = require('Comment.ft')
 ft.set('isabelle', {'(*%s*)', '(*%s*)'})
 
+-- doesn't work for some reason
+-- vim.g.filetype_typ = 'typst'
+vim.filetype.add({
+    extension = {
+        typ = 'typst'
+    }
+})
+
 -- Theme selection
 -- vim.cmd.colorscheme('rose-pine')
 -- vim.cmd.colorscheme('aura-dark')

@@ -82,6 +82,12 @@ lspconfig.sourcekit.setup({
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
 })
+lspconfig.typst_lsp.setup({
+    capabilities = capabilities,
+    settings = {
+        exportPdf = "never"
+    },
+})
 
 require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({
