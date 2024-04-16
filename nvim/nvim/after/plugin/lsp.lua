@@ -58,30 +58,43 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
 })
+
 lspconfig.julials.setup({
     capabilities = capabilities,
 })
+
 lspconfig.zls.setup({
     capabilities = capabilities,
 })
+
 lspconfig.clangd.setup({
     capabilities = capabilities,
 })
+
 lspconfig.ocamllsp.setup({
     capabilities = capabilities,
 })
+
 lspconfig.nim_langserver.setup({
     capabilities = capabilities,
 })
+
 lspconfig.crystalline.setup({
     capabilities = capabilities,
 })
+
 lspconfig.sourcekit.setup({
     capabilities = capabilities,
 })
+
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
 })
+
+lspconfig.metals.setup({
+    capabilities = capabilities,
+})
+
 lspconfig.typst_lsp.setup({
     capabilities = capabilities,
     settings = {
