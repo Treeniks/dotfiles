@@ -20,6 +20,7 @@ vim.keymap.set('n', '<leader>s', function() MiniStarter.open() end, { desc = 'Mi
 
 -- disable highlighting after a search
 vim.keymap.set('n', '<leader>,', vim.cmd.nohlsearch, { desc = "Disable Search Highlights" })
+vim.keymap.set('n', '<Esc>', vim.cmd.nohlsearch)
 
 -- Telescope Keybinds
 vim.keymap.set('n', '<leader>tp', telescope.extensions.project.project, { desc = 'Telescope Project' })
