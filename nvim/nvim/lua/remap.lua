@@ -70,6 +70,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, { desc = 'LSP Goto Definition', buffer = event.buf })
         vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, { desc = 'LSP Goto Declaration', buffer = event.buf })
 
+        vim.keymap.set('n', '<leader>gr', telescope_builtin.lsp_references,
+            { desc = 'LSP Find References (Telescope)', buffer = event.buf })
+        -- vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references,
+        --     { desc = 'LSP Find References', buffer = event.buf })
+
         vim.keymap.set('n', '<leader>dk', vim.diagnostic.open_float,
             { desc = 'Diagnostic Open Float', buffer = event.buf })
         vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev,
