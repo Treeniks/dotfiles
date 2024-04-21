@@ -141,7 +141,16 @@ require('lazy').setup({
 
     'nvim-lua/plenary.nvim',
 
-    'nvim-telescope/telescope.nvim',
+    {
+        'nvim-telescope/telescope.nvim',
+        opts = {
+            pickers = {
+                find_files = {
+                    follow = true
+                }
+            }
+        },
+    },
     {
         'nvim-telescope/telescope-project.nvim',
         config = function()
