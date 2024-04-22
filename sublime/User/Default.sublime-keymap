@@ -201,6 +201,6 @@
     },
 
     // ==== Terminus Keybinds =====
-    { "keys": ["alt+`"], "command": "toggle_terminus_panel" },
-    { "keys": ["alt+shift+`"], "command": "terminus_open" },
+    { "keys": ["ctrl+\\"], "command": "toggle_terminus_panel" },
+    { "keys": ["ctrl+shift+\\"], "command": "terminus_open" },
 ]
