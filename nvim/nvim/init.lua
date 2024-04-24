@@ -2,7 +2,7 @@ require('plugins')
 require('remap')
 
 local ft = require('Comment.ft')
-ft.set('isabelle', {'(*%s*)', '(*%s*)'})
+ft.set('isabelle', { '(*%s*)', '(*%s*)' })
 
 -- doesn't work for some reason
 -- vim.g.filetype_typ = 'typst'
@@ -42,7 +42,7 @@ vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 vim.g.neovide_theme = 'dark'
 vim.g.neovide_transparency = 0.95
 -- vim.g.transparency = 0.95
-vim.opt.guifont = 'JetBrains Mono:h16'
+vim.opt.guifont = 'JetBrains Mono:h13'
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -66,6 +66,7 @@ vim.opt.scrolloff = 1
 vim.opt.signcolumn = 'yes' -- stops constant shifting because of LSP diagnostics
 
 vim.opt.list = true
-vim.opt.listchars = {
-    trail = "⋅",
-}
+vim.opt.listchars:append({
+    tab = '>-',
+    trail = '⋅',
+})
