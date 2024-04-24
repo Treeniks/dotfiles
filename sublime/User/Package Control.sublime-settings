@@ -15,6 +15,7 @@
         "LSP-clangd",
         "LSP-json",
         "LSP-julia",
+        "LSP-metals",
         "LSP-pyright",
         "LSP-rust-analyzer",
         "MarkdownPreview",
