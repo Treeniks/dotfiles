@@ -275,6 +275,8 @@ require('lazy').setup({
         opts = {},
     },
 
+    'github/copilot.vim',
+
     -- Isabelle LSP Config
     -- {
     --     dir = '~/Documents/isabelle/isabelle-lsp.nvim',
