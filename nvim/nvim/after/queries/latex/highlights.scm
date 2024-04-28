@@ -1,4 +1,8 @@
 ; inherits: latex
+; for this to work, the `tree-sitter` cli binary must exist on PATH
+; on that nvim-treesitter can re-compile the latex grammar
+; (on Arch, install the tree-sitter-cli package)
+
 ; https://github.com/lervag/vimtex/blob/9df79e15bf035d1cfb32c11fffed38dd7b6a0501/autoload/vimtex/syntax/core.vim#L1404
 ; non-math
 ; those two don't seem to be their own query, fuck
