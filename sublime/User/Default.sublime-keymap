@@ -1,4 +1,9 @@
 [
+    {
+        "keys": ["f8"],
+        "command": "start_command_in_cwd",
+        "args": { "command": "kitty" },
+    },
     // ===== Sublime Keybinds =====
 
     // default is "next_view_in_stack"
