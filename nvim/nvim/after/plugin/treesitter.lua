@@ -8,7 +8,8 @@ require('nvim-treesitter.configs').setup({
         'rust',
         'zig',
 
-        'ocaml',
+        -- errors on Windows
+        -- 'ocaml',
         'haskell',
 
         'java',
