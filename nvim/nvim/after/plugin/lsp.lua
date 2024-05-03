@@ -230,6 +230,10 @@ luasnip.add_snippets('isabelle', {
     s('\\close', { t('\\<close>') }),
     s('\\lbrakk', { t('\\<lbrakk>') }),
     s('\\rbrakk', { t('\\<rbrakk>') }),
+    s('\\langle', { t('\\<langle>') }),
+    s('\\rangle', { t('\\<rangle>') }),
+
+    s('\\tree', { t('\\<langle>'), i(1), t('\\<rangle>') }),
 
     -- greek symbols
     s('\\alpha', { t('\\<alpha>') }),
