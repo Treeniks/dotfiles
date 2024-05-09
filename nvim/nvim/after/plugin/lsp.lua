@@ -1,6 +1,16 @@
 local lspconfig = require('lspconfig')
 local luasnip = require('luasnip')
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false
+    }
+)
+
+vim.diagnostic.config {
+    float = { border = "rounded" },
+}
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- enable language servers

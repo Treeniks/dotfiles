@@ -237,6 +237,28 @@ require('lazy').setup({
     },
 
     {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+
+    {
+        "NStefan002/screenkey.nvim",
+        cmd = "Screenkey",
+        opts = {},
+    },
+    {
+        'RaafatTurki/corn.nvim',
+        opts = {
+            item_preprocess_func = function(item)
+                -- the default truncation logic is here ...
+                return item
+            end,
+        },
+    },
+
+    {
         'echasnovski/mini.nvim',
         config = function()
             require('mini.files').setup({
