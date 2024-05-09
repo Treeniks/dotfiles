@@ -8,8 +8,11 @@ vim.g.mapleader = ' '
 
 vim.keymap.set({ 'n', 'i' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
 
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '10jzz')
+vim.keymap.set('n', '<C-u>', '10kzz')
+
+vim.keymap.set('n', '<C-f>', '10j')
+vim.keymap.set('n', '<C-b>', '10k')
 
 vim.keymap.set('n', '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end,
     { desc = 'Mini Files' })
