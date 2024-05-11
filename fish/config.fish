@@ -21,6 +21,7 @@ zoxide init fish --cmd d | source
 
 alias ls "eza -la"
 alias eza "eza -la"
+alias exa "exa -la"
 
 alias cat bat
 # alias cat lolcat
