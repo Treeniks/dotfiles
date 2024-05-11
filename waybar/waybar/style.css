@@ -1,0 +1,116 @@
+@define-color background #15141b;
+@define-color foreground #edecee;
+@define-color selection #29263c;
+@define-color selection2 #3d375e;
+@define-color primary #a277ff;
+@define-color secondary #61ffca;
+@define-color tertiary #ffca85;
+@define-color quaternary #f694ff;
+@define-color quinary #82e2ff;
+@define-color senary #ff6767;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 600;
+    font-size: 14;
+    color: @foreground;
+}
+
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+    /* border-bottom: 2px solid @primary; */
+}
+
+/* clock */
+#clock.1, #clock.2, #clock.3 {
+    background-color: @selection;
+    padding: 2px 4px 2px 4px;
+}
+
+#clock.1 {
+    margin: 4px 0px 4px 4px;
+    border-radius: 5px 0px 0px 5px;
+    color: @secondary;
+}
+#clock.2 {
+    margin: 4px 0px 4px 0px;
+    border-radius: 0px 0px 0px 0px;
+    color: @foreground;
+}
+#clock.3 {
+    margin: 4px 4px 4px 0px;
+    border-radius: 0px 5px 5px 0px;
+    color: @secondary;
+}
+
+/* left elements */
+/* background color is set in the individual elements */
+#clock.4, #network.1, #battery.1, #pulseaudio.1, #bluetooth.1 {
+    border-radius: 5px 0px 0px 5px;
+    margin: 4px 0px 4px 4px;
+    padding: 2px 6px 2px 6px;
+    color: @background;
+}
+
+/* needs larger padding because the icons are stupid */
+#network.1 {
+    padding: 2px 10px 2px 6px;
+}
+#pulseaudio.1 {
+    padding: 2px 8px 2px 6px;
+}
+#clock.4 {
+    padding: 2px 8px 2px 6px;
+}
+
+/* right elements */
+/* color is inherited from window#waybar */
+#clock.5, #network.2, #battery.2, #pulseaudio.2, #bluetooth.2 {
+    background-color: @selection;
+    border-radius: 0px 5px 5px 0px;
+    margin: 4px 4px 4px 0px;
+    padding: 2px 8px 2px 8px;
+}
+
+/* colored elements */
+#battery.1 {
+    background-color: @tertiary;
+}
+#pulseaudio.1 {
+    background-color: @quinary;
+}
+#network.1 {
+    background-color: @quaternary;
+}
+#clock.4 {
+    background-color: @secondary;
+}
+#bluetooth.1 {
+    background-color: @senary;
+}
+
+#custom-separator {
+    color: @secondary;
+    padding: 0px 6px 0px 20px;
+}
+
+/* for some reason, there is still some weird outline that sometimes appears
+ * around workspaces when the focus is on the status bar (e.g. mouse is hovering over the workspaces)
+ * but I have no idea how to get rid of that as I don't know what causes it... */
+#workspaces {
+    border-radius: 4px;
+    margin: 4px 0px 4px 6px;
+    padding: 0px 0px 0px 0px;
+    background-color: @selection;
+}
+
+#workspaces button {
+    border-radius: 4px;
+    padding: 0px 6px 0px 6px;
+}
+
+#workspaces button.visible {
+    background-color: @selection2;
+    padding: 0px 10px 0px 10px;
+}

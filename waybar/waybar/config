@@ -1,0 +1,128 @@
+// vi: ft=jsonc
+{
+    "layer": "top",
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/separator",
+        "hyprland/window",
+    ],
+    "modules-center": ["clock#1", "clock#2", "clock#3"],
+    "modules-right": ["bluetooth#1", "bluetooth#2", "network#1", "network#2", "pulseaudio#1", "pulseaudio#2", "battery#1", "battery#2", "clock#4", "clock#5"],
+
+    "custom/separator": {
+        "format": " "
+    },
+
+    "clock#1": {
+        "format": "{:%H}",
+    },
+    "clock#2": {
+        "format": "{:%M}",
+    },
+    "clock#3": {
+        "interval": 1,
+        "format": "{:%S}",
+    },
+
+    "clock#4": {
+        "format": "󰃭",
+    },
+    "clock#5": {
+        "format": "{:%Y-%m-%d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffca85'><b>{}</b></span>",
+                "days": "<span color='#edecee'><b>{}</b></span>",
+                "weeks": "<span color='#ff6767'><b>W{}</b></span>",
+                "weekdays": "<span color='#82e2ff'><b>{}</b></span>",
+                "today": "<span color='#61ffca'><b><u>{}</u></b></span>",
+            },
+        },
+    },
+
+    "battery#1": {
+        "interval": 10,
+        // The space here is because the font's icon actually takes more space here
+        "format": "{icon}",
+        "format-icons": [
+            "󰂃",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹",
+        ],
+        "format-charging": "󰂄",
+        "format-charging-alt": "{time} 󰂄",
+        // "format-plugged": "󰚥",
+    },
+    "battery#2": {
+        "interval": 10,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15,
+        },
+        "format": "{capacity}%",
+    },
+
+    "pulseaudio#1": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphones": "",
+            "default": [
+                // unfortunately this one jiggles around
+                // "󰕿",
+                "󰖀",
+                "󰕾",
+            ]
+        },
+        "on-click": "pavucontrol",
+    },
+    "pulseaudio#2": {
+        "format": "{volume:2}%",
+        "on-click": "pavucontrol",
+    },
+
+    "network#1": {
+        "format": "{icon}",
+        "format-wifi": "󰖩",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip": false,
+        "on-click": "nm-connection-editor",
+    },
+    "network#2": {
+        "format": "{ifname}",
+        "format-wifi": "{essid}",
+        "format-ethernet": "{ipaddr}",
+        "format-disconnected": "N/A",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "nm-connection-editor",
+    },
+
+    "bluetooth#1": {
+        "format": "󰂯",
+        "tooltip": false,
+        "on-click": "blueman-manager",
+    },
+    "bluetooth#2": {
+        "format": "{status}",
+        "on-click": "blueman-manager",
+    },
+}
