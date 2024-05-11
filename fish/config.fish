@@ -8,6 +8,11 @@ function fish_user_key_bindings
     fish_vi_key_bindings --no-erase insert
 end
 
+# should be done first
+# to get correct PATH setup
+# (like homebrew on MacOS)
+source ~/.config/fish/device_specific/desktop.fish
+
 set -gx EDITOR nvim
 
 # Starship prompt
@@ -18,5 +23,3 @@ alias ls "exa -la"
 alias exa "exa -la"
 
 alias cat "bat"
-
-source ~/.config/fish/device_specific/desktop.fish
