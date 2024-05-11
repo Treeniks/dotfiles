@@ -59,7 +59,7 @@ platform = OS.type(sys.platform)
 def check_os(*oses: OS):
     supported_oses = map(OS.platform, oses)
     if sys.platform not in supported_oses:
-        print("OS not yet supported")
+        print("OS not supported")
         sys.exit(0)
 
 def make_symlink(target: str, link: str):
@@ -68,9 +68,9 @@ def make_symlink(target: str, link: str):
 
     if not os.path.exists(link_dir):
         os.makedirs(link_dir)
-        print(f"Created directory {link_dir}")
-    elif os.path.exists(link):
-        response = input(f"Existing symlink for {s} found\nRemove? [y/N]: ")
+        print(f"Created directory '{link_dir}'")
+    elif os.path.lexists(link):
+        response = input(f"Existing '{s}' found\nRemove? [y/N]: ")
         if response.lower() != "y":
             print("Exiting")
             sys.exit(0)
@@ -78,7 +78,7 @@ def make_symlink(target: str, link: str):
             os.remove(link)
         except OSError:
             shutil.rmtree(link)
-        print(f"Removed {s}")
+        print(f"Removed '{s}'")
 
     os.symlink(target, link)
-    print(f"Created symlink for {s}")
+    print(f"Created symlink for '{s}'")
