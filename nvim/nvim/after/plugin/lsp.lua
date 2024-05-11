@@ -61,7 +61,6 @@ lspconfig.typst_lsp.setup({
     },
 })
 
-require('isabelle-lsp').setup({})
 lspconfig.isabelle.setup({
     capabilities = capabilities,
 })
