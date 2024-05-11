@@ -270,12 +270,24 @@ require('lazy').setup({
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
 
+    'onsails/lspkind.nvim',
+
     {
         'folke/neodev.nvim',
         opts = {},
     },
 
-    'github/copilot.vim',
+    {
+        'zbirenbaum/copilot.lua',
+        opts = {
+            suggestion = { enabled = false },
+            panel = { enabled = false },
+        },
+    },
+    {
+        'zbirenbaum/copilot-cmp',
+        opts = {},
+    },
 
     -- Isabelle LSP Config
     -- {
