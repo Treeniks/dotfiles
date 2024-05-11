@@ -8,35 +8,56 @@ if __name__ == "__main__":
     print("this is not a script")
     sys.exit(0)
 
-HOME = os.environ["HOME"]
 join = os.path.join
+
+# ignore errors
+# just define the ones that are available
+try:
+    HOME = os.environ["HOME"]
+    DOTCONFIG = join(HOME, ".config")
+except: pass
+try: USERPROFILE = os.environ["USERPROFILE"]
+except: pass
+try: APPDATA = os.environ["APPDATA"]
+except: pass
+try: LOCALAPPDATA = os.environ["LOCALAPPDATA"]
+except: pass
+
+env = os.environ
 
 def target_dir():
     filename = inspect.stack()[1].filename
     realpath = os.path.realpath(filename)
     return os.path.dirname(realpath)
 
-class OS_TYPE(Enum):
+class OS(Enum):
     LINUX = auto()
     WINDOWS = auto()
     MACOS = auto()
 
     def platform(self):
-        if self == OS_TYPE.LINUX:
+        if self == OS.LINUX:
             return "linux"
-        if self == OS_TYPE.WINDOWS:
+        if self == OS.WINDOWS:
             return "win32"
-        if self == OS_TYPE.MACOS:
+        if self == OS.MACOS:
             return "darwin"
 
-# allow functional-like acces to enum
-# probably not good style but makes writing link scripts easier
-LINUX = OS_TYPE.LINUX
-WINDOWS = OS_TYPE.WINDOWS
-MACOS = OS_TYPE.MACOS
+    @staticmethod
+    def type(platform: str):
+        if platform == "linux":
+            return OS.LINUX
+        if platform == "win32":
+            return OS.WINDOWS
+        if platform == "darwin":
+            return OS.MACOS
+        print("unknown OS")
+        sys.exit(0)
 
-def check_os(*oses: OS_TYPE):
-    supported_oses = map(OS_TYPE.platform, oses)
+platform = OS.type(sys.platform)
+
+def check_os(*oses: OS):
+    supported_oses = map(OS.platform, oses)
     if sys.platform not in supported_oses:
         print("OS not yet supported")
         sys.exit(0)
