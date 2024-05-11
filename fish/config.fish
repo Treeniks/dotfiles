@@ -19,7 +19,8 @@ set -gx EDITOR nvim
 starship init fish | source
 zoxide init fish --cmd d | source
 
-alias ls "exa -la"
-alias exa "exa -la"
+alias ls "eza -la"
+alias eza "eza -la"
 
-alias cat "bat"
+alias cat bat
+# alias cat lolcat
