@@ -23,7 +23,7 @@
             {"key": "has_prev_field", "operator": "equal", "operand": false},
             {"key": "panel_visible", "operator": "equal", "operand": false},
             {"key": "overlay_visible", "operator": "equal", "operand": false},
-            {"key": "popup_visible", "operator": "equal", "operand": false},
+            // {"key": "popup_visible", "operator": "equal", "operand": false},
             {"key": "num_selections", "operator": "equal", "operand": 1},
         ],
     },
