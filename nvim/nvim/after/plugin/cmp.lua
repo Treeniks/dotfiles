@@ -51,11 +51,33 @@ cmp.setup({
     },
 
     sources = cmp.config.sources({
-        { name = 'luasnip', group_index = 1 },
-        { name = 'path', group_index = 1 },
-        { name = 'nvim_lsp', group_index = 2 },
-        { name = "copilot", group_index = 3 },
+        { name = 'luasnip' },
+        { name = 'path' },
+        { name = 'nvim_lsp' },
+        { name = "copilot" },
     }),
+
+    sorting = {
+        priority_weight = 1,
+        comparators = {
+            -- main ones that should be used
+            -- order uses the order in which sources are declared
+            cmp.config.compare.order,
+            cmp.config.compare.locality,
+            cmp.config.compare.scopes,
+            cmp.config.compare.recently_used,
+
+            -- fallback (should be rare)
+            cmp.config.compare.exact,
+            cmp.config.compare.kind,
+            cmp.config.compare.score,
+
+            -- the rest that are shit
+            -- cmp.config.compare.offset,
+            -- cmp.config.compare.sort_text,
+            -- cmp.config.compare.length,
+        },
+    },
 
     preselect = cmp.PreselectMode.Item, -- set to cmp.PreselectMode.None to disable preselect
 
