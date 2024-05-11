@@ -5,7 +5,7 @@ from os.path import realpath, dirname
 path.append(dirname(dirname(realpath(__file__))))
 from utils import *
 
-check_os(OS.LINUX)
+check_os(OS.LINUX, OS.MACOS)
 
 target = join(target_dir(), "kitty.conf")
 link = join(DOTCONFIG, "kitty", "kitty.conf")
