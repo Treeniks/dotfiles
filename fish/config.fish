@@ -19,9 +19,12 @@ set -gx EDITOR nvim
 starship init fish | source
 zoxide init fish --cmd d | source
 
-alias ls "eza -la"
-alias eza "eza -la"
-alias exa "exa -la"
+alias ls "eza -la --color=always"
+alias eza "eza -la --color=always"
+alias exa "exa -la --color=always"
+
+# to fix less not showing colors correctly
+alias less "less -R"
 
 alias cat bat
 # alias cat lolcat
