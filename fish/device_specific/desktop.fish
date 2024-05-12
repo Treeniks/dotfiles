@@ -12,10 +12,10 @@ fish_add_path -g "$HOME/.local/share/coursier/bin/"
 
 function animemode
     switch $argv[1]
-    case on
-        hyprctl --batch "keyword monitor HDMI-A-2,3840x2160@60,0x0,2,bitdepth,10; keyword monitor DP-2,disable; keyword monitor HDMI-A-1,disable; keyword workspace name:DP-2_1,persistent:false; keyword workspace name:DP-2_2,persistent:false; keyword workspace name:DP-2_3,persistent:false; keyword workspace name:HDMI-A-1_1,persistent:false; keyword workspace name:HDMI-A-1_2,persistent:false; keyword workspace name:HDMI-A-1_3,persistent:false;"
-    case off
-        hyprctl reload
+        case on
+            hyprctl --batch "keyword monitor HDMI-A-2,3840x2160@60,0x0,2,bitdepth,10; keyword monitor DP-2,disable; keyword monitor HDMI-A-1,disable; keyword workspace name:DP-2_1,persistent:false; keyword workspace name:DP-2_2,persistent:false; keyword workspace name:DP-2_3,persistent:false; keyword workspace name:HDMI-A-1_1,persistent:false; keyword workspace name:HDMI-A-1_2,persistent:false; keyword workspace name:HDMI-A-1_3,persistent:false;"
+        case off
+            hyprctl reload
     end
 end
 
@@ -37,3 +37,6 @@ set -gx WLR_DRM_NO_ATOMIC 1
 # this is device specific as it looks rather different on windows
 set -gx SSH_AGENT_PID
 set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
+
+# for some reason the arch helix package doesn't add an hx command
+alias hx helix

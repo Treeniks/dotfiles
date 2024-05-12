@@ -12,3 +12,5 @@ fish_add_path -g "$HOME/Documents/zig/zls/zig-out/bin"
 # gpg-agent SSH stuff
 set -gx SSH_AGENT_PID
 set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
+
+alias hx helix
