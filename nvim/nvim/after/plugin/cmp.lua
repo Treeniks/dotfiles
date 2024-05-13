@@ -60,22 +60,23 @@ cmp.setup({
     sorting = {
         priority_weight = 1,
         comparators = {
+            cmp.config.compare.exact,
+
             -- main ones that should be used
             -- order uses the order in which sources are declared
             cmp.config.compare.order,
+
             cmp.config.compare.locality,
             cmp.config.compare.scopes,
             cmp.config.compare.recently_used,
-
             -- fallback (should be rare)
-            cmp.config.compare.exact,
             cmp.config.compare.kind,
             cmp.config.compare.score,
 
+            cmp.config.compare.length,
             -- the rest that are shit
             -- cmp.config.compare.offset,
             -- cmp.config.compare.sort_text,
-            -- cmp.config.compare.length,
         },
     },
 
