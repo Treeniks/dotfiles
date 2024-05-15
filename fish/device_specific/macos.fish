@@ -4,7 +4,10 @@
 
 # brew notices when it is called from fish
 # and gives the correct output accordingly
-eval $(/opt/homebrew/bin/brew shellenv)
+/opt/homebrew/bin/brew shellenv | source
+# additionally added to ensure homebrew installed stuff
+# comes before things in /usr/bin/ (e.g. python)
+fish_add_path -g "/opt/homebrew/bin" "/opt/homebrew/sbin"
 
 # Opam
 # source /Users/thomas/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
