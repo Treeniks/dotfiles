@@ -8,6 +8,11 @@ vim.g.mapleader = ' '
 
 vim.keymap.set({ 'n', 'i' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
 
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', 'gj', 'j')
+vim.keymap.set('n', 'gk', 'k')
+
 vim.keymap.set('n', '<C-d>', '10jzz')
 vim.keymap.set('n', '<C-u>', '10kzz')
 
