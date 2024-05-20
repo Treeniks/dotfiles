@@ -53,6 +53,5 @@
   "vim-crystal": { "branch": "master", "commit": "893bf0cf4cda6d5c93776d69ea6d7d0f5368a30a" },
   "vim-matchquote": { "branch": "master", "commit": "c4c70010ddb62607e03f84b68262ce9d0c2c82fe" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
-  "vim-visual-multi": { "branch": "master", "commit": "e2ff111f123da6cf97f95b96b10eb95854f953c9" },
   "whitespace.nvim": { "branch": "master", "commit": "34d319e07f86a628deeb237133088f01f8432bc0" }
 }

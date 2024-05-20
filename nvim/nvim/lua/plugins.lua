@@ -138,7 +138,7 @@ require('lazy').setup({
     'airblade/vim-matchquote',
 
     -- doesn't seem to work properly in conjunction with mini.clue
-    'mg979/vim-visual-multi',
+    -- 'mg979/vim-visual-multi',
 
     'nvim-lua/plenary.nvim',
 
