@@ -192,13 +192,6 @@ require('lazy').setup({
         },
     },
 
-    -- whitespace
-    {
-        'johnfrankmorgan/whitespace.nvim',
-        main = 'whitespace-nvim',
-        opts = {},
-    },
-
     -- status line at the bottom
     {
         'nvim-lualine/lualine.nvim',
