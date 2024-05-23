@@ -1,5 +1,13 @@
 format = """
-$username$hostname | $all
+$os$username$hostname | \
+$directory\
+$rust\
+$time\
+$line_break\
+$battery\
+$status\
+$shell\
+$character
 """
 
 [username]
@@ -11,3 +19,22 @@ style_user = 'bold yellow'
 ssh_only = false
 format = '@[$ssh_symbol$hostname]($style)'
 style = 'bold green'
+
+[os]
+disabled = false
+
+[os.symbols]
+Arch = "󰣇 "
+Macos = " "
+Windows = " "
+
+[time]
+disabled = false
+
+[status]
+disabled = false
+format = "[$status]($style) "
+
+# [shell]
+# disabled = false
+# fish_indicator = " "
