@@ -1,5 +1,5 @@
 format = """
-$os$username$hostname | \
+$username$hostname | \
 $directory\
 $rust\
 $time\
