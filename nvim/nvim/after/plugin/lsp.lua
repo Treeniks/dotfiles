@@ -54,6 +54,10 @@ lspconfig.metals.setup({
     capabilities = capabilities,
 })
 
+lspconfig.tsserver.setup({
+    capabilities = capabilities,
+})
+
 lspconfig.typst_lsp.setup({
     capabilities = capabilities,
     settings = {
