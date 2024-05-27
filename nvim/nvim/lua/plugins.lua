@@ -294,18 +294,18 @@ require('lazy').setup({
     },
 
     -- Isabelle LSP Config
+    {
+        dir = '~/Documents/isabelle/isabelle-lsp.nvim',
+        opts = { unicode_symbols = true, },
+    },
+    {
+        dir = '~/Documents/isabelle/isabelle-syn.nvim',
+    },
     -- {
-    --     dir = '~/Documents/isabelle/isabelle-lsp.nvim',
+    --     'Treeniks/isabelle-lsp.nvim',
     --     opts = {},
     -- },
-    -- {
-    --     dir = '~/Documents/isabelle/isabelle-syn.nvim',
-    -- },
-    {
-        'Treeniks/isabelle-lsp.nvim',
-        opts = {},
-    },
-    'Treeniks/isabelle-syn.nvim',
+    -- 'Treeniks/isabelle-syn.nvim',
 
     -- lol
     'eandrju/cellular-automaton.nvim',
