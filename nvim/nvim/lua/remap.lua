@@ -1,6 +1,5 @@
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
-local neogit = require('neogit')
 
 local harpoon = require('harpoon')
 
@@ -66,8 +65,6 @@ vim.keymap.set('n', '<leader>cg', function() vim.cmd('CellularAutomaton game_of_
 
 vim.keymap.set('n', '<leader>mt', MiniMap.toggle, { desc = 'MiniMap Toggle' })
 
--- v for version control
-vim.keymap.set('n', '<leader>v', neogit.open, { desc = 'Neogit' })
 vim.keymap.set('n', '<leader>j', vim.cmd.tabnext, { desc = 'Tab Next' })
 vim.keymap.set('n', '<leader>k', vim.cmd.tabprevious, { desc = 'Tab Previous' })
 vim.keymap.set('n', '<leader>n', vim.cmd.tabnew, { desc = 'Tab New' })
