@@ -7,7 +7,10 @@
 /opt/homebrew/bin/brew shellenv | source
 # additionally added to ensure homebrew installed stuff
 # comes before things in /usr/bin/ (e.g. python)
-fish_add_path -g "/opt/homebrew/bin" "/opt/homebrew/sbin"
+fish_add_path -g "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
+
+# to have python and not just python3 on PATH
+fish_add_path -g "$(brew --prefix python)/libexec/bin"
 
 # Opam
 # source /Users/thomas/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
@@ -20,8 +23,9 @@ fish_add_path -g "$HOME/.nimble/bin"
 fish_add_path -g "$HOME/.ghcup/bin"
 fish_add_path -g "$HOME/.dotnet/tools"
 
-# fish_add_path -g "$HOME/Documents/isabelle/isabelle-emacs/bin"
-fish_add_path -g "$HOME/Documents/isabelle/isabelle-git/bin"
+fish_add_path -g "$HOME/Documents/isabelle/isabelle-language-server/bin/"
+fish_add_path -g "$HOME/Documents/git-remote-hg/"
+
 fish_add_path -g "$HOME/Documents/zig/zig-macos-aarch64-0.12.0-dev.1769+bf5ab5451"
 fish_add_path -g "$HOME/Documents/zig/zls/zig-out/bin"
 fish_add_path -g "$HOME/Documents/vale/Vale-Mac-0.2.0.28"
