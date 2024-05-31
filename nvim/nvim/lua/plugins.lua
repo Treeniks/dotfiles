@@ -147,7 +147,9 @@ require('lazy').setup({
         opts = {
             pickers = {
                 find_files = {
-                    follow = true
+                    follow = true,
+                    hidden = true,
+                    no_ignore = true,
                 }
             }
         },
