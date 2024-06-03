@@ -3,6 +3,9 @@ local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 
+-- disable Copilot by default
+vim.cmd('Copilot disable')
+
 -- setup autocomplete
 cmp.setup({
     snippet = {
@@ -52,9 +55,9 @@ cmp.setup({
 
     sources = cmp.config.sources({
         { name = 'luasnip' },
-        { name = 'path' },
         { name = 'nvim_lsp' },
-        { name = "copilot" },
+        { name = 'path' },
+        { name = 'copilot' },
     }),
 
     sorting = {
