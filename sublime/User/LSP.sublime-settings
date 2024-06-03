@@ -21,6 +21,12 @@
         //         "check.command": "clippy",
         //     },
         // },
+        "ocaml": {
+            "command": [
+                "ocamllsp"
+            ],
+            "selector": "source.reason | source.ocaml",
+        },
         "zls": {
             "command": [
                 "zls"
