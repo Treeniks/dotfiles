@@ -41,6 +41,10 @@ function animemode
     end
 end
 
+function fixmon
+    ~/.config/hypr/desktop/fixmon.fish
+end
+
 # Nvidia stuff
 set -gx XDG_SESSION_TYPE wayland
 
