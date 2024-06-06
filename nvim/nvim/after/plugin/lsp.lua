@@ -109,7 +109,8 @@ luasnip.add_snippets('isabelle', {
     -- arrows
     s('\\Implies', { t('\\<Longrightarrow>') }),
     s('\\implies', { t('\\<longrightarrow>') }),
-    s('\\To', { t('\\<Rightarrow>') }),
+    -- s('\\To', { t('\\<Rightarrow>') }),
+    s('\\To', { t('⇒') }),
     s('\\to', { t('\\<rightarrow>') }),
     s('\\Iff', { t('\\<Longleftrightarrow>') }),
     s('\\iff', { t('\\<longleftrightarrow>') }),
@@ -186,7 +187,8 @@ luasnip.add_snippets('isabelle', {
     -- relations
     s('\\noteq', { t('\\<noteq>') }),
     s('\\neq', { t('\\<noteq>') }),
-    s('\\le', { t('\\<le>') }),
+    -- s('\\le', { t('\\<le>') }),
+    s('\\le', { t('≤') }),
     s('\\ge', { t('\\<ge>') }),
     s('\\sim', { t('\\<sim>') }),
     s('\\equiv', { t('\\<equiv>') }),
@@ -200,7 +202,8 @@ luasnip.add_snippets('isabelle', {
     s('\\langle', { t('\\<langle>') }),
     s('\\rangle', { t('\\<rangle>') }),
 
-    s('\\tree', { t('\\<langle>'), i(1), t('\\<rangle>') }),
+    -- s('\\tree', { t('\\<langle>'), i(1), t('\\<rangle>') }),
+    s('\\tree', { t('⟨'), i(1), t('⟩') }),
 
     -- greek symbols
     s('\\alpha', { t('\\<alpha>') }),
