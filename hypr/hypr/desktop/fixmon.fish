@@ -4,5 +4,6 @@
 # The only way to fix it is to completely disable the display output and reenable it again.
 
 hyprctl keyword monitor HDMI-A-2,disable
+hyprctl keyword monitor DP-2,disable
 sleep 2
 hyprctl reload
