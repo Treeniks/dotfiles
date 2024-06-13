@@ -210,6 +210,7 @@ require('lazy').setup({
     'alaviss/tree-sitter-nim',
     'alaviss/nim.nvim',
     'jlcrochet/vim-crystal',
+    'fladson/vim-kitty',
 
     {
         'windwp/nvim-autopairs',
