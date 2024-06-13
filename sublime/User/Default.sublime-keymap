@@ -220,6 +220,15 @@
         ]
     },
 
+    {
+        "keys": [" ", "h"],
+        "command": "toggle_diagnostics",
+        "context": [
+            {"key": "setting.lsp_active"},
+            {"key": "vnm.command_mode"},
+        ]
+    },
+
     // ==== Terminus Keybinds =====
     { "keys": ["ctrl+\\"], "command": "toggle_terminus_panel" },
     { "keys": ["ctrl+shift+\\"], "command": "terminus_open" },

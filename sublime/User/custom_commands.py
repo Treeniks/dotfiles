@@ -10,3 +10,13 @@ class StartCommandInCwd(ApplicationCommand):
             cwd = folders[0]
             subprocess.Popen(command, cwd = cwd)
 
+from LSP.plugin.core.settings import userprefs
+
+# after running the command, also run save once for it to take effect
+class ToggleDiagnostics(ApplicationCommand):
+    def run(self):
+        if (userprefs().show_diagnostics_severity_level == 0):
+            userprefs().show_diagnostics_severity_level = 4
+        else:
+            userprefs().show_diagnostics_severity_level = 0
+
