@@ -106,6 +106,82 @@ local function copy(args)
 end
 
 luasnip.add_snippets('isabelle', {
+    -- ===== custom =====
+    s('\\Implies', { t('⟹') }),
+    s('\\implies', { t('⟶') }),
+    s('\\To', { t('⇒') }),
+    s('\\to', { t('→') }),
+    s('\\Iff', { t('⟺') }),
+    s('\\iff', { t('⟷') }),
+
+    -- lattice shit
+    s('\\glb', { t('⊓') }),
+    s('\\Glb', { t('⨅') }),
+    s('\\lub', { t('⊔') }),
+    s('\\Lub', { t('⨆') }),
+
+    s('\\meet', { t('⊓') }),
+    s('\\Meet', { t('⨅') }),
+    s('\\join', { t('⊔') }),
+    s('\\Join', { t('⨆') }),
+
+    s('\\tree', { t('⟨'), i(1), t('⟩') }),
+
+    -- numbers
+    s('\\sub', { t('\\<^sub>') }),
+    s('\\bsub', { t('\\<^bsub>') }),
+    s('\\esub', { t('\\<^esub>') }),
+
+    s('\\sup', { t('\\<^sup>') }),
+    s('\\bsup', { t('\\<^bsup>') }),
+    s('\\esup', { t('\\<^esup>') }),
+
+    -- isabelle keywords
+    s('simp', { t('simp') }),
+    s('auto', { t('auto') }),
+    s('force', { t('force') }),
+    s('fastforce', { t('fastforce') }),
+    s('blast', { t('blast') }),
+    s('try0', { t('try0') }),
+    s('sledgehammer', { t('sledgehammer') }),
+
+    s('\\comment', {
+        t('― ‹'),
+        i(1),
+        t('›')
+    }),
+
+    s('fun', {
+        t('fun '),
+        i(1),
+        t(' :: "'),
+        i(2),
+        t({ '" where', '\t"' }),
+        f(copy, 1),
+        t(' '),
+        i(3, '_'),
+        t(' = '),
+        i(4, 'undefined'),
+        t('"'),
+    }),
+    s('inductive', {
+        t('inductive '),
+        i(1),
+        t(' :: "'),
+        i(2),
+        t({ '" where', '\t"' }),
+        i(3),
+        t('"'),
+    }),
+    s('proof', {
+        t('proof ('),
+        i(1, 'induction'),
+        t({ ')', '\t' }),
+        i(2),
+        t({ '', 'qed' }),
+    }),
+
+    -- ===== all other symbols ig =====
     s('\\alpha', { t('α') }),
     s('\\beta', { t('β') }),
     s('\\gamma', { t('γ') }),
@@ -391,79 +467,4 @@ luasnip.add_snippets('isabelle', {
     s('\\url', { t('🌐') }),
     s('\\doc', { t('📓') }),
     s('\\action', { t('☛') }),
-
-    -- ===== custom =====
-    s('\\Implies', { t('⟹') }),
-    s('\\implies', { t('⟶') }),
-    s('\\To', { t('⇒') }),
-    s('\\to', { t('→') }),
-    s('\\Iff', { t('⟺') }),
-    s('\\iff', { t('⟷') }),
-
-    -- lattice shit
-    s('\\glb', { t('⊓') }),
-    s('\\Glb', { t('⨅') }),
-    s('\\lub', { t('⊔') }),
-    s('\\Lub', { t('⨆') }),
-
-    s('\\meet', { t('⊓') }),
-    s('\\Meet', { t('⨅') }),
-    s('\\join', { t('⊔') }),
-    s('\\Join', { t('⨆') }),
-
-    s('\\tree', { t('⟨'), i(1), t('⟩') }),
-
-    -- numbers
-    s('\\sub', { t('\\<^sub>') }),
-    s('\\bsub', { t('\\<^bsub>') }),
-    s('\\esub', { t('\\<^esub>') }),
-
-    s('\\sup', { t('\\<^sup>') }),
-    s('\\bsup', { t('\\<^bsup>') }),
-    s('\\esup', { t('\\<^esup>') }),
-
-    -- isabelle keywords
-    s('simp', { t('simp') }),
-    s('auto', { t('auto') }),
-    s('force', { t('force') }),
-    s('fastforce', { t('fastforce') }),
-    s('blast', { t('blast') }),
-    s('try0', { t('try0') }),
-    s('sledgehammer', { t('sledgehammer') }),
-
-    s('\\comment', {
-        t('― ‹'),
-        i(1),
-        t('›')
-    }),
-
-    s('fun', {
-        t('fun '),
-        i(1),
-        t(' :: "'),
-        i(2),
-        t({ '" where', '\t"' }),
-        f(copy, 1),
-        t(' '),
-        i(3, '_'),
-        t(' = '),
-        i(4, 'undefined'),
-        t('"'),
-    }),
-    s('inductive', {
-        t('inductive '),
-        i(1),
-        t(' :: "'),
-        i(2),
-        t({ '" where', '\t"' }),
-        i(3),
-        t('"'),
-    }),
-    s('proof', {
-        t('proof ('),
-        i(1, 'induction'),
-        t({ ')', '\t' }),
-        i(2),
-        t({ '', 'qed' }),
-    }),
 })
