@@ -23,6 +23,7 @@ fish_add_path -g "$HOME/.nimble/bin"
 fish_add_path -g "$HOME/.ghcup/bin"
 fish_add_path -g "$HOME/.dotnet/tools"
 
+fish_add_path -g "$HOME/Documents/dotfiles/bin/"
 fish_add_path -g "$HOME/Documents/isabelle/isabelle-language-server/bin/"
 fish_add_path -g "$HOME/Documents/git-remote-hg/"
 
