@@ -100,6 +100,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
             { desc = 'Diagnostic Goto Previous', buffer = event.buf })
         vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = 'Diagnostic Goto Next', buffer = event.buf })
 
+        vim.keymap.set('n', '<leader>dh', function() vim.diagnostic.enable(false) end, { desc = 'Diagnostic Disable/Hide', buffer = event.buf })
+        vim.keymap.set('n', '<leader>ds', function() vim.diagnostic.enable(true) end, { desc = 'Diagnostic Enable/Show', buffer = event.buf })
+
         vim.keymap.set('n', '<C-k>', vim.lsp.buf.hover, { desc = 'LSP Hover', buffer = event.buf })
     end
 })
