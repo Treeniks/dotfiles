@@ -11,6 +11,7 @@ fish_add_path -g "$HOME/.dotnet/tools/"
 
 fish_add_path -g "$HOME/.local/share/coursier/bin/"
 
+fish_add_path -g "$HOME/Documents/dotfiles/bin/"
 fish_add_path -g "$HOME/Documents/isabelle/isabelle-language-server/bin/"
 fish_add_path -g "$HOME/Documents/odin/Odin/"
 fish_add_path -g "$HOME/Documents/git-remote-hg/"
