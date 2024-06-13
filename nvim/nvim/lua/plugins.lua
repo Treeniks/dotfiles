@@ -235,6 +235,7 @@ require('lazy').setup({
     },
     {
         'RaafatTurki/corn.nvim',
+        enabled = false,
         opts = {
             item_preprocess_func = function(item)
                 -- the default truncation logic is here ...
