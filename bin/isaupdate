@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+isabelle component_vscode_extension -D ~/.isabelle/contrib/
+rm -rf ~/.isabelle/isabelle-language-server/vscode/extensions/
+rm -rf ~/.isabelle/contrib/vscode_extension-20230206/
+rm -rf ~/.isabelle/contrib/vscode_extension-20230206.tar.gz
+mv ~/.isabelle/contrib/vscode_extension-* ~/.isabelle/contrib/vscode_extension-20230206
