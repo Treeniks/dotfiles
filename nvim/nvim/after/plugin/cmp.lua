@@ -60,26 +60,38 @@ cmp.setup({
         { name = 'copilot' },
     }),
 
+    -- default is defined here:
+    -- https://github.com/hrsh7th/nvim-cmp/blob/a110e12d0b58eefcf5b771f533fc2cf3050680ac/lua/cmp/config/default.lua#L65
     sorting = {
-        priority_weight = 1,
-        comparators = {
-            cmp.config.compare.exact,
+        priority_weight = 2, -- 2 is the default
 
-            -- main ones that should be used
-            -- order uses the order in which sources are declared
+        -- -- this is the default fro comparators:
+        -- compare.offset,
+        -- compare.exact,
+        -- -- compare.scopes,
+        -- compare.score,
+        -- compare.recently_used,
+        -- compare.locality,
+        -- compare.kind,
+        -- -- compare.sort_text,
+        -- compare.length,
+        -- compare.order,
+
+        -- only difference from default is moving order to the front
+        -- comparator descriptions can be found here:
+        -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/compare.lua
+        comparators = {
             cmp.config.compare.order,
 
-            cmp.config.compare.locality,
-            cmp.config.compare.scopes,
-            cmp.config.compare.recently_used,
-            -- fallback (should be rare)
-            cmp.config.compare.kind,
+            cmp.config.compare.offset,
+            cmp.config.compare.exact,
+            -- cmp.config.compare.scopes,
             cmp.config.compare.score,
-
-            cmp.config.compare.length,
-            -- the rest that are shit
-            -- cmp.config.compare.offset,
+            cmp.config.compare.recently_used,
+            cmp.config.compare.locality,
+            cmp.config.compare.kind,
             -- cmp.config.compare.sort_text,
+            cmp.config.compare.length,
         },
     },
 
