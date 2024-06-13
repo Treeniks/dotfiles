@@ -7,7 +7,7 @@ from utils import *
 
 check_os(OS.LINUX, OS.MACOS)
 
-target = join(target_dir(), "kitty.conf")
-link = join(DOTCONFIG, "kitty", "kitty.conf")
+target = join(target_dir(), "kitty")
+link = join(DOTCONFIG, "kitty")
 
 make_symlink(target, link)
