@@ -12,11 +12,11 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('n', 'gj', 'j')
 vim.keymap.set('n', 'gk', 'k')
 
-vim.keymap.set('n', '<C-d>', '10jzz')
-vim.keymap.set('n', '<C-u>', '10kzz')
+vim.keymap.set({ 'n', 'v' }, '<C-d>', '10jzz')
+vim.keymap.set({ 'n', 'v' }, '<C-u>', '10kzz')
 
-vim.keymap.set('n', '<C-f>', '10j')
-vim.keymap.set('n', '<C-b>', '10k')
+vim.keymap.set({ 'n', 'v' }, '<C-f>', '10j')
+vim.keymap.set({ 'n', 'v' }, '<C-b>', '10k')
 
 vim.keymap.set('n', '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end,
     { desc = 'Mini Files' })
