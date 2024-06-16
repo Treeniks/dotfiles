@@ -13,13 +13,14 @@ vim.filetype.add({
 })
 
 -- Theme selection
--- vim.cmd.colorscheme('rose-pine')
+-- vim.cmd.colorscheme('rose-pine-dawn')
 -- vim.cmd.colorscheme('aura-dark')
--- vim.cmd.colorscheme('catppuccin_mocha')
+vim.cmd.colorscheme('catppuccin-mocha')
+-- vim.cmd.colorscheme('catppuccin-latte')
 -- vim.cmd.colorscheme('iceberg')
 -- vim.cmd.colorscheme('carbonfox')
 -- vim.cmd.colorscheme('tokyonight-moon')
-vim.cmd.colorscheme('embark')
+-- vim.cmd.colorscheme('embark')
 -- vim.cmd.colorscheme('monokai-pro')
 -- vim.cmd.colorscheme('kanagawa-dragon')
 -- vim.cmd.colorscheme('dracula_pro_van_helsing')
@@ -34,9 +35,9 @@ vim.cmd.colorscheme('embark')
 --
 -- light theme
 -- vim.cmd.colorscheme('catppuccin_latte')
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 
 -- Neovide settings
 vim.g.neovide_theme = 'dark'
