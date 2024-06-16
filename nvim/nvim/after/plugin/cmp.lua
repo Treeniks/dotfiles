@@ -80,13 +80,14 @@ cmp.setup({
         -- comparator descriptions can be found here:
         -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/compare.lua
         comparators = {
+            cmp.config.compare.exact,
+
             cmp.config.compare.recently_used,
             cmp.config.compare.locality,
             cmp.config.compare.score,
             cmp.config.compare.offset,
             cmp.config.compare.order,
 
-            cmp.config.compare.exact,
             cmp.config.compare.kind,
         },
     },
