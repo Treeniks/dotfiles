@@ -20,18 +20,18 @@ require('lazy').setup({
     -- {{{
     {
         'rose-pine/neovim',
-        lazy = false,
         priority = 1000,
     },
     {
-        'catppuccin/vim',
+        'catppuccin/nvim',
         name = 'catppuccin',
-        lazy = false,
         priority = 1000,
+        opt = {
+            -- flavour = "mocha"
+        }
     },
     {
         'daltonmenezes/aura-theme',
-        lazy = false,
         priority = 1000,
         config = function(plugin)
             vim.opt.rtp:append(plugin.dir .. '/packages/neovim')
@@ -39,7 +39,6 @@ require('lazy').setup({
     },
     {
         'loctvl842/monokai-pro.nvim',
-        lazy = false,
         priority = 1000,
         opts = {
             transparent_background = true,
@@ -48,54 +47,44 @@ require('lazy').setup({
     },
     {
         'sainnhe/sonokai',
-        lazy = false,
         priority = 1000,
     },
     {
         'EdenEast/nightfox.nvim',
-        lazy = false,
         priority = 1000,
     },
     {
         'kaicataldo/material.vim',
-        lazy = false,
         priority = 1000,
     },
     {
         'folke/tokyonight.nvim',
-        lazy = false,
         priority = 1000,
     },
     {
         'cocopon/iceberg.vim',
-        lazy = false,
         priority = 1000,
     },
     {
         'morhetz/gruvbox',
-        lazy = false,
         priority = 1000,
     },
     {
         'embark-theme/vim',
         name = 'embark',
-        lazy = false,
         priority = 1000,
     },
     {
         'nyoom-engineering/oxocarbon.nvim',
-        lazy = false,
         priority = 1000,
     },
     {
         'olivercederborg/poimandres.nvim',
-        lazy = false,
         priority = 1000,
         opts = {},
     },
     {
         'rebelot/kanagawa.nvim',
-        lazy = false,
         priority = 1000,
     },
     -- }}}
