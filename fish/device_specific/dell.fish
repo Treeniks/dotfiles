@@ -1,5 +1,6 @@
 # PATH
 eval (opam env)
+fish_add_path -g "$HOME/Documents/dotfiles/bin/"
 fish_add_path -g "$HOME/Documents/isabelle/isabelle-language-server/bin/"
 fish_add_path -g "$HOME/.local/bin/"
 fish_add_path -g "$HOME/.cargo/bin/"
