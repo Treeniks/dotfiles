@@ -126,6 +126,7 @@ luasnip.add_snippets('isabelle', {
     s('\\Join', { t('⨆') }),
 
     s('\\tree', { t('⟨'), i(1), t('⟩') }),
+    s('\\leaf', { t('⟨⟩') }),
 
     -- numbers
     s('\\sub', { t('\\<^sub>') }),

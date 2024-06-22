@@ -85,7 +85,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover, { desc = 'LSP Hover', buffer = event.buf })
         vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, { desc = 'LSP Format', buffer = event.buf })
         vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, { desc = 'LSP Rename', buffer = event.buf })
-        vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, { desc = 'LSP Code Action', buffer = event.buf })
+        vim.keymap.set({ 'n', 'v' }, '<leader>la', vim.lsp.buf.code_action, { desc = 'LSP Code Action', buffer = event.buf })
         vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, { desc = 'LSP Goto Definition', buffer = event.buf })
         vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, { desc = 'LSP Goto Declaration', buffer = event.buf })
 
