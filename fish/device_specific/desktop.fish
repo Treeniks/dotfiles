@@ -43,7 +43,7 @@ function animemode
 end
 
 function fixmon
-    ~/.config/hypr/desktop/fixmon.fish
+    ~/.config/hypr/desktop/fix_mon.fish
 end
 
 # Nvidia stuff
