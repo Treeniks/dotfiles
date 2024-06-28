@@ -63,6 +63,10 @@ lspconfig.tsserver.setup({
     capabilities = capabilities,
 })
 
+lspconfig.gleam.setup({
+    capabilities = capabilities,
+})
+
 lspconfig.typst_lsp.setup({
     capabilities = capabilities,
     settings = {
