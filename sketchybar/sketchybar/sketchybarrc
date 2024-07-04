@@ -108,7 +108,7 @@ sketchybar --add item clock_logo right\
                             background.color=$PRIMARY
 
 sketchybar --add item date right \
-           --set date update_freq=1000 \
+           --set date update_freq=100 \
                       icon.drawing=off \
                       script="~/.config/sketchybar/plugins/date.sh" \
                       background.padding_left=0
