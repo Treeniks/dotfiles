@@ -263,7 +263,7 @@ require('lazy').setup({
     -- Isabelle LSP Config
     {
         dir = '~/Documents/isabelle/isabelle-lsp.nvim',
-        opts = { unicode_symbols = true, },
+        opts = { unicode_symbols_output = true, unicode_symbols_edits = true, },
     },
     {
         dir = '~/Documents/isabelle/isabelle-syn.nvim',
