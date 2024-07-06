@@ -19,13 +19,14 @@ vim.cmd.colorscheme('catppuccin-mocha')
 -- vim.cmd.colorscheme('catppuccin-latte')
 -- vim.cmd.colorscheme('iceberg')
 -- vim.cmd.colorscheme('carbonfox')
--- vim.cmd.colorscheme('tokyonight-moon')
+-- vim.cmd.colorscheme('tokyonight-night')
 -- vim.cmd.colorscheme('embark')
 -- vim.cmd.colorscheme('monokai-pro')
 -- vim.cmd.colorscheme('kanagawa-dragon')
 -- vim.cmd.colorscheme('dracula_pro_van_helsing')
 -- vim.cmd.colorscheme('oxocarbon')
 -- vim.cmd.colorscheme('poimandres')
+-- vim.cmd.colorscheme('neofusion')
 --
 -- vim.g.sonokai_style = 'andromeda'
 -- vim.cmd.colorscheme('sonokai')
@@ -33,8 +34,7 @@ vim.cmd.colorscheme('catppuccin-mocha')
 -- vim.g.material_theme_style = 'darker'
 -- vim.cmd.colorscheme('material')
 --
--- light theme
--- vim.cmd.colorscheme('catppuccin_latte')
+--
 -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
