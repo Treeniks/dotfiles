@@ -182,6 +182,7 @@ require('lazy').setup({
     {
         'MeanderingProgrammer/markdown.nvim',
         opts = {},
+        -- enabled = false,
     },
 
     {
@@ -229,6 +230,10 @@ require('lazy').setup({
             -- MiniMap.open()
 
             -- mini.clue setup is in remap file
+
+            require('mini.align').setup({})
+
+            require('mini.icons').setup({})
         end,
     },
 

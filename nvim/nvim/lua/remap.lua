@@ -3,6 +3,8 @@ local telescope_builtin = require('telescope.builtin')
 
 local harpoon = require('harpoon')
 
+local render_markdown = require('render-markdown')
+
 vim.g.mapleader = ' '
 
 vim.keymap.set({ 'n', 'i' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
@@ -64,6 +66,7 @@ vim.keymap.set('n', '<leader>cr', function() vim.cmd('CellularAutomaton make_it_
 vim.keymap.set('n', '<leader>cg', function() vim.cmd('CellularAutomaton game_of_life') end, { desc = 'lol Game' })
 
 vim.keymap.set('n', '<leader>mt', MiniMap.toggle, { desc = 'MiniMap Toggle' })
+vim.keymap.set('n', '<leader>mm', render_markdown.toggle, { desc = 'Render Markdown Toggle' })
 
 vim.keymap.set('n', '<leader>j', vim.cmd.tabnext, { desc = 'Tab Next' })
 vim.keymap.set('n', '<leader>k', vim.cmd.tabprevious, { desc = 'Tab Previous' })
@@ -157,7 +160,7 @@ miniclue.setup({
         { mode = 'n', keys = '<leader>d', desc = 'LSP Diagnostic' },
         { mode = 'n', keys = '<leader>t', desc = 'Telescope' },
         { mode = 'n', keys = '<leader>h', desc = 'Harpoon' },
-        { mode = 'n', keys = '<leader>m', desc = 'MiniMap' },
+        { mode = 'n', keys = '<leader>m', desc = 'MiniMap & Markdown' },
         { mode = 'n', keys = '<leader>c', desc = 'lol' },
         -- would need to add a whole bunch of custom clues for defualt actions
         -- oof
