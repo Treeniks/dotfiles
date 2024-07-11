@@ -1,4 +1,4 @@
-cmd - return : kitty -d ~
+# cmd - return : kitty -d ~
 alt - return : kitty -d ~
 
 # alternative to cmd+q
