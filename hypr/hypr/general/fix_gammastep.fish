@@ -12,5 +12,5 @@ end
 
 # `2>&1` redirects stderr to stdout
 # `> /dev/null` to suppress output
-gammastep -O 4000 > /dev/null 2>&1 &
+gammastep -O 4500 > /dev/null 2>&1 &
 disown $last_pid
