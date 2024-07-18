@@ -35,6 +35,8 @@ yabai -m config \
     right_padding 12 \
     window_gap 6
 
+yabai -m rule --add label=finder app=Finder manage=off
+
 echo "yabai configuration loaded"
 echo "starting sketchybar"
 sketchybar &
