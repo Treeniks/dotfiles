@@ -1,0 +1,252 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+    "variables": {
+        "background": "#001e1e2e"
+    },
+    "globals": {},
+    "rules": [
+        {
+            "name": "isabelle.background_unprocessed1",
+            "scope": "isabelle.background_unprocessed1", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_running1",
+            "scope": "isabelle.background_running1", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_canceled",
+            "scope": "isabelle.background_canceled", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_bad",
+            "scope": "isabelle.background_bad", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_intensify",
+            "scope": "isabelle.background_intensify", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_markdown_bullet1",
+            "scope": "isabelle.background_markdown_bullet1", // 'markdownH1'
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_markdown_bullet2",
+            "scope": "isabelle.background_markdown_bullet2", // 'markdownH2'
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_markdown_bullet3",
+            "scope": "isabelle.background_markdown_bullet3", // 'markdownH3'
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.background_markdown_bullet4",
+            "scope": "isabelle.background_markdown_bullet4", // 'markdownH4'
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.foreground_quoted",
+            "scope": "isabelle.foreground_quoted", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_main",
+            "scope": "isabelle.text_main", // 'Normal'
+            "background": "var(background)",
+            "foreground": "var(text)",
+        },
+        {
+            "name": "isabelle.text_quasi_keyword",
+            "scope": "isabelle.text_quasi_keyword", // 'Keyword'
+            "background": "var(background)",
+            "foreground": "var(red)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_free",
+            "scope": "isabelle.text_free", // 'Function'
+            "background": "var(background)",
+            "foreground": "var(blue)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_bound",
+            "scope": "isabelle.text_bound", // 'Identifier'
+            "background": "var(background)",
+            "foreground": "var(sky)",
+        },
+        {
+            "name": "isabelle.text_inner_numeral",
+            "scope": "isabelle.text_inner_numeral", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_inner_quoted",
+            "scope": "isabelle.text_inner_quoted", // 'String'
+            "background": "var(background)",
+            "foreground": "var(green)",
+        },
+        {
+            "name": "isabelle.text_comment1",
+            "scope": "isabelle.text_comment1", // 'Comment'
+            "background": "var(background)",
+            "foreground": "var(overlay1)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_comment2",
+            "scope": "isabelle.text_comment2", // false
+            "background": "var(background)",
+        }, // seems to not exist in the LSP
+    {
+            "name": "isabelle.text_comment3",
+            "scope": "isabelle.text_comment3", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_dynamic",
+            "scope": "isabelle.text_dynamic", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_class_parameter",
+            "scope": "isabelle.text_class_parameter", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_antiquote",
+            "scope": "isabelle.text_antiquote", // 'Comment'
+            "background": "var(background)",
+            "foreground": "var(overlay1)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_raw_text",
+            "scope": "isabelle.text_raw_text", // 'Comment'
+            "background": "var(background)",
+            "foreground": "var(overlay1)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_plain_text",
+            "scope": "isabelle.text_plain_text", // 'String'
+            "background": "var(background)",
+            "foreground": "var(green)",
+        },
+        {
+            "name": "isabelle.text_overview_unprocessed",
+            "scope": "isabelle.text_overview_unprocessed", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_overview_running",
+            "scope": "isabelle.text_overview_running", // 'Bold'
+            "background": "var(mauve)",
+        },
+        {
+            "name": "isabelle.text_overview_error",
+            "scope": "isabelle.text_overview_error", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_overview_warning",
+            "scope": "isabelle.text_overview_warning", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.dotted_writeln",
+            "scope": "isabelle.dotted_writeln", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.dotted_warning",
+            "scope": "isabelle.dotted_warning", // "DiagnosticWarn"
+            "background": "var(red)",
+        },
+        {
+            "name": "isabelle.dotted_information",
+            "scope": "isabelle.dotted_information", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.spell_checker",
+            "scope": "isabelle.spell_checker", // 'Underlined'
+            "background": "var(background)",
+            "font_style": "underline",
+        },
+        // -- currently unused by isabelle-emacs
+        // -- but will probably be used once my Language Server chages get merged into Isabelle
+        {
+            "name": "isabelle.text_inner_cartouche",
+            "scope": "isabelle.text_inner_cartouche", // false
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_var",
+            "scope": "isabelle.text_var", // 'Function'
+            "background": "var(background)",
+            "foreground": "var(peach)"
+        },
+        {
+            "name": "isabelle.text_skolem",
+            "scope": "isabelle.text_skolem", // 'Identifier'
+            "background": "var(background)",
+            "foreground": "var(peach)"
+        },
+        {
+            "name": "isabelle.text_tvar",
+            "scope": "isabelle.text_tvar", // 'Type'
+            "background": "var(background)",
+            "foreground": "var(yellow)",
+        },
+        {
+            "name": "isabelle.text_tfree",
+            "scope": "isabelle.text_tfree", // 'Type'
+            "background": "var(background)",
+            "foreground": "var(yellow)",
+        },
+        {
+            "name": "isabelle.text_operator",
+            "scope": "isabelle.text_operator", // 'Function'
+            "background": "var(background)",
+            "foreground": "var(peach)",
+        },
+        {
+            "name": "isabelle.text_improper",
+            "scope": "isabelle.text_improper", // 'Keyword'
+            "background": "var(background)",
+        },
+        {
+            "name": "isabelle.text_keyword3",
+            "scope": "isabelle.text_keyword3", // 'Keyword'
+            "background": "var(background)",
+            "foreground": "var(red)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_keyword2",
+            "scope": "isabelle.text_keyword2", // 'Keyword'
+            "background": "var(background)",
+            "foreground": "var(red)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.text_keyword1",
+            "scope": "isabelle.text_keyword1", // 'Keyword'
+            "background": "var(background)",
+            "foreground": "var(red)",
+            "font_style": "italic",
+        },
+        {
+            "name": "isabelle.foreground_antiquoted",
+            "scope": "isabelle.foreground_antiquoted", // false
+            "background": "var(background)",
+        },
+    ]
+}
