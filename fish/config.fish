@@ -11,7 +11,7 @@ end
 # should be done first
 # to get correct PATH setup
 # (like homebrew on MacOS)
-source ~/.config/fish/device_specific/desktop.fish
+# source ~/.config/fish/device_specific/desktop.fish
 
 set -gx EDITOR nvim
 
