@@ -8,13 +8,13 @@ return {
     -- nushell currently broken on Windows, see https://github.com/nushell/nushell/issues/5585
     -- fixed by disabling "shell_integration" in nushell config
     default_prog = {"fish"},
-    
+
     -- color_scheme = "Catppuccin Latte",
 
     native_macos_fullscreen_mode = true,
 
     line_height = 1.,
-    window_background_opacity = 0.9,
+    window_background_opacity = 0.98,
     hide_tab_bar_if_only_one_tab = true,
 
     window_close_confirmation = "NeverPrompt",
