@@ -23,8 +23,9 @@ alias ls "eza -la --color=always"
 alias eza "eza -la --color=always"
 alias exa "exa -la --color=always"
 
-# to fix less not showing colors correctly
-alias less "less -R"
+# -R fix less not showing colors correctly
+# -i so that searched are case insensitive
+alias less "less -Ri"
 
 alias cat bat
 # alias cat lolcat
