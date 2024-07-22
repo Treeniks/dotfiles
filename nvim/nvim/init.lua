@@ -58,6 +58,13 @@ vim.opt.smartindent = true
 -- should be filetype specific
 -- vim.opt.wrap = false
 
+-- makes word wrap only wrap on spaces instead of in the middle of words
+vim.opt.linebreak = true
+-- and adds some visual to a wrapping
+vim.opt.breakindent = true
+vim.opt.breakindentopt = "sbr"
+vim.opt.showbreak = " "
+
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 
