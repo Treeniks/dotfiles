@@ -19,6 +19,7 @@ require('nvim-treesitter.configs').setup({
         'markdown',
         'markdown_inline',
         'latex',
+        'typst',
 
         -- bad langs
         'javascript',
