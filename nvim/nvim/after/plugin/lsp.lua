@@ -67,10 +67,11 @@ lspconfig.gleam.setup({
     capabilities = capabilities,
 })
 
-lspconfig.typst_lsp.setup({
+lspconfig.tinymist.setup({
     capabilities = capabilities,
     settings = {
-        exportPdf = "never"
+        exportPdf = "never",
+        formatterMode = "typstyle",
     },
 })
 
