@@ -236,8 +236,8 @@ require('lazy').setup({
             -- mini.clue setup is in remap file
 
             require('mini.align').setup({})
-
             require('mini.icons').setup({})
+            require('mini.cursorword').setup({})
         end,
     },
 
