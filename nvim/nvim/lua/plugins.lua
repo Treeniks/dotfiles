@@ -170,6 +170,10 @@ require('lazy').setup({
     'jlcrochet/vim-crystal',
     'fladson/vim-kitty',
 
+    -- I'm undecided between these two
+    -- 'easymotion/vim-easymotion',
+    'ggandor/leap.nvim',
+
     {
         'windwp/nvim-autopairs',
         config = function()

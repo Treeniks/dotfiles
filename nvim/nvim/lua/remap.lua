@@ -45,6 +45,11 @@ vim.keymap.set('n', '<leader>s', function() MiniStarter.open() end, { desc = 'Mi
 vim.keymap.set('n', '<leader>,', vim.cmd.nohlsearch, { desc = "Disable Search Highlights" })
 vim.keymap.set('n', '<Esc>', vim.cmd.nohlsearch)
 
+-- leap.nvim/easymotion
+-- I'm undecided between these two
+-- vim.keymap.set('n', '\\', '<Plug>(easymotion-s)')
+vim.keymap.set('n', '\\', '<Plug>(leap)')
+
 -- Telescope Keybinds
 vim.keymap.set('n', '<leader>tp', telescope.extensions.project.project, { desc = 'Telescope Project' })
 vim.keymap.set('n', '<leader>tf', telescope_builtin.find_files, { desc = 'Telescope Files' })
