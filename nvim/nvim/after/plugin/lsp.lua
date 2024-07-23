@@ -79,6 +79,27 @@ lspconfig.isabelle.setup({
     capabilities = capabilities,
 })
 
+lspconfig.ltex.setup({
+    capabilities = capabilities,
+    filetypes = {
+        -- default
+        'bib', 'gitcommit', 'markdown', 'org', 'plaintex', 'rst', 'rnoweb', 'tex', 'pandoc', 'quarto', 'rmd', 'context', 'html', 'xhtml', 'mail', 'text',
+
+        -- extras
+        'typst',
+    },
+    -- settings = {
+    --     ltex = {
+    --         additionalRules = {
+    --             languageModel = "/home/suteki/Documents/tum/ngram/"
+    --         },
+    --     },
+    -- },
+    on_attach = function(client, bufnr)
+        require('ltex_extra').setup({})
+    end,
+})
+
 local s = luasnip.snippet
 local sn = luasnip.snippet_node
 local isn = luasnip.indent_snippet_node

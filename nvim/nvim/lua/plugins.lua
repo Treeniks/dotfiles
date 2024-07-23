@@ -252,6 +252,8 @@ require('lazy').setup({
 
     'onsails/lspkind.nvim',
 
+    'barreiroleo/ltex_extra.nvim',
+
     {
         'folke/neodev.nvim',
         opts = {},
