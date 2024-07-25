@@ -203,12 +203,14 @@ require('lazy').setup({
     },
     {
         'RaafatTurki/corn.nvim',
+        -- while it moves out of the way for lines at the very top,
+        -- it does not do so correctly when wrapping is on, in which case it does get in the way
         enabled = false,
         opts = {
-            item_preprocess_func = function(item)
-                -- the default truncation logic is here ...
-                return item
-            end,
+            -- item_preprocess_func = function(item)
+            --     -- the default truncation logic is here ...
+            --     return item
+            -- end,
         },
     },
 
