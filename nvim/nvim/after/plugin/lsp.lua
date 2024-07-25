@@ -94,15 +94,18 @@ lspconfig.ltex.setup({
         -- extras
         'typst',
     },
-    -- settings = {
-    --     ltex = {
-    --         additionalRules = {
-    --             languageModel = "/home/suteki/Documents/tum/ngram/"
-    --         },
-    --     },
-    -- },
-    on_attach = function(client, bufnr)
-        require('ltex_extra').setup({})
+    settings = {
+        ltex = {
+            language = 'en-US',
+            -- additionalRules = {
+            --     languageModel = '/home/suteki/Documents/ngram/'
+            -- },
+        },
+    },
+    on_attach = function(_, _)
+        require('ltex_extra').setup({
+            load_langs = { 'en-US' }
+        })
     end,
 })
 
