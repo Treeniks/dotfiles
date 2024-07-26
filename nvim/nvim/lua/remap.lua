@@ -7,6 +7,14 @@ local render_markdown = require('render-markdown')
 
 vim.g.mapleader = ' '
 
+-- until proper multifile typst support becomes a thing
+vim.keymap.set({ 'n' }, '<leader>pp', function()
+    vim.lsp.buf.execute_command({ command = 'tinymist.pinMain', arguments = { vim.api.nvim_buf_get_name(0) } })
+end, { desc = 'tinymist Pin Main' })
+vim.keymap.set({ 'n' }, '<leader>po', function()
+    vim.lsp.buf.execute_command({ command = 'tinymist.pinMain', arguments = { nil } })
+end, { desc = 'tinymist Pin Main' })
+
 vim.keymap.set({ 'n', 'i' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
 
 vim.keymap.set('n', 'j', 'gj')
@@ -167,6 +175,7 @@ miniclue.setup({
         { mode = 'n', keys = '<leader>h', desc = 'Harpoon' },
         { mode = 'n', keys = '<leader>m', desc = 'MiniMap & Markdown' },
         { mode = 'n', keys = '<leader>c', desc = 'lol' },
+        { mode = 'n', keys = '<leader>p', desc = 'tinymist' },
         -- would need to add a whole bunch of custom clues for defualt actions
         -- oof
         -- { mode = 'n', keys = 'cw', desc = 'Change Word' }
