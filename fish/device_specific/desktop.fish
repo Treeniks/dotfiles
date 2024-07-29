@@ -1,7 +1,5 @@
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
-fish_add_path -g "$HOME/Downloads/node-v20.13.1-linux-x64/bin/"
-
 # Path
 eval (opam env)
 fish_add_path -g "$HOME/.local/bin/"
