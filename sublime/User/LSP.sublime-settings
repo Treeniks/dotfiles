@@ -42,11 +42,14 @@
             ],
             "selector": "source.crystal",
         },
-        "typst-lsp": {
+        "tinymist": {
             "command": [
-                "typst-lsp"
+                "tinymist"
             ],
             "selector": "text.typst",
+            "settings": {
+                "formatterMode": "typstyle",
+            },
         },
     },
 }
