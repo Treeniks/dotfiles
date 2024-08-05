@@ -13,7 +13,7 @@ vim.keymap.set({ 'n' }, '<leader>pp', function()
 end, { desc = 'tinymist Pin Main' })
 vim.keymap.set({ 'n' }, '<leader>po', function()
     vim.lsp.buf.execute_command({ command = 'tinymist.pinMain', arguments = { nil } })
-end, { desc = 'tinymist Pin Main' })
+end, { desc = 'tinymist Unpin Main' })
 
 vim.keymap.set({ 'n', 'i' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
 
