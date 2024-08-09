@@ -87,6 +87,7 @@ lspconfig.isabelle.setup({
 
 lspconfig.ltex.setup({
     capabilities = capabilities,
+    autostart = false,
     filetypes = {
         -- default
         'bib', 'gitcommit', 'markdown', 'org', 'plaintex', 'rst', 'rnoweb', 'tex', 'pandoc', 'quarto', 'rmd', 'context', 'html', 'xhtml', 'mail', 'text',
