@@ -56,6 +56,7 @@ require('lazy').setup({
     },
     'rebelot/kanagawa.nvim',
     'diegoulloao/neofusion.nvim',
+    'projekt0n/github-nvim-theme',
     -- }}}
 
     -- {
