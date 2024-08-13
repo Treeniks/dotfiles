@@ -104,7 +104,7 @@
             "scope": "isabelle.text_comment2", // false
             "background": "var(background)",
         }, // seems to not exist in the LSP
-    {
+        {
             "name": "isabelle.text_comment3",
             "scope": "isabelle.text_comment3", // false
             "background": "var(background)",
