@@ -40,38 +40,40 @@ return {
     default_cursor_style = "BlinkingBlock",
 
     -- Aura color scheme https://github.com/daltonmenezes/aura-theme/tree/main/packages/color-palettes
-    colors = {
-        foreground = '#edecee',
-        background = '#15141b',
-
-        cursor_bg = '#a277ff',
-        cursor_fg = '#15141b',
-        cursor_border = '#a277ff',
-
-        selection_fg = '#edecee',
-        selection_bg = '#29263c',
-
-        ansi = {
-          '#110f18',
-          '#ff6767',
-          '#61ffca',
-          '#ffca85',
-          '#a277ff',
-          '#a277ff',
-          '#61ffca',
-          '#edecee',
-        },
-        brights = {
-          '#4d4d4d',
-          '#ff6767',
-          '#61ffca',
-          '#ffca85',
-          '#a277ff',
-          '#a277ff',
-          '#61ffca',
-          '#edecee',
-        },
-    },
+    -- colors = {
+    --     foreground = '#edecee',
+    --     background = '#15141b',
+    --
+    --     cursor_bg = '#a277ff',
+    --     cursor_fg = '#15141b',
+    --     cursor_border = '#a277ff',
+    --
+    --     selection_fg = '#edecee',
+    --     selection_bg = '#29263c',
+    --
+    --     ansi = {
+    --       '#110f18',
+    --       '#ff6767',
+    --       '#61ffca',
+    --       '#ffca85',
+    --       '#a277ff',
+    --       '#a277ff',
+    --       '#61ffca',
+    --       '#edecee',
+    --     },
+    --     brights = {
+    --       '#4d4d4d',
+    --       '#ff6767',
+    --       '#61ffca',
+    --       '#ffca85',
+    --       '#a277ff',
+    --       '#a277ff',
+    --       '#61ffca',
+    --       '#edecee',
+    --     },
+    -- },
+    -- color_scheme = 'rose-pine-dawn',
+    color_scheme = 'catppuccin-mocha',
 
     -- -- rename the window to "WezTerm" permanently
     -- wezterm.on("format-window-title", function(tab, pane, tabs, panes, config)
