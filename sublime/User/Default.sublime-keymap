@@ -12,21 +12,6 @@
     { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 
     { "keys": ["ctrl+["], "command": "vnm_enter_command_mode" },
-    {
-        "keys": ["escape"],
-        "command": "vnm_enter_command_mode",
-        "context": [
-            // these are (hopefully) all the cases where escape has
-            // pre-defined behaviour that I don't want to lose
-            {"key": "vnm.command_mode", "operator": "equal", "operand": false},
-            {"key": "has_next_field", "operator": "equal", "operand": false},
-            {"key": "has_prev_field", "operator": "equal", "operand": false},
-            {"key": "panel_visible", "operator": "equal", "operand": false},
-            {"key": "overlay_visible", "operator": "equal", "operand": false},
-            // {"key": "popup_visible", "operator": "equal", "operand": false},
-            {"key": "num_selections", "operator": "equal", "operand": 1},
-        ],
-    },
     // either this or a different enter_command_mode keybind
     // { "keys": ["ctrl+]"], "command": "unindent" },
     // { "keys": ["ctrl+\\"], "command": "indent" },
@@ -233,18 +218,6 @@
     { "keys": ["ctrl+\\"], "command": "toggle_terminus_panel" },
     { "keys": ["ctrl+shift+\\"], "command": "terminus_open" },
 
-    // ! not needed if the contexts for the Vinimum keybind are correct
-    // taken from Terminus's default keybindings
-    // required as we overwrite escape to be used for Vinimum above
-    // { "keys": ["escape"], "command": "terminus_keypress", "args": {"key": "escape"},
-    //     "context": [
-    //         { "key": "terminus_view" },
-    //         { "key": "terminus_view.finished", "operator": "not_equal", "operand": true },
-    //         { "key": "overlay_visible", "operator": "equal", "operand": false },
-    //         { "key": "popup_visible", "operator": "equal", "operand": false },
-    //     ]
-    // },
-    // however, we do want ctrl+[ to work in terminus
     { "keys": ["ctrl+["], "command": "terminus_keypress", "args": {"key": "escape"},
         "context": [
             { "key": "terminus_view" },
