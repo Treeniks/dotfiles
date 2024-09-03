@@ -5,24 +5,35 @@ from os.path import realpath, dirname
 path.append(dirname(dirname(realpath(__file__))))
 from utils import *
 
-check_os(OS.WINDOWS)
+check_os(OS.WINDOWS, OS.LINUX)
 
 target = join(target_dir(), "chrome")
 
 match platform:
-    # case OS.LINUX | OS.MACOS:
-        # link = join(DOTCONFIG, "config_folder")
-    case OS.WINDOWS:
-        base = join(USERPROFILE, "scoop", "persist", "firefox", "profile")
+    # case OS.MACOS:
+    #     pass
+    case OS.LINUX:
+        import configparser
 
-link = join(base, "chrome")
+        base = join(HOME, ".mozilla", "firefox")
+        installs_ini = join(base, "installs.ini")
+        config = configparser.ConfigParser()
+        config.read(installs_ini)
+        assert(len(config.sections()) == 1)
+        profile_folder = config[config.sections()[0]]["Default"]
+
+        profile = join(base, profile_folder)
+    case OS.WINDOWS:
+        profile = join(USERPROFILE, "scoop", "persist", "firefox", "profile")
+
+link = join(profile, "chrome")
 make_symlink(target, link)
 
 # =========
 # Betterfox
 # =========
 
-userjs = join(base, "user.js")
+userjs = join(profile, "user.js")
 answer = input("Install Betterfox? [Y/n]: ")
 if answer.lower() != "n":
     import requests
