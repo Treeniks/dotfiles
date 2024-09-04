@@ -8,25 +8,31 @@
     width: 8px !important;
 }
 
+/* TODO: unfortunately this also removes native Minimize/Maximize/Close buttons */
+/* maybe that can be fixed? */
 #TabsToolbar {
     visibility: collapse !important;
 }
 
-.titlebar-buttonbox-container {
-    position: absolute;
-    right: 0;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    width: 110px !important;
-}
+/* keep Minimize/Maximize/Close disabled for linux and mac
+   because they'd just display blank space */
+@media (-moz-platform: windows) {
+    .titlebar-buttonbox-container {
+        position: absolute;
+        right: 0;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        width: 110px !important;
+    }
 
-.titlebar-button {
-    width: 36px !important;
-}
+    .titlebar-button {
+        width: 36px !important;
+    }
 
-#nav-bar {
-    width: calc(100% - 110px);
+    #nav-bar {
+        width: calc(100% - 110px);
+    }
 }
 
 #sidebar-header {
