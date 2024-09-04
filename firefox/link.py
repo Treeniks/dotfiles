@@ -5,17 +5,19 @@ from os.path import realpath, dirname
 path.append(dirname(dirname(realpath(__file__))))
 from utils import *
 
-check_os(OS.WINDOWS, OS.LINUX)
+check_os(OS.LINUX, OS.WINDOWS, OS.MACOS)
 
 target = join(target_dir(), "chrome")
 
 match platform:
-    # case OS.MACOS:
-    #     pass
-    case OS.LINUX:
+    case OS.LINUX | OS.MACOS:
         import configparser
 
-        base = join(HOME, ".mozilla", "firefox")
+        if platform == OS.LINUX:
+            base = join(HOME, ".mozilla", "firefox")
+        else: # OS.MACOS
+            base = join(APPLICATION_SUPPORT, "Firefox")
+
         installs_ini = join(base, "installs.ini")
         config = configparser.ConfigParser()
         config.read(installs_ini)
