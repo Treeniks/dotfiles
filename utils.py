@@ -15,6 +15,7 @@ join = os.path.join
 try:
     HOME = os.environ["HOME"]
     DOTCONFIG = join(HOME, ".config")
+    APPLICATION_SUPPORT = join(HOME, "Library", "Application Support")
 except: pass
 try: USERPROFILE = os.environ["USERPROFILE"]
 except: pass
