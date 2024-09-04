@@ -6,7 +6,8 @@ Based primarily on [Minimal-Arc](https://github.com/zayihu/Minimal-Arc) with a f
 
 ## Manual Install
 
-- enable `toolkit.legacyUserProfileCustomizations.stylesheets` in about:config or install [Betterfox](https://github.com/yokoffing/Betterfox) configs.
+- install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/)
+- enable `toolkit.legacyUserProfileCustomizations.stylesheets` in about:config or install [Betterfox](https://github.com/yokoffing/Betterfox) configs
 - copy `chrome` folder into Firefox profile (about:profiles)
 - import `sidebery-data.json` in Sidebery settings
 
