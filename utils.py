@@ -64,7 +64,7 @@ def check_os(*oses: OS):
         sys.exit(0)
 
 def make_symlink(target: str, link: str):
-    s = os.path.basename(target)
+    s = os.path.basename(link)
     link_dir = os.path.dirname(link)
 
     if not os.path.exists(link_dir):
