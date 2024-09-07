@@ -35,10 +35,11 @@ make_symlink(target, link)
 # Betterfox
 # =========
 
-userjs = join(profile, "user.js")
 answer = input("Install Betterfox? [Y/n]: ")
 if answer.lower() != "n":
     import requests
+
+    userjs = join(profile, "user.js")
 
     url = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js"
     r = requests.get(url)
@@ -47,3 +48,26 @@ if answer.lower() != "n":
         file.write(r.text)
 
     print("Installed Betterfox")
+
+# ==================================
+# ManualAppUpdateOnly (Windows only)
+# ==================================
+
+# https://mozilla.github.io/policy-templates/#manualappupdateonly
+policy = """{
+  "policies": {
+    "ManualAppUpdateOnly": true
+  }
+}
+"""
+
+if platform == OS.WINDOWS:
+    answer = input("Add ManualAppUpdateOnly policy? [Y/n]: ")
+    if answer.lower() != "n":
+
+        policies = join(USERPROFILE, "scoop", "persist", "firefox", "distribution", "policies.json")
+
+        with open(policies, "w") as file:
+            file.write(policy)
+
+        print("Added policy")
