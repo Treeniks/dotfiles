@@ -1,0 +1,23 @@
+{
+	"name": "Vimium C",
+	"@time": "9/10/2024, 2:57:59 AM",
+	"time": 1725929879525,
+	"environment": {
+		"extension": "1.99.997",
+		"platform": "win",
+		"firefox": 129
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "^ Z ",
+			"pattern": "^"
+		}
+	],
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"map Z openUrl url=\"vimium://status\\u0020toggle\\u0020^\\u0020Z\"",
+		""
+	],
+	"vimSync": true
+}
