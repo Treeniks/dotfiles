@@ -27,7 +27,13 @@ function animemode
                 echo "Gammastep not running"
             end
 
-            hyprctl --batch "keyword monitor HDMI-A-2,3840x2160@120,0x0,2,bitdepth,10; keyword monitor DP-2,disable; keyword monitor DP-3,disable; keyword workspace name:DP-2_1,persistent:false; keyword workspace name:DP-2_2,persistent:false; keyword workspace name:DP-2_3,persistent:false; keyword workspace name:DP-3_1,persistent:false; keyword workspace name:DP-3_2,persistent:false; keyword workspace name:DP-3_3,persistent:false;"
+            hyprctl --batch "
+                keyword monitor HDMI-A-3,3840x2160@120,0x0,2,bitdepth,10;
+                keyword monitor DP-4,disable;
+                keyword monitor DP-3,disable;
+                keyword workspace name:DP-4_1,persistent:false;
+                keyword workspace name:DP-3_1,persistent:false;
+            "
         case off
             # `2>&1` redirects stderr to stdout
             # `> /dev/null` to suppress output
