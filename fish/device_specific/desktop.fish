@@ -4,15 +4,13 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 eval (opam env)
 fish_add_path -g "$HOME/.local/bin/"
 fish_add_path -g "$HOME/.cargo/bin/"
-fish_add_path -g "$HOME/.nimble/bin/"
-fish_add_path -g "$HOME/.dotnet/tools/"
-
-fish_add_path -g "$HOME/.local/share/coursier/bin/"
 
 fish_add_path -g "$HOME/Documents/dotfiles/bin/"
-fish_add_path -g "$HOME/Documents/isabelle/isabelle-language-server/bin/"
-fish_add_path -g "$HOME/Documents/odin/Odin/"
-fish_add_path -g "$HOME/Documents/git-remote-hg/"
+fish_add_path -g "$HOME/Documents/isabelle/isabelle/bin/"
+
+fish_add_path -g "/usr/local/texlive/2024/bin/x86_64-linux/"
+set -gx MANPATH $MANPATH "/usr/local/texlive/2024/texmf-dist/doc/man/"
+set -gx INFOPATH $INFOPATH "/usr/local/texlive/2024/texmf-dist/doc/info/"
 
 function animemode
     switch $argv[1]
