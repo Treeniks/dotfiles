@@ -15,6 +15,9 @@ match platform:
     case OS.MACOS:
         link = join(APPLICATION_SUPPORT, "Sublime Text", "Packages", "User")
     case OS.WINDOWS:
-        link = join(USERPROFILE, "scoop", "persist", "sublime-text", "Data", "Packages", "User")
+        if check_scoop():
+            link = join(USERPROFILE, "scoop", "persist", "sublime-text", "Data", "Packages", "User")
+        else:
+            link = join(APPDATA, "Sublime Text", "Packages", "User")
 
 make_symlink(target, link)

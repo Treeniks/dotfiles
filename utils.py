@@ -83,3 +83,10 @@ def make_symlink(target: str, link: str):
 
     os.symlink(target, link)
     print(f"Created symlink for '{s}'")
+
+def check_scoop():
+    if platform != OS.WINDOWS:
+        return False
+    else:
+        response = input(f"Installed via scoop? [Y/n]: ")
+        return not response.lower() != "y"

@@ -26,7 +26,20 @@ match platform:
 
         profile = join(base, profile_folder)
     case OS.WINDOWS:
-        profile = join(USERPROFILE, "scoop", "persist", "firefox", "profile")
+        if check_scoop():
+            profile = join(USERPROFILE, "scoop", "persist", "firefox", "profile")
+        else:
+            import configparser
+
+            base = join(APPDATA, "Mozilla", "Firefox")
+
+            installs_ini = join(base, "installs.ini")
+            config = configparser.ConfigParser()
+            config.read(installs_ini)
+            assert(len(config.sections()) == 1)
+            profile_folder = config[config.sections()[0]]["Default"]
+
+            profile = join(base, profile_folder)
 
 link = join(profile, "chrome")
 make_symlink(target, link)
