@@ -48,20 +48,6 @@ function fixmon
     ~/.config/hypr/desktop/fix_mon.fish
 end
 
-# Nvidia stuff
-set -gx XDG_SESSION_TYPE wayland
-
-set -gx WLR_NO_HARDWARE_CURSORS 1
-
-set -gx GBM_BACKEND nvidia-drm
-set -gx __GLX_VENDOR_LIBRARY_NAME nvidia
-
-set -gx LIBVA_DRIVER_NAME nvidia
-
-set -gx __GL_GSYNC_ALLOWED 1
-set -gx __GL_VRR_ALLOWED 1
-set -gx WLR_DRM_NO_ATOMIC 1
-
 # gpg-agent SSH stuff
 # this is device specific as it looks rather different on windows
 set -gx SSH_AGENT_PID
