@@ -73,8 +73,7 @@ def make_symlink(target: str, link: str):
     elif os.path.lexists(link):
         response = input(f"Existing '{s}' found\nRemove? [y/N]: ")
         if response.lower() != "y":
-            print("Exiting")
-            sys.exit(0)
+            return
         try:
             os.remove(link)
         except OSError:
