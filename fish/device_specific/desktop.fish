@@ -70,7 +70,7 @@ set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
 # for some reason the arch helix package doesn't add an hx command
 alias hx helix
 
-function uxplay
+function ipad
     if systemctl is-active --quiet avahi-daemon
         echo "avahi-daemon is already running"
     else
@@ -83,5 +83,5 @@ function uxplay
     # avdec disables hardware decoding
     # probably because nvidia sucks or something
     # but it breaks without it
-    ~/Documents/uxplay/uxplay -avdec
+    uxplay -avdec
 end
