@@ -48,10 +48,6 @@ lspconfig.crystalline.setup({
     capabilities = capabilities,
 })
 
-lspconfig.sourcekit.setup({
-    capabilities = capabilities,
-})
-
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
 })
