@@ -66,6 +66,8 @@ vim.keymap.set('n', '<leader>ts', function() telescope_builtin.grep_string({ sea
     { desc = 'Telescope Grep Search' })
 vim.keymap.set('n', '<leader>tb', telescope_builtin.buffers, { desc = 'Buffers' })
 
+vim.keymap.set('n', '<C-q>', telescope_builtin.lsp_document_symbols, {})
+
 -- Harpoon Keybinds
 vim.keymap.set('n', '<leader>hm', function() harpoon:list():append() end, { desc = 'Harpoon Mark' })
 vim.keymap.set('n', '<leader>hf', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end,
