@@ -52,11 +52,4 @@ return {
             })
         end,
     },
-
-    {
-        'folke/lazydev.nvim',
-        version = '1.8.0',
-        ft = 'lua',
-        opts = {},
-    },
 }
