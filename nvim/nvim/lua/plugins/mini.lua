@@ -35,7 +35,8 @@ return {
         -- using lualine for now
         -- require('mini.statusline').setup({})
         require('mini.surround').setup({})
-        require('mini.tabline').setup({})
+        -- unsure
+        -- require('mini.tabline').setup({})
         require('mini.trailspace').setup({})
     end,
 }
