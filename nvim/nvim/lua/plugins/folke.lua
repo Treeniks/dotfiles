@@ -19,6 +19,7 @@ return {
 
     {
         'folke/noice.nvim',
+        event = 'VeryLazy',
         opts = {
             presets = {
                 bottom_search = false,
@@ -57,7 +58,7 @@ return {
 
     {
         'folke/which-key.nvim',
-        lazy = true,
+        event = 'VeryLazy',
         opts = {
             preset = 'helix',
             delay = 0,
