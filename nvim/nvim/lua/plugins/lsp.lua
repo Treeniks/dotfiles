@@ -30,8 +30,7 @@ return {
                         { 'gd',         vim.lsp.buf.definition,                      desc = 'Goto Definition' },
                         { 'gD',         vim.lsp.buf.declaration,                     desc = 'Goto Declaration' },
 
-                        -- kmset('', '<leader>lR', telescope_builtin.lsp_references, { desc = 'LSP Find References (Telescope)', buffer = event.buf })
-                        { '<leader>lR', vim.lsp.buf.references,                      desc = 'Find References' },
+                        -- find_references keybind is in telescope config
 
                         { '<leader>d',  group = 'Diagnostics' },
 
