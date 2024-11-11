@@ -81,6 +81,12 @@ return {
                 ['<C-L>'] = { 'snippet_backward', 'fallback' },
             },
 
+            -- not sure what it does or doesn't work
+            accept = { auto_brackets = { enabled = true } },
+
+            -- handled by noice
+            -- trigger = { signature_help = { enabled = true } },
+
             sources = {
                 completion = { enabled_providers = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' } },
                 providers = {
