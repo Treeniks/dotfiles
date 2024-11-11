@@ -5,7 +5,20 @@ return {
 
     {
         'nvim-lualine/lualine.nvim',
-        opts = {},
+        opts = {
+            -- show @recording section
+            -- taken from https://github.com/folke/noice.nvim/wiki/Configuration-Recipes
+            -- and relies on folke/noice.nvim
+            sections = {
+                lualine_x = {
+                    {
+                        require("noice").api.statusline.mode.get,
+                        cond = require("noice").api.statusline.mode.has,
+                        color = { fg = "#ff9e64" },
+                    }
+                },
+            },
+        },
         dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
 

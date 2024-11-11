@@ -10,11 +10,32 @@ return {
         opts = {
             presets = {
                 bottom_search = false,
-                command_palette = false,
+                command_palette = true,
                 long_message_to_split = false,
                 inc_rename = true,
                 lsp_doc_border = true,
             },
+
+            -- for a normal command line
+            -- also recommend disabling `command_palette` above in that case
+            -- cmdline = {
+            --     view = "cmdline",
+            -- },
+
+            lsp = {
+                -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+                override = {
+                    ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
+                    ['vim.lsp.util.stylize_markdown'] = true,
+                    ['cmp.entry.get_documentation'] = true,
+                },
+            },
+        },
+
+        dependencies = {
+            'MunifTanjim/nui.nvim',
+            -- way too noisy, I'd rather use the mini backend
+            -- "rcarriga/nvim-notify",
         },
     },
 
