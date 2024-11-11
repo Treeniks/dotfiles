@@ -1,7 +1,5 @@
 return {
-    {
-        'folke/lazy.nvim',
-    },
+    { 'folke/lazy.nvim' },
 
     -- realistically only here for the terminal functionality
     -- and I'm not too convinced by even that
@@ -53,18 +51,13 @@ return {
         },
     },
 
-    {
-        'folke/todo-comments.nvim',
-        opts = {},
-    },
+    { 'folke/todo-comments.nvim', opts = {} },
 
-    {
-        'folke/twilight.nvim',
-        opts = {},
-    },
+    { 'folke/twilight.nvim',      opts = {} },
 
     {
         'folke/which-key.nvim',
+        lazy = true,
         opts = {
             preset = 'helix',
             delay = 0,
@@ -75,6 +68,10 @@ return {
             spec = {
                 { '<leader>b', group = 'Buffer' },
                 { '<leader>m', group = 'Misc' },
+                -- I'd rather have this together with Telescope's config
+                -- but idk how lazy.nvim and which-key are supposed to be
+                -- working together wrt keybind groups.
+                { '<leader>t', group = 'Telescope' },
             },
         },
     },

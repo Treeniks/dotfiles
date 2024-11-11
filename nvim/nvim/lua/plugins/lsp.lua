@@ -101,8 +101,5 @@ return {
         },
     },
 
-    {
-        'smjonas/inc-rename.nvim',
-        opts = {},
-    },
+    { 'smjonas/inc-rename.nvim', opts = {} },
 }
