@@ -94,7 +94,7 @@ return {
             require('inc_rename').setup({})
             -- `wk.add` does not support `expr = true`
             vim.keymap.set('n', '<leader>lr', function()
-                return ":IncRename " .. vim.fn.expand("<cword>")
+                return ':IncRename ' .. vim.fn.expand('<cword>')
             end, { expr = true, desc = 'IncRename' })
         end,
     },
