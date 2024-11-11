@@ -1,12 +1,5 @@
 return {
     {
-        'folke/lazydev.nvim',
-        version = '1.8.0',
-        ft = 'lua',
-        opts = {},
-    },
-
-    {
         'folke/lazy.nvim',
         version = '*',
     },
@@ -19,7 +12,7 @@ return {
                 bottom_search = false,
                 command_palette = false,
                 long_message_to_split = false,
-                inc_rename = false,
+                inc_rename = true,
                 lsp_doc_border = true,
             },
         },
