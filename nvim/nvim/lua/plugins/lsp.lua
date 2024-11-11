@@ -41,7 +41,7 @@ return {
                         { '<leader>dn', vim.diagnostic.goto_next,                    desc = 'Diagnostic Goto Next' },
 
                         { '<leader>dh', function() vim.diagnostic.enable(false) end, desc = 'Diagnostic Disable/Hide' },
-                        { '<leader>dh', function() vim.diagnostic.enable(true) end,  desc = 'Diagnostic Enable/Show' },
+                        { '<leader>ds', function() vim.diagnostic.enable(true) end,  desc = 'Diagnostic Enable/Show' },
                     })
                 end
             })
