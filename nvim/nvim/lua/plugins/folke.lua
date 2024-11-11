@@ -4,6 +4,23 @@ return {
         version = '*',
     },
 
+    -- realistically only here for the terminal functionality
+    -- and I'm not too convinced by even that
+    {
+        'folke/snacks.nvim',
+        version = '1.2.0',
+        priority = 999,
+        opts = {
+            notifier = { enabled = false }, -- noice's mini notifications are less distracting
+            words = { enabled = false },    -- mini.cursorword
+        },
+        keys = {
+            { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
+            -- maybe replace with mini.terminal once that's out?
+            { '<C-\\>',     function() Snacks.terminal() end,  mode = { 'n', 'v', 'i', 't' }, desc = 'Open Terminal' },
+        },
+    },
+
     {
         'folke/noice.nvim',
         version = '4.7.0',
@@ -62,7 +79,8 @@ return {
                 { 's',      mode = 'n' }, -- mini.surround
             },
             spec = {
-                { '<leader>m', group = 'Misc' }
+                { '<leader>b', group = 'Buffer' },
+                { '<leader>m', group = 'Misc' },
             },
         },
     },
