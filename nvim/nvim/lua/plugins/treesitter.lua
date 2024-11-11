@@ -9,8 +9,10 @@ return {
     opts = {
         ensure_installed = {
             'lua', 'rust', 'c', 'cpp', 'zig',
-            'typst', 'latex', 'markdown',
-            'just'
+            'typst', 'latex', 'markdown', 'markdown_inline',
+            'just',
+            -- additional deps for noice.nvim
+            'vim', 'regex', 'bash'
         },
 
         auto_install = true,

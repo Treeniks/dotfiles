@@ -1,5 +1,12 @@
 return {
     {
+        'folke/lazydev.nvim',
+        version = '1.8.0',
+        ft = 'lua',
+        opts = {},
+    },
+
+    {
         'folke/lazy.nvim',
         version = '*',
     },
@@ -7,7 +14,15 @@ return {
     {
         'folke/noice.nvim',
         version = '4.7.0',
-        opts = {},
+        opts = {
+            presets = {
+                bottom_search = false,
+                command_palette = false,
+                long_message_to_split = false,
+                inc_rename = false,
+                lsp_doc_border = true,
+            },
+        },
     },
 
     {
@@ -23,9 +38,15 @@ return {
     },
 
     {
-        'folke/lazydev.nvim',
-        version = '1.8.0',
-        ft = 'lua',
-        opts = {},
+        'folke/which-key.nvim',
+        version = '3.13.3',
+        opts = {
+            preset = 'helix',
+            delay = 0,
+            triggers = {
+                { '<auto>', mode = 'nixsotc' },
+                { 's',      mode = 'n' }, -- mini.surround
+            }
+        },
     },
 }
