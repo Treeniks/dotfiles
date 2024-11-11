@@ -3,7 +3,6 @@ local wk = require('which-key')
 return {
     {
         'neovim/nvim-lspconfig',
-        version = '1.0.0',
         config = function()
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({
@@ -64,7 +63,6 @@ return {
 
     {
         'saghen/blink.cmp',
-        version = '0.5.1',
         opts = {
             keymap = {
                 ['<Tab>'] = { 'select_and_accept', 'fallback' },

@@ -2,7 +2,6 @@ local wk = require('which-key')
 
 return {
     'nvim-telescope/telescope.nvim',
-    version = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         require('telescope').setup({})

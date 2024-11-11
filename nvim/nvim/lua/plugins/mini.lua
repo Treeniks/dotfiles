@@ -2,7 +2,6 @@ local wk = require('which-key')
 
 return {
     'echasnovski/mini.nvim',
-    version = '0.14.0',
     config = function()
         require('mini.files').setup({
             windows = {
