@@ -19,6 +19,7 @@ return {
             lspconfig.rust_analyzer.setup({})
             lspconfig.clangd.setup({})
 
+            local telescope_builtin = require('telescope.builtin')
             vim.api.nvim_create_autocmd('LspAttach', {
                 callback = function(event)
                     wk.add({
@@ -30,8 +31,6 @@ return {
                         { 'gd',         vim.lsp.buf.definition,                      desc = 'Goto Definition' },
                         { 'gD',         vim.lsp.buf.declaration,                     desc = 'Goto Declaration' },
 
-                        -- find_references keybind is in telescope config
-
                         { '<leader>d',  group = 'Diagnostics' },
 
                         { '<leader>dk', vim.diagnostic.open_float,                   desc = 'Open Float' },
@@ -40,7 +39,17 @@ return {
 
                         { '<leader>dh', function() vim.diagnostic.enable(false) end, desc = 'Disable/Hide' },
                         { '<leader>ds', function() vim.diagnostic.enable(true) end,  desc = 'Enable/Show' },
+
+                        -- Telescope
+                        { '<leader>lR', telescope_builtin.lsp_references,            desc = 'Find References' },
+                        { '<leader>ls', telescope_builtin.lsp_document_symbols,      desc = 'LSP Document Symbols' },
                     })
+
+                    -- IncRename
+                    -- `wk.add` does not support `expr = true`
+                    vim.keymap.set('n', '<leader>lr', function()
+                        return ':IncRename ' .. vim.fn.expand('<cword>')
+                    end, { expr = true, desc = 'IncRename' })
                 end
             })
         end,
@@ -90,12 +99,6 @@ return {
 
     {
         'smjonas/inc-rename.nvim',
-        config = function()
-            require('inc_rename').setup({})
-            -- `wk.add` does not support `expr = true`
-            vim.keymap.set('n', '<leader>lr', function()
-                return ':IncRename ' .. vim.fn.expand('<cword>')
-            end, { expr = true, desc = 'IncRename' })
-        end,
+        opts = {},
     },
 }

@@ -39,7 +39,10 @@ return {
             triggers = {
                 { '<auto>', mode = 'nixsotc' },
                 { 's',      mode = 'n' }, -- mini.surround
-            }
+            },
+            spec = {
+                { '<leader>m', group = 'Misc' }
+            },
         },
     },
 }
