@@ -23,6 +23,12 @@ return {
     },
 
     {
+        'kylechui/nvim-surround',
+        version = '*',
+        config = true,
+    },
+
+    {
         'MeanderingProgrammer/render-markdown.nvim',
         config = function()
             local render_markdown = require('render-markdown')

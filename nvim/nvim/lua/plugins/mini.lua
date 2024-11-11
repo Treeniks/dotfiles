@@ -27,16 +27,23 @@ return {
         require('mini.jump').setup({})
         require('mini.jump2d').setup({})
         require('mini.move').setup({})
+
         -- replaced by noice
         -- require('mini.notify').setup({})
+
         require('mini.operators').setup({})
         require('mini.pairs').setup({})
         require('mini.splitjoin').setup({})
+
         -- using lualine for now
         -- require('mini.statusline').setup({})
-        require('mini.surround').setup({})
+
+        -- I prefer normal surround keybinds
+        -- require('mini.surround').setup({})
+
         -- unsure
         -- require('mini.tabline').setup({})
+
         require('mini.trailspace').setup({})
     end,
 }
