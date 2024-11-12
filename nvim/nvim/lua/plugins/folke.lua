@@ -11,7 +11,7 @@ return {
             words = { enabled = false },    -- mini.cursorword
         },
         keys = {
-            { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
+            { '<leader>bd', function() Snacks.bufdelete() end, desc = 'Delete Buffer' },
             -- maybe replace with mini.terminal once that's out?
             { '<C-\\>',     function() Snacks.terminal() end,  mode = { 'n', 'v', 'i', 't' }, desc = 'Open Terminal' },
         },
@@ -32,7 +32,7 @@ return {
             -- for a normal command line
             -- also recommend disabling `command_palette` above in that case
             -- cmdline = {
-            --     view = "cmdline",
+            --     view = 'cmdline',
             -- },
 
             lsp = {
@@ -48,7 +48,7 @@ return {
         dependencies = {
             'MunifTanjim/nui.nvim',
             -- way too noisy, I'd rather use the mini backend
-            -- "rcarriga/nvim-notify",
+            -- 'rcarriga/nvim-notify',
         },
     },
 
