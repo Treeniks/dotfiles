@@ -50,6 +50,20 @@ return {
             -- way too noisy, I'd rather use the mini backend
             -- 'rcarriga/nvim-notify',
         },
+
+        keys = {
+            -- https://github.com/folke/noice.nvim/issues/341
+            {
+                '<C-e>',
+                function()
+                    local nldocs = require('noice.lsp.docs')
+                    local message = nldocs.get('signature')
+                    nldocs.hide(message)
+                end,
+                mode = 'i',
+                desc = 'Close Signature Help'
+            }
+        },
     },
 
     { 'folke/todo-comments.nvim', opts = {} },
