@@ -17,8 +17,11 @@ eval (opam env)
 # MacOS comes with bison preinstalled, but I want to use brew's bison
 fish_add_path -g "/opt/homebrew/opt/bison/bin"
 
-# if homebrew's gcc or clang are needed
-fish_add_path -g "$(brew --prefix llvm)/bin"
+# homebrew's llvm
+set llvm (brew --prefix llvm)
+fish_add_path "$llvm/bin"
+set -gx LDFLAGS "-L$llvm/lib"
+set -gx CPPFLAGS "-I$llvm/include"
 
 fish_add_path -g "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 fish_add_path -g "$HOME/.cargo/bin"
