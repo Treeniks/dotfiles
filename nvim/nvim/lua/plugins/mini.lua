@@ -17,6 +17,21 @@ return {
             { '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, desc = 'Mini Files' },
         })
 
+        -- example config from https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md
+        local hipatterns = require('mini.hipatterns')
+        hipatterns.setup({
+            highlighters = {
+                -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+                fixme     = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+                hack      = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
+                todo      = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
+                note      = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
+
+                -- Highlight hex color strings (`#rrggbb`) using that color
+                hex_color = hipatterns.gen_highlighter.hex_color(),
+            },
+        })
+
         require('mini.ai').setup({})
         require('mini.bracketed').setup({})
         require('mini.comment').setup({})

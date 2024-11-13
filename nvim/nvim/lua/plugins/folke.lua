@@ -66,9 +66,7 @@ return {
         },
     },
 
-    { 'folke/todo-comments.nvim', opts = {} },
-
-    { 'folke/twilight.nvim',      opts = {} },
+    { 'folke/twilight.nvim', opts = {} },
 
     {
         'folke/which-key.nvim',
