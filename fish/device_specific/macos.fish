@@ -18,9 +18,7 @@ eval (opam env)
 fish_add_path -g "/opt/homebrew/opt/bison/bin"
 
 # if homebrew's gcc or clang are needed
-# fish_add_path -g "/opt/homebrew/Cellar/llvm/19.1.1/bin"
-# alias gcc gcc-14
-# alias c++ c++-14
+fish_add_path -g "$(brew --prefix llvm)/bin"
 
 fish_add_path -g "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 fish_add_path -g "$HOME/.cargo/bin"
