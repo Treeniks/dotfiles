@@ -33,6 +33,8 @@ vim.opt.listchars:append({
     trail = '⋅',
 })
 
+vim.o.undofile = true
+
 -- ===== Neovide =====
 vim.opt.guifont = 'Maple Mono:h13'
 vim.g.neovide_theme = 'dark'
