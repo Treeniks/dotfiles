@@ -29,11 +29,13 @@ yabai -m config \
     mouse_drop_action swap \
 \
     layout bsp \
-    top_padding 12 \
-    bottom_padding 12 \
-    left_padding 12 \
-    right_padding 12 \
-    window_gap 6
+    top_padding 6 \
+    bottom_padding 6 \
+    left_padding 6 \
+    right_padding 6 \
+    window_gap 6 \
+\
+    external_bar all:32:0
 
 # yabai -m rule --add label=finder app=Finder manage=off
 
