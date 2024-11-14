@@ -42,6 +42,9 @@ return {
 
             local blink = require('blink.cmp')
             for server, config in pairs(opts.servers or {}) do
+                if opts.setup[server] then
+                    opts.setup[server]()
+                end
                 config.capabilities = blink.get_lsp_capabilities(config.capabilities)
                 lspconfig[server].setup(config)
             end
@@ -58,6 +61,9 @@ return {
                     },
                 },
             },
+            -- list of functions that get called before setting up the server
+            -- (used primarily for isabelle-lsp.nvim)
+            setup = {},
         },
     },
 
