@@ -5,7 +5,6 @@ return {
     -- and I'm not too convinced by even that
     {
         'folke/snacks.nvim',
-        priority = 999,
         opts = {
             notifier = { enabled = false }, -- noice's mini notifications are less distracting
             words = { enabled = false },    -- mini.cursorword

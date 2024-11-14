@@ -113,6 +113,7 @@ return {
 
         -- allows extending the enabled_providers array elsewhere in your config
         -- without having to redefining it (not actually used in my config currently)
+        -- TODO: probably should enable lazydev with that
         opts_extend = { 'sources.completion.enabled_providers' },
     },
 
