@@ -3,20 +3,8 @@ local wk = require('which-key')
 return {
     {
         'neovim/nvim-lspconfig',
-        config = function()
+        config = function(_, opts)
             local lspconfig = require('lspconfig')
-            lspconfig.lua_ls.setup({
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            disable = { 'missing-fields' } -- lots of false-positives
-                        }
-                    }
-                }
-            })
-
-            lspconfig.rust_analyzer.setup({})
-            lspconfig.clangd.setup({})
 
             local telescope_builtin = require('telescope.builtin')
             vim.api.nvim_create_autocmd('LspAttach', {
@@ -51,7 +39,26 @@ return {
                     end, { expr = true, desc = 'IncRename' })
                 end
             })
+
+            local blink = require('blink.cmp')
+            for server, config in pairs(opts.servers or {}) do
+                config.capabilities = blink.get_lsp_capabilities(config.capabilities)
+                lspconfig[server].setup(config)
+            end
         end,
+        opts = {
+            servers = {
+                rust_analyzer = {},
+                clangd = {},
+                lua_ls = {
+                    settings = {
+                        Lua = {
+                            diagnostics = { disable = { 'missing-fields' } }, -- lots of false positives
+                        },
+                    },
+                },
+            },
+        },
     },
 
     {
@@ -63,6 +70,8 @@ return {
 
     {
         'saghen/blink.cmp',
+        lazy = false,
+        dependencies = 'rafamadriz/friendly-snippets',
         opts = {
             keymap = {
                 ['<Tab>'] = { 'select_and_accept', 'fallback' },
@@ -79,7 +88,6 @@ return {
                 ['<C-L>'] = { 'snippet_backward', 'fallback' },
             },
 
-            -- not sure what it does or doesn't work
             accept = { auto_brackets = { enabled = true } },
 
             -- handled by noice
@@ -98,7 +106,14 @@ return {
                 documentation = { border = 'rounded' },
                 signature_help = { border = 'rounded' },
             },
+
+            -- remove once themes add direct support for blink
+            highlight = { use_nvim_cmp_as_default = true },
         },
+
+        -- allows extending the enabled_providers array elsewhere in your config
+        -- without having to redefining it (not actually used in my config currently)
+        opts_extend = { 'sources.completion.enabled_providers' },
     },
 
     { 'smjonas/inc-rename.nvim', opts = {} },
