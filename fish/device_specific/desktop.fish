@@ -12,42 +12,6 @@ fish_add_path -g "$HOME/.local/texlive/2024/bin/x86_64-linux/"
 set -gx MANPATH $MANPATH "$HOME/.local/texlive/2024/texmf-dist/doc/man/"
 set -gx INFOPATH $INFOPATH "$HOME/.local/texlive/2024/texmf-dist/doc/info/"
 
-function animemode
-    switch $argv[1]
-        case on
-            # kill gammastep
-            set pid (pgrep gammastep)
-
-            if test -n $pid
-                kill $pid
-                echo "Gammastep stopped"
-            else
-                echo "Gammastep not running"
-            end
-
-            hyprctl --batch "
-                keyword monitor HDMI-A-2,3840x2160@120,0x0,2,bitdepth,10;
-                keyword monitor DP-3,disable;
-                keyword monitor DP-2,disable;
-                keyword workspace name:DP-3_1,persistent:false;
-                keyword workspace name:DP-2_1,persistent:false;
-            "
-        case off
-            # `2>&1` redirects stderr to stdout
-            # `> /dev/null` to suppress output
-            gammastep -O 4000 > /dev/null 2>&1 &
-            disown $last_pid
-
-            echo "Gammastep started"
-
-            hyprctl reload
-    end
-end
-
-function fixmon
-    ~/.config/hypr/desktop/fix_mon.fish
-end
-
 # gpg-agent SSH stuff
 # this is device specific as it looks rather different on windows
 set -gx SSH_AGENT_PID

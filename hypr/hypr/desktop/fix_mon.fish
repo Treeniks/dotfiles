@@ -5,5 +5,6 @@
 
 hyprctl keyword monitor HDMI-A-2,disable
 hyprctl keyword monitor DP-3,disable
+hyprctl keyword monitor DP-2,disable
 sleep 2
 hyprctl reload
