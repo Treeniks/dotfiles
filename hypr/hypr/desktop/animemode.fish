@@ -2,14 +2,14 @@
 
 switch $argv[1]
     case on
-        # kill gammastep
-        set pid (pgrep gammastep)
+        # kill hyprsunset
+        set pid (pgrep hyprsunset)
 
         if test -n $pid
             kill $pid
-            echo "Gammastep stopped"
+            echo "hyprsunset stopped"
         else
-            echo "Gammastep not running"
+            echo "hyprsunset not running"
         end
 
         hyprctl --batch "
@@ -19,13 +19,12 @@ switch $argv[1]
             keyword workspace name:DP-3_1,persistent:false;
             keyword workspace name:DP-2_1,persistent:false;
         "
+
+        $HOME/.config/hypr/general/fix_hyprpaper.fish
+        $HOME/.config/hypr/general/fix_waybar.fish
     case off
-        # `2>&1` redirects stderr to stdout
-        # `> /dev/null` to suppress output
-        gammastep -O 4500 > /dev/null 2>&1 &
-        disown $last_pid
-
-        echo "Gammastep started"
-
+        $HOME/.config/hypr/general/fix_hyprsunset.fish
+        $HOME/.config/hypr/general/fix_hyprpaper.fish
+        $HOME/.config/hypr/general/fix_waybar.fish
         hyprctl reload
 end

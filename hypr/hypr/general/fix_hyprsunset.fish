@@ -1,16 +1,16 @@
 #!/usr/bin/env fish
 
-# kill gammastep
-set pid (pgrep gammastep)
+# kill hyprsunset
+set pid (pgrep hyprsunset)
 
 if test -n $pid
     kill $pid
-    echo "Gammastep stopped"
+    echo "hyprsunset stopped"
 else
-    echo "Gammastep not running"
+    echo "hyprsunset not running"
 end
 
 # `2>&1` redirects stderr to stdout
 # `> /dev/null` to suppress output
-gammastep -O 4500 > /dev/null 2>&1 &
+hyprsunset -t 5500 > /dev/null 2>&1 &
 disown $last_pid
