@@ -32,6 +32,12 @@ return {
             },
         })
 
+        require('mini.pairs').setup({})
+        -- remove these as they cause issues more often than not
+        MiniPairs.unmap('i', '"', '""')
+        MiniPairs.unmap('i', "'", "''")
+        MiniPairs.unmap('i', '`', '``')
+
         require('mini.ai').setup({})
         require('mini.bracketed').setup({})
         require('mini.comment').setup({})
@@ -47,7 +53,6 @@ return {
         -- require('mini.notify').setup({})
 
         require('mini.operators').setup({})
-        require('mini.pairs').setup({})
         require('mini.splitjoin').setup({})
 
         -- using lualine for now
