@@ -53,6 +53,7 @@ return {
             servers = {
                 rust_analyzer = {},
                 clangd = {},
+                pyright = {},
                 lua_ls = {
                     settings = {
                         Lua = {
