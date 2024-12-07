@@ -17,6 +17,7 @@ return {
                         color = { fg = '#ff9e64' },
                     }
                 },
+                lualine_y = { 'selectioncount' },
             },
         },
         dependencies = { 'nvim-tree/nvim-web-devicons' },
