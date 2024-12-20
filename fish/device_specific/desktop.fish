@@ -8,6 +8,8 @@ fish_add_path -g "$HOME/.cargo/bin/"
 fish_add_path -g "$HOME/Documents/dotfiles/bin/"
 fish_add_path -g "$HOME/Documents/isabelle/isabelle/bin/"
 
+fish_add_path -g "$HOME/.modular/bin"
+
 fish_add_path -g "$HOME/.local/texlive/2024/bin/x86_64-linux/"
 set -gx MANPATH $MANPATH "$HOME/.local/texlive/2024/texmf-dist/doc/man/"
 set -gx INFOPATH $INFOPATH "$HOME/.local/texlive/2024/texmf-dist/doc/info/"
