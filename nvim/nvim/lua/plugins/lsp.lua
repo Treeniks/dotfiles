@@ -51,6 +51,7 @@ return {
         end,
         opts = {
             servers = {
+                zls = {},
                 rust_analyzer = {},
                 clangd = {},
                 pyright = {},
