@@ -95,33 +95,43 @@ return {
                 ['<C-L>'] = { 'snippet_backward', 'fallback' },
             },
 
-            accept = { auto_brackets = { enabled = true } },
+            completion = {
+                menu = {
+                    border = 'rounded',
+                    -- I'm currently testing using ghost_text primarily
+                    -- and only showing other completions on demand.
+                    -- That might keep the screen less cluttered.
+                    auto_show = false,
+                },
+                documentation = { window = { border = 'rounded' } },
+                ghost_text = { enabled = true },
+            },
 
-            -- handled by noice
-            -- trigger = { signature_help = { enabled = true } },
+            signature = {
+                enabled = true,
+                window = { border = 'rounded' }
+            },
 
             sources = {
-                completion = { enabled_providers = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' } },
+                default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+                -- disable cmdline completions
+                -- as it breaks with noice.nvim
+                cmdline = {},
                 providers = {
-                    lsp = { fallback_for = { 'lazydev' } },
-                    lazydev = { name = 'LazyDev', module = 'lazydev.integrations.blink' },
+                    lazydev = {
+                        name = "LazyDev",
+                        module = "lazydev.integrations.blink",
+                        -- make lazydev completions top priority
+                        score_offset = 100,
+                    },
                 },
             },
-
-            windows = {
-                autocomplete = { border = 'rounded' },
-                documentation = { border = 'rounded' },
-                signature_help = { border = 'rounded' },
-            },
-
-            -- remove once themes add direct support for blink
-            highlight = { use_nvim_cmp_as_default = true },
         },
 
-        -- allows extending the enabled_providers array elsewhere in your config
+        -- allows extending the sources elsewhere in your config
         -- without having to redefining it (not actually used in my config currently)
         -- TODO: probably should enable lazydev with that
-        opts_extend = { 'sources.completion.enabled_providers' },
+        opts_extend = { 'sources.default' },
     },
 
     { 'smjonas/inc-rename.nvim', opts = {} },

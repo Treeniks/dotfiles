@@ -24,7 +24,7 @@ vim.opt.ignorecase = true -- unsure
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 1
-vim.opt.signcolumn = 'number' -- or 'yes'
+vim.opt.signcolumn = 'yes' -- or 'number'
 
 -- whitespace visuals
 vim.opt.list = true
