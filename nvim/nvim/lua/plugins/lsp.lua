@@ -55,6 +55,7 @@ return {
                 rust_analyzer = {},
                 clangd = {},
                 pyright = {},
+                mojo = {},
                 lua_ls = {
                     settings = {
                         Lua = {
@@ -62,6 +63,7 @@ return {
                         },
                     },
                 },
+                slint_lsp = {},
             },
             -- list of functions that get called before setting up the server
             -- (used primarily for isabelle-lsp.nvim)
@@ -84,7 +86,7 @@ return {
             keymap = {
                 ['<Tab>'] = { 'select_and_accept', 'fallback' },
                 ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-                ['<C-e>'] = { 'hide', 'fallback' },
+                ['<C-e>'] = { 'hide', 'hide_documentation', 'fallback' },
 
                 ['<C-p>'] = { 'select_prev', 'fallback' },
                 ['<C-n>'] = { 'select_next', 'fallback' },
@@ -97,17 +99,11 @@ return {
             },
 
             completion = {
-                menu = {
-                    border = 'rounded',
-                    -- I'm currently testing using ghost_text primarily
-                    -- and only showing other completions on demand.
-                    -- That might keep the screen less cluttered.
-                    auto_show = false,
-                },
+                menu = { border = 'rounded' },
                 documentation = { window = { border = 'rounded' } },
-                ghost_text = { enabled = true },
             },
 
+            -- no keybind to hide it unfortunately
             signature = {
                 enabled = true,
                 window = { border = 'rounded' }
