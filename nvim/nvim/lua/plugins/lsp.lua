@@ -104,10 +104,11 @@ return {
             },
 
             -- no keybind to hide it unfortunately
-            signature = {
-                enabled = true,
-                window = { border = 'rounded' }
-            },
+            -- also super buggy so no thank you
+            -- signature = {
+            --     enabled = true,
+            --     window = { border = 'rounded' }
+            -- },
 
             sources = {
                 default = { "lazydev", "lsp", "path", "snippets", "buffer" },
