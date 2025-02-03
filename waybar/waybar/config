@@ -89,11 +89,11 @@
                 "󰕾",
             ]
         },
-        "on-click": "pavucontrol",
+        "on-click": "pwvucontrol",
     },
     "pulseaudio#2": {
         "format": "{volume:2}%",
-        "on-click": "pavucontrol",
+        "on-click": "pwvucontrol",
     },
 
     "network#1": {
