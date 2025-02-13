@@ -60,6 +60,11 @@ kmset('', '<C-b>', '10k')
 
 kmset('n', '<ESC>', vim.cmd.nohlsearch)
 
+kmset('n', '<leader>n', vim.cmd.tabnew, { desc = 'New Tab' })
+kmset('n', '<leader>k', vim.cmd.tabprev, { desc = 'Prev Tab' })
+kmset('n', '<leader>j', vim.cmd.tabnext, { desc = 'Next Tab' })
+kmset('n', '<leader>q', vim.cmd.tabclose, { desc = 'Close Tab' })
+
 -- ==== lazy.nvim =====
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
