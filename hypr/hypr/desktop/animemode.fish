@@ -13,7 +13,7 @@ switch $argv[1]
         end
 
         hyprctl --batch "
-            keyword monitor HDMI-A-2,3840x2160@120,0x0,2,bitdepth,12;
+            keyword monitor HDMI-A-2,3840x2160@120,0x0,2,vrr,1;
             keyword monitor DP-3,disable;
             keyword monitor DP-2,disable;
             keyword workspace name:DP-3_1,persistent:false;
