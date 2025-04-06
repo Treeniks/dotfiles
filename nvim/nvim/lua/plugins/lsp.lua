@@ -51,6 +51,7 @@ return {
         end,
         opts = {
             servers = {
+                clojure_lsp = {},
                 zls = {},
                 rust_analyzer = {},
                 clangd = {},
@@ -110,11 +111,10 @@ return {
             --     window = { border = 'rounded' }
             -- },
 
+            cmdline = { enabled = true },
+
             sources = {
                 default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-                -- disable cmdline completions
-                -- as it breaks with noice.nvim
-                cmdline = {},
                 providers = {
                     lazydev = {
                         name = "LazyDev",
