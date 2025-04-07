@@ -3,8 +3,34 @@ return {
         'catppuccin/nvim',
         name = 'catppuccin',
         lazy = false,
+        branch = 'main',
         priority = 1000,
-        config = function() vim.cmd.colorscheme('catppuccin-mocha') end,
-        -- config = function() vim.cmd.colorscheme('catppuccin-latte') end,
+        config = function()
+            require('catppuccin').setup({
+                transparent_background = true,
+                dim_inactive = {
+                    enabled = true,
+                },
+                integrations = {
+                    blink_cmp = true,
+                    treesitter = true,
+                    notify = true,
+                    mini = { enabled = true },
+                    indent_blankline = { enabled = true },
+                    leap = true,
+                    noice = true,
+                    nvim_surround = true,
+                    render_markdown = true,
+                    snacks = { enabled = true },
+                    telescope = { enabled = true },
+                    which_key = true,
+                },
+            })
+
+            vim.cmd.colorscheme('catppuccin-mocha')
+
+            -- light theme for projectors
+            -- vim.cmd.colorscheme('catppuccin-latte')
+        end,
     },
 }

@@ -33,6 +33,7 @@ return {
                 },
                 lualine_y = { 'selectioncount' },
             },
+            options = { theme = "catppuccin" },
         },
         dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
