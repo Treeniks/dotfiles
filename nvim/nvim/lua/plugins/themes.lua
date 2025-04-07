@@ -7,7 +7,9 @@ return {
         priority = 1000,
         config = function()
             require('catppuccin').setup({
-                transparent_background = true,
+                -- looks stupid with neovide
+                -- and causes some issues with signature/completions windows and such
+                -- transparent_background = true,
                 dim_inactive = {
                     enabled = true,
                 },
