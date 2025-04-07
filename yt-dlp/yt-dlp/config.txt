@@ -1,1 +1,1 @@
--o "%(uploader_id)s - %(uploader)s - %(id)s.%(ext)s"
+-o "%(uploader)s - %(title)s - %(id)s.%(ext)s"
