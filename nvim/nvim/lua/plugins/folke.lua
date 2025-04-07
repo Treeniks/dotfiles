@@ -43,8 +43,7 @@ return {
                 },
 
                 -- let blink handle it iself
-                -- TODO: blink is still way too buggy regarding signatures
-                -- signature = { enabled = false },
+                signature = { enabled = false },
             },
         },
 

@@ -100,7 +100,10 @@ return {
             },
 
             completion = {
-                menu = { border = 'rounded' },
+                menu = {
+                    border = 'rounded',
+                    draw = { treesitter = { 'lsp' } },
+                },
                 documentation = { window = { border = 'rounded' } },
             },
 
@@ -123,6 +126,11 @@ return {
                         score_offset = 100,
                     },
                 },
+            },
+
+            signature = {
+                enabled = true,
+                window = { border = 'rounded' },
             },
         },
 
