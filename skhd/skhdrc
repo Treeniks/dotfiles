@@ -2,6 +2,7 @@
 alt - return : kitty -d ~
 
 alt - d : open ~
+alt - e : open ~
 
 # alternative to cmd+q
 # lalt+q only closes one window
@@ -14,6 +15,7 @@ lalt - q : yabai -m window --close
 alt - m : yabai -m window --minimize
 
 alt - f : yabai -m window --toggle zoom-fullscreen
+shift + alt - f : yabai -m window --toggle native-fullscreen
 alt - v : yabai -m window --toggle float
 
 alt - 0 : yabai -m space --balance
