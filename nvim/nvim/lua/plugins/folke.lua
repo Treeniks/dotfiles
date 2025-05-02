@@ -5,14 +5,40 @@ return {
     -- and I'm not too convinced by even that
     {
         'folke/snacks.nvim',
+        lazy = false,
         opts = {
             notifier = { enabled = false }, -- noice's mini notifications are less distracting
             words = { enabled = false },    -- mini.cursorword
+            explorer = {
+                enabled = true,
+                layout = {
+                    auto_hide = { "input" },
+                },
+            },
+            picker = {
+                sources = {
+                    explorer = {
+                        layout = { auto_hide = { "input" } },
+                    },
+                },
+            },
         },
         keys = {
             { '<leader>bd', function() Snacks.bufdelete() end, desc = 'Delete Buffer' },
             -- maybe replace with mini.terminal once that's out?
             { '<C-\\>',     function() Snacks.terminal() end,  mode = { 'n', 'v', 'i', 't' }, desc = 'Open Terminal' },
+            {
+                '<leader>e',
+                function()
+                    explorer = Snacks.picker.get({ source = 'explorer' })[1]
+                    if explorer then
+                        explorer:focus()
+                    else
+                        Snacks.explorer()
+                    end
+                end,
+                desc = 'Open Snacks Explorer'
+            },
         },
     },
 
