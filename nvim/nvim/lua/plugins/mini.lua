@@ -14,7 +14,7 @@ return {
             },
         })
         wk.add({
-            { '<leader>E', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, desc = 'Mini Files' },
+            { '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, desc = 'Mini Files' },
         })
 
         -- example config from https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md

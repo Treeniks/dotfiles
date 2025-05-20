@@ -28,7 +28,7 @@ return {
             -- maybe replace with mini.terminal once that's out?
             { '<C-\\>',     function() Snacks.terminal() end,  mode = { 'n', 'v', 'i', 't' }, desc = 'Open Terminal' },
             {
-                '<leader>e',
+                '<leader>E',
                 function()
                     explorer = Snacks.picker.get({ source = 'explorer' })[1]
                     if explorer then

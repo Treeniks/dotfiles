@@ -14,6 +14,7 @@ return {
 
                         { '<C-k>',      vim.lsp.buf.hover,                           desc = 'Hover' },
                         { '<leader>lf', vim.lsp.buf.format,                          desc = 'Format' },
+                        { '<S-M-f>',    vim.lsp.buf.format,                          desc = 'Format',              mode = { 'n', 'v', 'i' } },
                         { '<leader>la', vim.lsp.buf.code_action,                     desc = 'Code Action' },
                         { 'gd',         vim.lsp.buf.definition,                      desc = 'Goto Definition' },
                         { 'gD',         vim.lsp.buf.declaration,                     desc = 'Goto Declaration' },
@@ -87,7 +88,7 @@ return {
             keymap = {
                 ['<Tab>'] = { 'select_and_accept', 'fallback' },
                 ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-                ['<C-e>'] = { 'hide', 'hide_documentation', 'fallback' },
+                ['<C-e>'] = { 'hide', 'hide_documentation', 'hide_signature', 'fallback' },
 
                 ['<C-p>'] = { 'select_prev', 'fallback' },
                 ['<C-n>'] = { 'select_next', 'fallback' },
