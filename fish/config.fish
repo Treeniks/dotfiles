@@ -6,6 +6,9 @@ set -g fish_greeting
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
     fish_vi_key_bindings --no-erase insert
+
+    # bring back old 3.X behavior
+    bind -M insert ctrl-n down-or-search
 end
 
 # should be done first
