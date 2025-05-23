@@ -10,7 +10,11 @@
 fish_add_path -g "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
 
 # to have python and not just python3 on PATH
-fish_add_path -g "$(brew --prefix python)/libexec/bin"
+# fish_add_path -g "$(brew --prefix python)/libexec/bin"
+
+# I don't want to rely on homebrew for pip packages
+# so I just created this global venv...kinda cringe but whatever
+fish_add_path -g "$HOME/.venv/bin"
 
 # Opam
 eval (opam env)
@@ -33,8 +37,8 @@ fish_add_path -g "$HOME/Documents/dotfiles/bin/"
 fish_add_path -g "$HOME/Documents/isabelle/isabelle/bin/"
 fish_add_path -g "$HOME/Documents/git-remote-hg/"
 
-fish_add_path -g "$HOME/Documents/zig/zig-macos-aarch64-0.12.0-dev.1769+bf5ab5451"
-fish_add_path -g "$HOME/Documents/zig/zls/zig-out/bin"
+# fish_add_path -g "$HOME/Documents/zig/zig-macos-aarch64-0.12.0-dev.1769+bf5ab5451"
+# fish_add_path -g "$HOME/Documents/zig/zls/zig-out/bin"
 fish_add_path -g "$HOME/Documents/vale/Vale-Mac-0.2.0.28"
 
 fish_add_path -g "$HOME/Library/Application Support/Coursier/bin"
