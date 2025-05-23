@@ -38,7 +38,7 @@ vim.o.undofile = true
 -- ===== Neovide =====
 vim.opt.guifont = 'Maple Mono:h13'
 vim.g.neovide_theme = 'dark'
-vim.g.neovide_transparency = 0.95
+vim.g.neovide_opacity = 0.95
 
 -- ===== Keybinds =====
 -- plugin-related keybinds are set within each plugin's lua file
