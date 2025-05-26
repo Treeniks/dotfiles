@@ -36,7 +36,7 @@ vim.opt.listchars:append({
 vim.o.undofile = true
 
 -- ===== Neovide =====
-vim.opt.guifont = 'Maple Mono:h13'
+vim.opt.guifont = 'JetBrains Mono:h13'
 vim.g.neovide_theme = 'dark'
 vim.g.neovide_opacity = 0.95
 
