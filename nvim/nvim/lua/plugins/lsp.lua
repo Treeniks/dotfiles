@@ -78,7 +78,15 @@ return {
                 clojure_lsp = {},
                 zls = {},
                 rust_analyzer = {},
-                clangd = {},
+                clangd = {
+                    on_attach = function()
+                        wk.add({
+                            '<leader>lh',
+                            ':ClangdSwitchSourceHeader<CR>',
+                            desc = 'Clangd Source/Header',
+                        })
+                    end,
+                },
                 pyright = {},
                 mojo = {},
                 lua_ls = {
