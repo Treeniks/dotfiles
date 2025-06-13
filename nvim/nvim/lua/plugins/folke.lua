@@ -94,6 +94,58 @@ return {
         },
     },
 
+    {
+        'folke/trouble.nvim',
+        opts = {
+
+            modes = {
+                my_symbols = {
+                    mode = 'symbols', -- inherit from symbols mode
+
+                    auto_refresh = true,
+                    focus = false,
+                    restore = true,
+                    pinned = false,
+
+                    win = {
+                        type = 'split',
+                        relative = 'win',
+                        position = 'left',
+                        size = 0.18,
+                    },
+                },
+                perma_symbols = {
+                    mode = 'symbols', -- inherit from symbols mode
+
+                    auto_refresh = false,
+                    focus = false,
+                    restore = true,
+                    pinned = true,
+
+                    win = {
+                        type = 'split',
+                        relative = 'win',
+                        position = 'top',
+                        size = 0.7,
+                    },
+                },
+            },
+        },
+        cmd = 'Trouble',
+        keys = {
+            {
+                '<leader>xs',
+                function() require('trouble').toggle('my_symbols') end,
+                desc = 'Symbols',
+            },
+            {
+                '<leader>xS',
+                function() require('trouble').toggle('perma_symbols') end,
+                desc = 'Perma Symbols',
+            },
+        },
+    },
+
     { 'folke/twilight.nvim', opts = {} },
 
     {
@@ -113,6 +165,7 @@ return {
                 -- but idk how lazy.nvim and which-key are supposed to be
                 -- working together wrt keybind groups.
                 { '<leader>t', group = 'Telescope' },
+                { '<leader>x', group = 'Trouble' },
             },
         },
     },
