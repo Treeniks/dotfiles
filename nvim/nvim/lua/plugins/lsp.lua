@@ -5,25 +5,48 @@ return {
         'neovim/nvim-lspconfig',
         config = function(_, opts)
             local lspconfig = require('lspconfig')
-
             local telescope_builtin = require('telescope.builtin')
+
             vim.api.nvim_create_autocmd('LspAttach', {
                 callback = function(event)
                     wk.add({
                         { '<leader>l',  group = 'LSP' },
 
-                        { '<C-k>',      vim.lsp.buf.hover,                           desc = 'Hover' },
-                        { '<leader>lf', vim.lsp.buf.format,                          desc = 'Format' },
-                        { '<S-M-f>',    vim.lsp.buf.format,                          desc = 'Format',              mode = { 'n', 'v', 'i' } },
-                        { '<leader>la', vim.lsp.buf.code_action,                     desc = 'Code Action' },
-                        { 'gd',         vim.lsp.buf.definition,                      desc = 'Goto Definition' },
-                        { 'gD',         vim.lsp.buf.declaration,                     desc = 'Goto Declaration' },
+                        { '<C-k>',      vim.lsp.buf.hover,  desc = 'Hover' },
+                        { '<leader>lf', vim.lsp.buf.format, desc = 'Format' },
+                        {
+                            '<S-M-f>',
+                            vim.lsp.buf.format,
+                            desc = 'Format',
+                            mode = { 'n', 'v', 'i' }
+                        },
+                        { '<leader>la', vim.lsp.buf.code_action,   desc = 'Code Action' },
+                        { 'gd',         vim.lsp.buf.definition,    desc = 'Goto Definition' },
+                        { 'gD',         vim.lsp.buf.declaration,   desc = 'Goto Declaration' },
 
                         { '<leader>d',  group = 'Diagnostics' },
 
-                        { '<leader>dk', vim.diagnostic.open_float,                   desc = 'Open Float' },
-                        { '<leader>dp', vim.diagnostic.goto_prev,                    desc = 'Goto Previous' },
-                        { '<leader>dn', vim.diagnostic.goto_next,                    desc = 'Goto Next' },
+                        { '<leader>dk', vim.diagnostic.open_float, desc = 'Open Float' },
+                        {
+                            '<leader>dp',
+                            function()
+                                vim.diagnostic.jump({
+                                    diagnostic = vim.diagnostic.get_prev(),
+                                    float = { border = 'rounded' },
+                                })
+                            end,
+                            desc = 'Goto Previous'
+                        },
+                        {
+                            '<leader>dn',
+                            function()
+                                vim.diagnostic.jump({
+                                    diagnostic = vim.diagnostic.get_next(),
+                                    float = { border = 'rounded' },
+                                })
+                            end,
+                            desc = 'Goto Next'
+                        },
 
                         { '<leader>dh', function() vim.diagnostic.enable(false) end, desc = 'Disable/Hide' },
                         { '<leader>ds', function() vim.diagnostic.enable(true) end,  desc = 'Enable/Show' },
