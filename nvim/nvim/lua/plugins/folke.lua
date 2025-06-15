@@ -117,7 +117,7 @@ return {
                 perma_symbols = {
                     mode = 'symbols', -- inherit from symbols mode
 
-                    auto_refresh = false,
+                    auto_refresh = true,
                     focus = false,
                     restore = true,
                     pinned = true,
