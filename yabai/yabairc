@@ -4,7 +4,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 yabai -m config \
-    mouse_follows_focus on \
+    mouse_follows_focus off \
     focus_follows_mouse autoraise \
 \
     window_origin_display cursor \
