@@ -47,6 +47,7 @@ vim.g.mapleader = ' '
 local kmset = vim.keymap.set
 
 kmset({ 'n', 'i', 'v' }, '<C-s>', vim.cmd.write, { desc = 'Save' })
+kmset('i', '<C-v>', '<C-r>+')
 
 kmset('n', 'j', 'gj')
 kmset('n', 'k', 'gk')
