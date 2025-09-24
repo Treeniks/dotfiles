@@ -139,13 +139,6 @@ return {
                 documentation = { window = { border = 'rounded' } },
             },
 
-            -- no keybind to hide it unfortunately
-            -- also super buggy so no thank you
-            -- signature = {
-            --     enabled = true,
-            --     window = { border = 'rounded' }
-            -- },
-
             cmdline = { enabled = true },
 
             sources = {
