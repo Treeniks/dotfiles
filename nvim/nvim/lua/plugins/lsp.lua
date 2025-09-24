@@ -224,7 +224,7 @@ return {
         opts = {
             keymap = {
                 ['<Tab>'] = { 'select_and_accept', 'fallback' },
-                ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+                ['<C-Space>'] = { 'show', 'show_documentation', 'hide_documentation' },
                 ['<C-e>'] = { 'hide', 'hide_documentation', 'hide_signature', 'fallback' },
 
                 ['<C-p>'] = { 'select_prev', 'fallback' },
@@ -233,8 +233,8 @@ return {
                 ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
                 ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
 
-                ['<C-l>'] = { 'snippet_forward', 'fallback' },
-                ['<C-L>'] = { 'snippet_backward', 'fallback' },
+                ['<C-l>'] = { 'snippet_forward' },
+                ['<C-L>'] = { 'snippet_backward' },
             },
 
             completion = {
