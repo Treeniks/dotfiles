@@ -20,13 +20,14 @@ return {
                             desc = 'Format',
                             mode = { 'n', 'v', 'i' }
                         },
-                        { '<leader>la', vim.lsp.buf.code_action,   desc = 'Code Action' },
-                        { 'gd',         vim.lsp.buf.definition,    desc = 'Goto Definition' },
-                        { 'gD',         vim.lsp.buf.declaration,   desc = 'Goto Declaration' },
+                        { '<leader>la', vim.lsp.buf.code_action,     desc = 'Code Action' },
+                        { 'gd',         vim.lsp.buf.definition,      desc = 'Goto Definition' },
+                        { '<leader>lt', vim.lsp.buf.type_definition, desc = 'Goto Type Definition' },
+                        { 'gD',         vim.lsp.buf.declaration,     desc = 'Goto Declaration' },
 
                         { '<leader>d',  group = 'Diagnostics' },
 
-                        { '<leader>dk', vim.diagnostic.open_float, desc = 'Open Float' },
+                        { '<leader>dk', vim.diagnostic.open_float,   desc = 'Open Float' },
                         {
                             '<leader>dp',
                             function()
