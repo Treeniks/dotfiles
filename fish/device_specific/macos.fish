@@ -44,9 +44,9 @@ fish_add_path -g "$HOME/Documents/vale/Vale-Mac-0.2.0.28"
 fish_add_path -g "$HOME/Library/Application Support/Coursier/bin"
 
 # texlive
-set -gx MANPATH $MANPATH "/usr/local/texlive/2024/texmf-dist/doc/man"
-set -gx INFOPATH $INFOPATH "/usr/local/texlive/2024/texmf-dist/doc/info"
-fish_add_path -g "/usr/local/texlive/2024/bin/universal-darwin"
+set -gx MANPATH $MANPATH "/usr/local/texlive/2025/texmf-dist/doc/man"
+set -gx INFOPATH $INFOPATH "/usr/local/texlive/2025/texmf-dist/doc/info"
+fish_add_path -g "/usr/local/texlive/2025/bin/universal-darwin"
 
 # Launch GPG Agent
 gpgconf --launch gpg-agent
