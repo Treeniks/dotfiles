@@ -1,0 +1,89 @@
+# don't forget to run this:
+# https://nikitabobko.github.io/AeroSpace/goodness#move-by-dragging-any-part-of-the-window
+#
+# defaults write -g NSWindowShouldDragOnGesture -bool true
+#
+# also:
+# https://github.com/MediosZ/SwipeAeroSpace
+
+after-startup-command = [
+    'exec-and-forget sketchybar',
+    # https://nikitabobko.github.io/AeroSpace/goodness#highlight-focused-windows-with-colored-borders
+    'exec-and-forget borders active_color=0xFFA277FF inactive_color=0xFF15141B width=2.0',
+]
+start-at-login = true
+
+# annoying on workspace change
+# on-focus-changed = "move-mouse window-lazy-center"
+
+exec-on-workspace-change = [
+    '/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
+[key-mapping]
+preset = 'qwerty'
+
+[gaps]
+inner.horizontal = 3
+inner.vertical = 3
+outer.left = 3
+outer.bottom = 3
+outer.right = 3
+
+outer.top = [
+  { monitor."built-in" = 3 },
+  35 # 32 + 3
+]
+
+[mode.main.binding]
+alt-enter = 'exec-and-forget open -n /Applications/kitty.app'
+
+alt-d = 'exec-and-forget open ~'
+
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+alt-ctrl-h = 'join-with left'
+alt-ctrl-j = 'join-with down'
+alt-ctrl-k = 'join-with up'
+alt-ctrl-l = 'join-with right'
+
+alt-minus = 'resize smart -50'
+alt-equal = 'resize smart +50'
+
+alt-f = 'fullscreen'
+alt-shift-f = 'macos-native-fullscreen'
+alt-q = 'close'
+
+alt-v = 'layout tiling floating'
+
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+
+alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
+alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
+alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+
+# https://nikitabobko.github.io/AeroSpace/goodies#screenshoot-shortcut
+alt-shift-s = 'exec-and-forget screencapture -i -c'
