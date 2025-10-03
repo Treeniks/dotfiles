@@ -9,13 +9,13 @@ yabai -m config \
 \
     window_origin_display cursor \
     window_placement second_child \
-    window_zoom_persist on \
-    window_shadow on \
+    window_zoom_persist off \
+    window_shadow float \
     window_opacity on \
-    window_opacity_duration 0.5 \
+    window_opacity_duration 0.1 \
     active_window_opacity 1.0 \
-    normal_window_opacity 0.9 \
-    window_animation_duration 0.0 \
+    normal_window_opacity 0.98 \
+    window_animation_duration 0.1 \
     window_animation_frame_rate 120 \
 \
     insert_feedback_color 0xffd75f5f \
@@ -29,11 +29,11 @@ yabai -m config \
     mouse_drop_action swap \
 \
     layout bsp \
-    top_padding 6 \
-    bottom_padding 6 \
-    left_padding 6 \
-    right_padding 6 \
-    window_gap 6 \
+    top_padding 2 \
+    bottom_padding 2 \
+    left_padding 2 \
+    right_padding 2 \
+    window_gap 2 \
 \
     external_bar all:32:0
 
