@@ -149,10 +149,13 @@ binds {
 
     Mod+C { center-column; }
 
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Shift+Minus { set-column-width "-10%"; }
+    Mod+Shift+Equal { set-column-width "+10%"; }
+    // this one is confusingly the other way around
+    // but the reason is that it makes more sense this way
+    // on my split keyboard layout, as it now coincides with j and k
+    Mod+Equal { set-window-height "-10%"; }
+    Mod+Minus { set-window-height "+10%"; }
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
