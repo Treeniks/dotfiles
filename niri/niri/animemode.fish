@@ -7,9 +7,10 @@ switch $argv[1]
         niri msg output DP-3 off
         niri msg output DP-2 off
     case off
-        gammastep -O 4000 &
         disown $last_pid
         niri msg output HDMI-A-2 scale 1.5
         niri msg output DP-3 on
         niri msg output DP-2 on
+        sleep 2
+        gammastep -O 4500 &
 end
