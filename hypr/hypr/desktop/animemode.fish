@@ -3,14 +3,15 @@
 switch $argv[1]
     case on
         # kill hyprsunset
-        set pid (pgrep hyprsunset)
+        killall -s SIGKILL hyprsunset
+        # set pid (pgrep hyprsunset)
 
-        if test -n $pid
-            kill $pid
-            echo "hyprsunset stopped"
-        else
-            echo "hyprsunset not running"
-        end
+        # if test -n $pid
+        #     kill $pid
+        #     echo "hyprsunset stopped"
+        # else
+        #     echo "hyprsunset not running"
+        # end
 
         hyprctl --batch "
             keyword monitor HDMI-A-2,3840x2160@120,0x0,2,vrr,1;
