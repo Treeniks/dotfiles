@@ -1,0 +1,315 @@
+// "/-" comments out the following node.
+
+output "HDMI-A-2" {
+    mode "3840x2160@119.880"
+    scale 1.5
+    position x=0 y=150
+    variable-refresh-rate on-demand=true
+}
+
+output "DP-3" {
+    mode "2560x1440@300"
+    scale 1
+    position x=2560 y=0
+    variable-refresh-rate on-demand=true
+    focus-at-startup
+}
+
+output "DP-2" {
+    mode "1920x1080@143.980"
+    scale 1
+    position x=5120 y=150
+    variable-refresh-rate on-demand=true
+}
+
+spawn-at-startup "waybar"
+spawn-at-startup "hyprpaper"
+spawn-at-startup "mako"
+prefer-no-csd
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "altgr-intl"
+            options "fkeys:basic_13-24"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        scroll-factor 0.6
+    }
+
+    mouse {
+        accel-speed -0.4
+        accel-profile "flat"
+    }
+}
+
+binds {
+    Mod+B       { toggle-overview; }
+    Mod+Slash   { show-hotkey-overlay; }
+
+    Mod+Return  { spawn "kitty"; }
+    Mod+D       { spawn "nemo"; }
+    Mod+Space   { spawn "wofi" "--show" "drun"; }
+    Mod+Q       repeat=false { close-window; }
+
+    Mod+Left                { focus-column-left; }
+    Mod+Down                { focus-window-down; }
+    Mod+Up                  { focus-window-up; }
+    Mod+Right               { focus-column-right; }
+    Mod+H                   { focus-column-left; }
+    Mod+J                   { focus-window-down; }
+    Mod+K                   { focus-window-up; }
+    Mod+L                   { focus-column-right; }
+    //
+    Mod+Shift+Left          { move-column-left; }
+    Mod+Shift+Down          { move-window-down; }
+    Mod+Shift+Up            { move-window-up; }
+    Mod+Shift+Right         { move-column-right; }
+    Mod+Shift+H             { move-column-left; }
+    Mod+Shift+J             { move-window-down; }
+    Mod+Shift+K             { move-window-up; }
+    Mod+Shift+L             { move-column-right; }
+    //
+    Mod+Ctrl+Left           { focus-monitor-left; }
+    Mod+Ctrl+Down           { focus-monitor-down; }
+    Mod+Ctrl+Up             { focus-monitor-up; }
+    Mod+Ctrl+Right          { focus-monitor-right; }
+    Mod+Ctrl+H              { focus-monitor-left; }
+    Mod+Ctrl+J              { focus-monitor-down; }
+    Mod+Ctrl+K              { focus-monitor-up; }
+    Mod+Ctrl+L              { focus-monitor-right; }
+
+    Mod+Page_Down           { focus-workspace-down; }
+    Mod+Page_Up             { focus-workspace-up; }
+    Mod+U                   { focus-workspace-down; }
+    Mod+I                   { focus-workspace-up; }
+    //
+    Mod+Shift+Page_Down     { move-column-to-workspace-down; }
+    Mod+Shift+Page_Up       { move-column-to-workspace-up; }
+    Mod+Shift+U             { move-column-to-workspace-down; }
+    Mod+Shift+I             { move-column-to-workspace-up; }
+    //
+    Mod+Ctrl+Page_Down      { move-workspace-down; }
+    Mod+Ctrl+Page_Up        { move-workspace-up; }
+    Mod+Ctrl+U              { move-workspace-down; }
+    Mod+Ctrl+I              { move-workspace-up; }
+
+    Mod+Shift+Ctrl+Left     { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down     { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up       { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right    { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+H        { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+J        { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+K        { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+L        { move-column-to-monitor-right; }
+
+    // TODO: think of a keybind to move workspaces between monitors
+    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
+
+    Mod+Home        { focus-column-first; }
+    Mod+End         { focus-column-last; }
+    Mod+Shift+Home  { move-column-to-first; }
+    Mod+Shift+End   { move-column-to-last; }
+
+    // The allow-when-locked=true property makes them work even when the session is locked.
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    Mod+WheelScrollDown         { focus-column-right; }
+    Mod+WheelScrollUp           { focus-column-left; }
+    Mod+Shift+WheelScrollDown   cooldown-ms=150 { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp     cooldown-ms=150 { focus-workspace-up; }
+
+    // TODO touchpad scroll
+
+    Mod+Tab { focus-workspace-previous; }
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    // makes the column "fill the rest of the space".
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+W { toggle-column-tabbed-display; }
+
+    Mod+S { screenshot; }
+    Mod+Ctrl+S { screenshot-screen; }
+    Mod+Shift+S { screenshot-window; }
+
+    // Applications such as remote-desktop clients and software KVM switches may
+    // request that niri stops processing the keyboard shortcuts defined here
+    // so they may, for example, forward the key presses as-is to a remote machine.
+    // It's a good idea to bind an escape hatch to toggle the inhibitor,
+    // so a buggy application can't hold your session hostage.
+    //
+    // The allow-inhibiting=false property can be applied to other binds as well,
+    // which ensures niri always processes them, even when an inhibitor is active.
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // The quit action will show a confirmation dialog to avoid accidental exits.
+    Mod+Shift+E { quit; }
+
+    Mod+Shift+P { power-off-monitors; }
+}
+
+layout {
+    gaps 4
+    center-focused-column "never"
+    empty-workspace-above-first
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+    // If you leave the brackets empty, the windows themselves will decide their initial width.
+    // default-column-width {}
+
+    focus-ring {
+        off
+        width 2
+        active-color "#A277FF" // Aura Theme Primary
+        inactive-color "#29263C" // Aura Theme Selections
+    }
+
+    border {
+        width 2
+        active-color "#A277FF" // Aura Theme Primary
+        inactive-color "#29263C" // Aura Theme Selections
+    }
+
+    shadow {
+        on
+
+        // draw-behind-window true
+
+        softness 100
+        spread 5
+        offset x=0 y=0
+        color "#000000A0"
+    }
+
+    tab-indicator {
+        hide-when-single-tab
+        place-within-column
+        gap -4
+        width 6
+        length total-proportion=0.8
+
+        active-color "#FF6767" // Aura Theme Senary
+        inactive-color "#29263C" // Aura Theme Selections
+    }
+}
+
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d %H-%M-%S.png"
+
+environment {
+    // Nvidia stuff
+    GBM_BACKEND "nvidia-drm"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    LIBVA_DRIVER_NAME "nvidia"
+    __GL_GSYNC_ALLOWED "1"
+
+    // SSH
+    SSH_AGENT_PID ""
+    SSH_AUTH_SOCK "/run/user/1000/gnupg/S.gpg-agent.ssh"
+
+    // https://wiki.hyprland.org/Configuring/Environment-variables/
+    GDK_BACKEND "wayland,x11"
+    QT_QPA_PLATFORM "wayland;xcb"
+    SDL_VIDEODRIVER "wayland"
+    CLUTTER_BACKEND "wayland"
+
+    XDG_CURRENT_DESKTOP "Niri"
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "Niri"
+
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    QT_QPA_PLATFORM "wayland;xcb"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+
+    // Electron
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
+}
+
+cursor {
+    xcursor-theme "catppuccin-mocha-dark-cursors"
+    xcursor-size 24
+}
+
+overview {
+    zoom 0.5 // default
+    backdrop-color "#15141B" // Aura Theme Backgrounds
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// default animations are fine
+/-animations { }
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+// work around WezTerm's initial configure bug
+// by setting an empty default-column-width
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// open the Firefox picture-in-picture player as floating by default
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="Proton Pass"
+    block-out-from "screen-capture"
+}
