@@ -24,6 +24,7 @@ output "DP-2" {
 
 spawn-at-startup "waybar"
 spawn-at-startup "hyprpaper"
+spawn-at-startup "gammastep" "-O" "4000"
 spawn-at-startup "mako"
 prefer-no-csd
 
@@ -57,6 +58,9 @@ binds {
     Mod+D       { spawn "nemo"; }
     Mod+Space   { spawn "wofi" "--show" "drun"; }
     Mod+Q       repeat=false { close-window; }
+
+    Mod+Shift+A { spawn "~/.config/niri/animemode.fish" "on"; }
+    Mod+Shift+Z { spawn "~/.config/niri/animemode.fish" "off"; }
 
     Mod+Left                { focus-column-left; }
     Mod+Down                { focus-window-down; }
