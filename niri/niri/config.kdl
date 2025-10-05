@@ -23,7 +23,7 @@ output "DP-2" {
 }
 
 spawn-at-startup "waybar"
-spawn-at-startup "hyprpaper"
+spawn-at-startup "swww-daemon"
 spawn-at-startup "gammastep" "-O" "4500"
 spawn-at-startup "mako"
 prefer-no-csd
