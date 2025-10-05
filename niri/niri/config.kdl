@@ -57,64 +57,50 @@ binds {
     Mod+Return  { spawn "kitty"; }
     Mod+D       { spawn "nemo"; }
     Mod+Space   { spawn "wofi" "--show" "drun"; }
+    Mod+E       { spawn "wlogout"; }
     Mod+Q       repeat=false { close-window; }
 
     Mod+Shift+A { spawn "~/.config/niri/animemode.fish" "on"; }
     Mod+Shift+Z { spawn "~/.config/niri/animemode.fish" "off"; }
 
-    Mod+Left                { focus-column-left; }
-    Mod+Down                { focus-window-down; }
-    Mod+Up                  { focus-window-up; }
-    Mod+Right               { focus-column-right; }
-    Mod+H                   { focus-column-left; }
-    Mod+J                   { focus-window-down; }
-    Mod+K                   { focus-window-up; }
-    Mod+L                   { focus-column-right; }
-    //
-    Mod+Shift+Left          { move-column-left; }
-    Mod+Shift+Down          { move-window-down; }
-    Mod+Shift+Up            { move-window-up; }
-    Mod+Shift+Right         { move-column-right; }
-    Mod+Shift+H             { move-column-left; }
+    Mod+H                   { focus-column-or-monitor-left; }
+    Mod+J                   { focus-window-or-monitor-down; }
+    Mod+K                   { focus-window-or-monitor-up; }
+    Mod+L                   { focus-column-or-monitor-right; }
+    Mod+Shift+H             { move-column-left-or-to-monitor-left; }
     Mod+Shift+J             { move-window-down; }
     Mod+Shift+K             { move-window-up; }
-    Mod+Shift+L             { move-column-right; }
-    //
-    Mod+Ctrl+Left           { focus-monitor-left; }
-    Mod+Ctrl+Down           { focus-monitor-down; }
-    Mod+Ctrl+Up             { focus-monitor-up; }
-    Mod+Ctrl+Right          { focus-monitor-right; }
-    Mod+Ctrl+H              { focus-monitor-left; }
-    Mod+Ctrl+J              { focus-monitor-down; }
-    Mod+Ctrl+K              { focus-monitor-up; }
-    Mod+Ctrl+L              { focus-monitor-right; }
+    Mod+Shift+L             { move-column-right-or-to-monitor-right; }
+    // Mod+Ctrl+H              { ; }
+    // Mod+Ctrl+J              { ; }
+    // Mod+Ctrl+K              { ; }
+    // Mod+Ctrl+L              { ; }
+
+    Mod+Left                { focus-monitor-left; }
+    Mod+Down                { focus-monitor-down; }
+    Mod+Up                  { focus-monitor-up; }
+    Mod+Right               { focus-monitor-right; }
+    Mod+Shift+Left          { move-column-to-monitor-left; }
+    Mod+Shift+Down          { move-column-to-monitor-down; }
+    Mod+Shift+Up            { move-column-to-monitor-up; }
+    Mod+Shift+Right         { move-column-to-monitor-right; }
+    Mod+Ctrl+Left           { move-workspace-to-monitor-left; }
+    Mod+Ctrl+Down           { move-workspace-to-monitor-down; }
+    Mod+Ctrl+Up             { move-workspace-to-monitor-up; }
+    Mod+Ctrl+Right          { move-workspace-to-monitor-right; }
 
     Mod+Page_Down           { focus-workspace-down; }
     Mod+Page_Up             { focus-workspace-up; }
     Mod+U                   { focus-workspace-down; }
     Mod+I                   { focus-workspace-up; }
-    //
     Mod+Shift+Page_Down     { move-column-to-workspace-down; }
     Mod+Shift+Page_Up       { move-column-to-workspace-up; }
     Mod+Shift+U             { move-column-to-workspace-down; }
     Mod+Shift+I             { move-column-to-workspace-up; }
-    //
     Mod+Ctrl+Page_Down      { move-workspace-down; }
     Mod+Ctrl+Page_Up        { move-workspace-up; }
     Mod+Ctrl+U              { move-workspace-down; }
     Mod+Ctrl+I              { move-workspace-up; }
-
-    Mod+Shift+Ctrl+Left     { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+Down     { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+Up       { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+Right    { move-column-to-monitor-right; }
-    Mod+Shift+Ctrl+H        { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+J        { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+K        { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+L        { move-column-to-monitor-right; }
-
-    // TODO: think of a keybind to move workspaces between monitors
-    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
 
     Mod+Home        { focus-column-first; }
     Mod+End         { focus-column-last; }
@@ -129,8 +115,8 @@ binds {
 
     Mod+WheelScrollDown         { focus-column-right; }
     Mod+WheelScrollUp           { focus-column-left; }
-    Mod+Shift+WheelScrollDown   cooldown-ms=150 { focus-workspace-down; }
-    Mod+Shift+WheelScrollUp     cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown   { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp     { focus-workspace-up; }
 
     // TODO touchpad scroll
 
@@ -138,6 +124,8 @@ binds {
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+O   { consume-or-expel-window-left; }
+    Mod+P   { consume-or-expel-window-right; }
 
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
