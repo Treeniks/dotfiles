@@ -26,6 +26,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "gammastep" "-O" "4500"
 spawn-at-startup "mako"
+spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 prefer-no-csd
 
 input {
