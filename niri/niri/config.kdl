@@ -46,12 +46,29 @@ input {
     }
 
     mouse {
-        accel-speed -0.4
+        accel-speed -0.45
         accel-profile "flat"
     }
 }
 
 binds {
+    Mod+1 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/134744312_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+2 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/102144283_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+3 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/130023460_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+4 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/119937989_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+
+    Mod+6 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/106924041_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+7 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/103314045_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+8 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/124949134_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+9 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/94537474_p0.jpg"        "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+0 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/97744605_p0.png"        "--transition-type" "wave" "--transition-fps" "300"; }
+
+    Mod+Shift+1 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/112514694_p0.jpg" "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+Shift+2 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/134651926_p0.png" "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+Shift+3 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/109799420_p0.png" "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+Shift+4 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/133361166_p0.jpg" "--transition-type" "wave" "--transition-fps" "300"; }
+    Mod+Shift+5 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/110871636_p0.jpg" "--transition-type" "wave" "--transition-fps" "300"; }
+
     Mod+B       { toggle-overview; }
     Mod+Slash   { show-hotkey-overlay; }
 
@@ -102,6 +119,10 @@ binds {
     Mod+Ctrl+Page_Up        { move-workspace-up; }
     Mod+Ctrl+U              { move-workspace-down; }
     Mod+Ctrl+I              { move-workspace-up; }
+
+    // these are a bit easier to press with just the left hand
+    Mod+Z                   { focus-workspace-down; }
+    Mod+X                   { focus-workspace-up; }
 
     Mod+Home        { focus-column-first; }
     Mod+End         { focus-column-last; }
@@ -173,6 +194,12 @@ binds {
     Mod+Shift+E { quit; }
 
     Mod+Shift+P { power-off-monitors; }
+
+    F1 { spawn "chamel" "toggle"; }
+    F2 { spawn "chamel" "undo"; }
+    F3 { spawn "chamel" "clear"; }
+    F4 { spawn "chamel" "exit"; }
+    // F2 { spawn "killall" "chameleos"; }
 }
 
 layout {
@@ -252,7 +279,6 @@ environment {
 
     // https://wiki.hyprland.org/Configuring/Environment-variables/
     GDK_BACKEND "wayland,x11"
-    QT_QPA_PLATFORM "wayland;xcb"
     SDL_VIDEODRIVER "wayland"
     CLUTTER_BACKEND "wayland"
 
@@ -263,7 +289,7 @@ environment {
     QT_AUTO_SCREEN_SCALE_FACTOR "1"
     QT_QPA_PLATFORM "wayland;xcb"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_QPA_PLATFORMTHEME "qt6ct"
 
     // Electron
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
