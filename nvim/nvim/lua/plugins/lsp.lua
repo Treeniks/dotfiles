@@ -12,7 +12,13 @@ return {
                     wk.add({
                         { '<leader>l',  group = 'LSP' },
 
-                        { '<C-k>',      vim.lsp.buf.hover,  desc = 'Hover' },
+                        {
+                            '<C-k>',
+                            function()
+                                vim.lsp.buf.hover({ border = 'rounded' })
+                            end,
+                            desc = 'Hover'
+                        },
                         { '<leader>lf', vim.lsp.buf.format, desc = 'Format' },
                         {
                             '<S-M-f>',
@@ -90,6 +96,7 @@ return {
                         })
                     end,
                 },
+                wgsl_analyzer = {},
                 pyright = {},
                 mojo = {},
                 lua_ls = {
@@ -100,6 +107,9 @@ return {
                     },
                 },
                 slint_lsp = {},
+                ts_ls = {}, -- TypeScript
+                qmlls = {}, -- QML
+                taplo = {}, -- TOML
             },
             -- list of functions that get called before setting up the server
             -- (used primarily for isabelle-lsp.nvim)
