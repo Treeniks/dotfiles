@@ -19,6 +19,7 @@
         "LSP-metals",
         "LSP-pyright",
         "LSP-rust-analyzer",
+        "LSP-taplo",
         "LSP-typescript",
         "MarkdownPreview",
         "Material Theme",
