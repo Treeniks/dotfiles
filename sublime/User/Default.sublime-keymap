@@ -6,6 +6,10 @@
     },
     // ===== Sublime Keybinds =====
 
+    // taken from vim and the default keybind sucks
+    { "keys": ["ctrl+o"], "command": "jump_back" },
+    { "keys": ["ctrl+i"], "command": "jump_forward" },
+
     // default is "next_view_in_stack"
     // which goes by last usage instead of tabs
     { "keys": ["ctrl+tab"], "command": "next_view" },
