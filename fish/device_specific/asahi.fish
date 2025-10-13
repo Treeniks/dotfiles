@@ -1,9 +1,4 @@
-# asahi uses nix because Fedora's repos are kinda bare
-source "$HOME/.nix-profile/etc/profile.d/nix.fish"
+source "$HOME/.cargo/env.fish"
 
-# eval (opam env)
-
-fish_add_path -g "$HOME/.cargo/bin/"
-
-fish_add_path -g "/opt/sublime_text/"
-fish_add_path -g "/opt/sublime_merge/"
+set -gx SSH_AGENT_PID
+set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
