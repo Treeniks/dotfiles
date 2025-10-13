@@ -3,6 +3,9 @@ end
 
 set -g fish_greeting
 
+# https://github.com/fish-shell/fish-shell/issues/11251
+set fish_color_command blue
+
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
     fish_vi_key_bindings --no-erase insert
