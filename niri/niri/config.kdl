@@ -29,6 +29,8 @@ spawn-at-startup "mako"
 spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 prefer-no-csd
 
+spawn-at-startup "chameleos" "-c" "#00BFFF"
+
 input {
     keyboard {
         xkb {
@@ -195,10 +197,10 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 
-    F1 { spawn "chamel" "toggle"; }
-    F2 { spawn "chamel" "undo"; }
-    F3 { spawn "chamel" "clear"; }
-    F4 { spawn "chamel" "exit"; }
+    Mod+F1 { spawn "chamel" "toggle"; }
+    Mod+F2 { spawn "chamel" "undo"; }
+    Mod+F3 { spawn "chamel" "clear"; }
+    Mod+F4 { spawn "chamel" "clear-and-deactivate"; }
     // F2 { spawn "killall" "chameleos"; }
 }
 
