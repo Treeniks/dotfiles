@@ -207,6 +207,7 @@ binds {
     Mod+F2 { spawn "chamel" "undo"; }
     Mod+F3 { spawn "chamel" "clear"; }
     Mod+F4 { spawn "chamel" "clear-and-deactivate"; }
+    Mod+F5 { spawn "sh" "-c" "killall chameleos; sleep 1; chameleos"; }
     // F2 { spawn "killall" "chameleos"; }
 }
 
