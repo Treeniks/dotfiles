@@ -77,8 +77,8 @@ binds {
 
     Mod+Return  { spawn "kitty"; }
     Mod+D       { spawn "nemo"; }
-    Mod+Space   { spawn "wofi" "--show" "drun"; }
-    Mod+E       { spawn "wlogout"; }
+    Mod+Space   { spawn "fuzzel"; }
+    Mod+E       { spawn "wleave"; }
     Mod+Q       repeat=false { close-window; }
 
     Mod+Shift+A { spawn "~/.config/niri/animemode.fish" "on"; }
