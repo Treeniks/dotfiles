@@ -141,10 +141,12 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    Mod+WheelScrollDown         { focus-column-right; }
-    Mod+WheelScrollUp           { focus-column-left; }
-    Mod+Shift+WheelScrollDown   { focus-workspace-down; }
-    Mod+Shift+WheelScrollUp     { focus-workspace-up; }
+    Mod+WheelScrollDown         { focus-workspace-down; }
+    Mod+WheelScrollUp           { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown   { focus-column-right; }
+    Mod+Shift+WheelScrollUp     { focus-column-left; }
+    Mod+MouseForward            { focus-column-right; }
+    Mod+MouseBack               { focus-column-left; }
 
     // TODO touchpad scroll
 
