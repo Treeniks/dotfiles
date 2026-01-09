@@ -1,13 +1,13 @@
 // "/-" comments out the following node.
 
-output "HDMI-A-2" {
+output "HDMI-A-1" {
     mode "3840x2160@119.880"
     scale 1.5
     position x=0 y=150
     variable-refresh-rate on-demand=true
 }
 
-output "DP-3" {
+output "DP-1" {
     mode "2560x1440@300"
     scale 1
     position x=2560 y=0
@@ -272,12 +272,6 @@ window-rule {
 screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d %H-%M-%S.png"
 
 environment {
-    // Nvidia stuff
-    GBM_BACKEND "nvidia-drm"
-    __GLX_VENDOR_LIBRARY_NAME "nvidia"
-    LIBVA_DRIVER_NAME "nvidia"
-    __GL_GSYNC_ALLOWED "1"
-
     // SSH
     SSH_AGENT_PID ""
     SSH_AUTH_SOCK "/run/user/1000/gnupg/S.gpg-agent.ssh"
