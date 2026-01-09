@@ -38,6 +38,7 @@ input {
             variant "altgr-intl"
             options "fkeys:basic_13-24"
         }
+        repeat-delay 200
         numlock
     }
 
