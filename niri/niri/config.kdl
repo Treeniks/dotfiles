@@ -338,3 +338,18 @@ window-rule {
     match app-id="Proton Pass"
     block-out-from "screen-capture"
 }
+
+window-rule {
+    match app-id="gamescope"
+    variable-refresh-rate true
+}
+
+window-rule {
+    match app-id="monsterhunterwilds.exe"
+    variable-refresh-rate true
+}
+
+window-rule {
+    match app-id="steam_app"
+    variable-refresh-rate true
+}
