@@ -1,0 +1,4 @@
+[mgr]
+append_keymap = [
+    { on = [ "g", "b" ], run = 'shell -- awww img "$0"', desc = "Make Background" },
+]
