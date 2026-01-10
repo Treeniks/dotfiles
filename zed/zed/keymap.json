@@ -1,0 +1,52 @@
+[
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "k": [
+        "vim::Up",
+        {
+          "display_lines": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "j": [
+        "vim::Down",
+        {
+          "display_lines": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g k": "vim::Up"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g j": "vim::Down"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f": "editor::Format"
+    }
+  }
+]

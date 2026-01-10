@@ -1,0 +1,39 @@
+{
+  "base_keymap": "SublimeText",
+
+  "buffer_font_family": "Maple Mono",
+  "buffer_font_size": 18.0,
+  "icon_theme": "Catppuccin Mocha",
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Catppuccin Mocha",
+  },
+  "ui_font_size": 16,
+
+  "disable_ai": true,
+  "enable_language_server": true,
+
+  "format_on_save": "off",
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+
+  "minimap": {
+    "display_in": "all_editors",
+    "show": "always",
+  },
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.9,
+  },
+
+  "languages": {
+    "LaTeX": {
+      "tab_size": 2,
+      "soft_wrap": "editor_width",
+    },
+    "BibTeX": {
+      "tab_size": 2,
+      "format_on_save": "on",
+    },
+  },
+}
