@@ -215,6 +215,7 @@ layout {
     gaps 4
     center-focused-column "never"
     empty-workspace-above-first
+    background-color "#15141B" // Aura Theme Backgrounds
 
     preset-column-widths {
         proportion 0.33333
@@ -305,7 +306,7 @@ cursor {
 
 overview {
     zoom 0.5 // default
-    backdrop-color "#15141B" // Aura Theme Backgrounds
+    backdrop-color "#1e1e2e" // Catppuccin Theme
 }
 
 hotkey-overlay {
