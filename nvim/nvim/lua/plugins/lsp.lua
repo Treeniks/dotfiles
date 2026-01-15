@@ -84,6 +84,9 @@ return {
         end,
         opts = {
             servers = {
+                nixd = {
+                    formatting = { command = { "nixfmt" } },
+                },
                 clojure_lsp = {},
                 zls = {},
                 rust_analyzer = {},
