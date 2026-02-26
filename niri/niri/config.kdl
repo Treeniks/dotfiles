@@ -29,7 +29,7 @@ spawn-at-startup "mako"
 spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 prefer-no-csd
 
-spawn-at-startup "chameleos" "-c" "#00BFFF"
+spawn-at-startup "chameleos" "-c" "#FF0020"
 
 input {
     keyboard {
