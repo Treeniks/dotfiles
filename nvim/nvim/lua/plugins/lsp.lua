@@ -93,6 +93,45 @@ return {
         end,
         opts = {
             servers = {
+                texlab = {
+                    on_attach = function()
+                        vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', function()
+                            vim.cmd.write()
+                            vim.cmd.LspTexlabForward()
+                        end, { desc = 'Save & TexlabForward' })
+                    end,
+                    settings = {
+                        texlab = {
+                            -- couldn't get synctex working properly with neovim
+                            -- unsure why
+                            build = {
+                                executable = 'latexmk',
+                                args = { '-synctex=1', '%f' },
+                                onSave = false,
+                            },
+                            forwardSearch = {
+                                executable = 'evince-synctex',
+                                args = {
+                                    '-f', '%l', '-t', '%f', '%p', '"texlab inverse-search -i %f -l %l"'
+                                },
+                            },
+                        },
+                    },
+                },
+
+                ltex_plus = {
+                    settings = {
+                        ltex = {
+                            language = "en-GB",
+                            additionalRules = {
+                                motherTongue = "de-DE",
+                            },
+                            checkFrequency = "save",
+                            dictionary = { ['en-GB'] = { 'intuitionistic' } },
+                        },
+                    },
+                },
+
                 nixd = {
                     formatting = { command = { "nixfmt" } },
                 },
