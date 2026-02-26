@@ -4,7 +4,6 @@ return {
     {
         'neovim/nvim-lspconfig',
         config = function(_, opts)
-            local lspconfig = require('lspconfig')
             local telescope_builtin = require('telescope.builtin')
 
             vim.api.nvim_create_autocmd('LspAttach', {
@@ -74,12 +73,22 @@ return {
             -- local cmp = require('cmp_nvim_lsp')
             local blink = require('blink.cmp')
             for server, config in pairs(opts.servers or {}) do
-                if opts.setup[server] then
-                    opts.setup[server]()
-                end
                 -- config.capabilities = cmp.default_capabilities()
                 config.capabilities = blink.get_lsp_capabilities(config.capabilities)
-                lspconfig[server].setup(config)
+
+                if config.on_attach then
+                    local old_on_attach = vim.lsp.config[server].on_attach
+                    local config_on_attach = config.on_attach
+                    local new_on_attach = function(client, bufnr)
+                        if old_on_attach then
+                            old_on_attach(client, bufnr)
+                        end
+                        config_on_attach(client, bufnr)
+                    end
+                    config.on_attach = new_on_attach
+                end
+                vim.lsp.config(server, config)
+                vim.lsp.enable(server)
             end
         end,
         opts = {
@@ -113,10 +122,9 @@ return {
                 ts_ls = {}, -- TypeScript
                 qmlls = {}, -- QML
                 taplo = {}, -- TOML
+
+                isabelle = {},
             },
-            -- list of functions that get called before setting up the server
-            -- (used primarily for isabelle-lsp.nvim)
-            setup = {},
         },
     },
 
@@ -139,10 +147,7 @@ return {
     --         cmp.setup({
     --             snippet = {
     --                 expand = function(args)
-    --                     -- vim.fn['vsnip#anonymous'](args.body) -- vsnip
-    --                     luasnip.lsp_expand(args.body) -- For `luasnip` users.
-    --                     -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-    --                     -- vim.fn['UltiSnips#Anon'](args.body) -- For `ultisnips` users.
+    --                     luasnip.lsp_expand(args.body)
     --                 end,
     --             },
     --
@@ -186,7 +191,6 @@ return {
     --                 { name = 'luasnip',  priorty = 8 },
     --                 { name = 'nvim_lsp', priorty = 4 },
     --                 { name = 'path',     priorty = 2 },
-    --                 { name = 'copilot',  priority = 0 },
     --             }),
     --
     --             -- default is defined here:
@@ -194,19 +198,6 @@ return {
     --             sorting = {
     --                 priority_weight = 2, -- 2 is the default
     --
-    --                 -- -- this is the default fro comparators:
-    --                 -- compare.offset,
-    --                 -- compare.exact,
-    --                 -- -- compare.scopes,
-    --                 -- compare.score,
-    --                 -- compare.recently_used,
-    --                 -- compare.locality,
-    --                 -- compare.kind,
-    --                 -- -- compare.sort_text,
-    --                 -- compare.length,
-    --                 -- compare.order,
-    --
-    --                 -- comparator descriptions can be found here:
     --                 -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/compare.lua
     --                 comparators = {
     --                     cmp.config.compare.exact,
