@@ -1,0 +1,6 @@
+[Nemo Action]
+Name=Open In Sublime Text
+Exec=subl %F
+Extensions=dir
+Selection=any
+Icon=sublime-text
