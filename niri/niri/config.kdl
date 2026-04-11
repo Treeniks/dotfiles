@@ -55,27 +55,11 @@ input {
 }
 
 binds {
-    Mod+1 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/134744312_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+2 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/102144283_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+3 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/130023460_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+4 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/119937989_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-
-    Mod+6 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/106924041_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+7 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/103314045_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+8 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/124949134_p0.jpg"       "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+9 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/94537474_p0.jpg"        "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+0 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/97744605_p0.png"        "--transition-type" "wave" "--transition-fps" "300"; }
-
-    Mod+Shift+1 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/112514694_p0.jpg" "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+Shift+2 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/134651926_p0.png" "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+Shift+3 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/109799420_p0.png" "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+Shift+4 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/133361166_p0.jpg" "--transition-type" "wave" "--transition-fps" "300"; }
-    Mod+Shift+5 { spawn "swww" "img" "/home/suteki/Pictures/Pixiv/110871636_p0.jpg" "--transition-type" "wave" "--transition-fps" "300"; }
-
     Mod+B       { toggle-overview; }
     Mod+Slash   { show-hotkey-overlay; }
 
-    Mod+Return  { spawn "kitty"; }
+    Mod+Return      { spawn "kitty"; }
+    Mod+Backspace   { spawn "kitty"; }
     Mod+D       { spawn "nemo"; }
     Mod+Space   { spawn "fuzzel"; }
     Mod+E       { spawn "wleave"; }
@@ -96,41 +80,23 @@ binds {
     // Mod+Ctrl+J              { ; }
     // Mod+Ctrl+K              { ; }
     // Mod+Ctrl+L              { ; }
-
-    Mod+Left                { focus-monitor-left; }
-    Mod+Down                { focus-monitor-down; }
-    Mod+Up                  { focus-monitor-up; }
-    Mod+Right               { focus-monitor-right; }
-    Mod+Shift+Left          { move-column-to-monitor-left; }
-    Mod+Shift+Down          { move-column-to-monitor-down; }
-    Mod+Shift+Up            { move-column-to-monitor-up; }
-    Mod+Shift+Right         { move-column-to-monitor-right; }
-    Mod+Ctrl+Left           { move-workspace-to-monitor-left; }
-    Mod+Ctrl+Down           { move-workspace-to-monitor-down; }
-    Mod+Ctrl+Up             { move-workspace-to-monitor-up; }
-    Mod+Ctrl+Right          { move-workspace-to-monitor-right; }
-
-    Mod+Page_Down           { focus-workspace-down; }
-    Mod+Page_Up             { focus-workspace-up; }
     Mod+U                   { focus-workspace-down; }
     Mod+I                   { focus-workspace-up; }
-    Mod+Shift+Page_Down     { move-column-to-workspace-down; }
-    Mod+Shift+Page_Up       { move-column-to-workspace-up; }
     Mod+Shift+U             { move-column-to-workspace-down; }
     Mod+Shift+I             { move-column-to-workspace-up; }
-    Mod+Ctrl+Page_Down      { move-workspace-down; }
-    Mod+Ctrl+Page_Up        { move-workspace-up; }
     Mod+Ctrl+U              { move-workspace-down; }
     Mod+Ctrl+I              { move-workspace-up; }
+
+    Mod+Y                   { focus-monitor-left; }
+    Mod+O                   { focus-monitor-right; }
+    Mod+Shift+Y             { move-column-to-monitor-left; }
+    Mod+Shift+O             { move-column-to-monitor-right; }
+    Mod+Ctrl+Y              { move-workspace-to-monitor-left; }
+    Mod+Ctrl+O              { move-workspace-to-monitor-right; }
 
     // these are a bit easier to press with just the left hand
     Mod+Z                   { focus-workspace-down; }
     Mod+X                   { focus-workspace-up; }
-
-    Mod+Home        { focus-column-first; }
-    Mod+End         { focus-column-last; }
-    Mod+Shift+Home  { move-column-to-first; }
-    Mod+Shift+End   { move-column-to-last; }
 
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -138,8 +104,8 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     Mod+WheelScrollDown         { focus-workspace-down; }
     Mod+WheelScrollUp           { focus-workspace-up; }
@@ -150,34 +116,27 @@ binds {
 
     // TODO touchpad scroll
 
-    Mod+Tab { focus-workspace-previous; }
-
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+O   { consume-or-expel-window-left; }
-    Mod+P   { consume-or-expel-window-right; }
-
-    Mod+Comma  { consume-window-into-column; }
-    Mod+Period { expel-window-from-column; }
+    Mod+Comma   { consume-or-expel-window-left; }
+    Mod+Period  { consume-or-expel-window-right; }
+    Mod+N       { consume-window-into-column; }
+    Mod+M       { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 
     // makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
 
-    Mod+Shift+Minus { set-column-width "-10%"; }
-    Mod+Shift+Equal { set-column-width "+10%"; }
-    // this one is confusingly the other way around
-    // but the reason is that it makes more sense this way
-    // on my split keyboard layout, as it now coincides with j and k
-    Mod+Equal { set-window-height "-10%"; }
-    Mod+Minus { set-window-height "+10%"; }
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
@@ -207,8 +166,7 @@ binds {
     Mod+F2 { spawn "chamel" "undo"; }
     Mod+F3 { spawn "chamel" "clear"; }
     Mod+F4 { spawn "chamel" "clear-and-deactivate"; }
-    Mod+F5 { spawn "sh" "-c" "killall chameleos; sleep 1; chameleos"; }
-    // F2 { spawn "killall" "chameleos"; }
+    Mod+F5 { spawn "sh" "-c" "pkill chameleos; sleep 1; chameleos"; }
 }
 
 layout {
